@@ -1,0 +1,28 @@
+Statement stmt = conn.createStatement();
+
+// Set auto-commit to false
+conn.setAutoCommit(false);
+
+// Create SQL statement
+String SQL = "INSERT INTO Employees (id, first, last, age) " +
+             "VALUES(200,'Zia', 'Ali', 30)";
+// Add above SQL statement in the batch.
+stmt.addBatch(SQL);
+
+// Create one more SQL statement
+String SQL = "INSERT INTO Employees (id, first, last, age) " +
+             "VALUES(201,'Raj', 'Kumar', 35)";
+// Add above SQL statement in the batch.
+stmt.addBatch(SQL);
+
+// Create one more SQL statement
+String SQL = "UPDATE Employees SET age = 35 " +
+             "WHERE id = 100";
+// Add above SQL statement in the batch.
+stmt.addBatch(SQL);
+
+// Create an int[] to hold returned values
+int[] count = stmt.executeBatch();
+
+//Explicitly commit statements to apply changes
+conn.commit();

@@ -1,0 +1,87 @@
+code to tokenize a string
+
+#include<iostream>
+#include<fstream>
+#include<conio.h>
+#include<string>
+#include<stdio.h>
+#include<iomanip>
+#include<process.h>
+#include<vector>
+using namespace std;
+void addcontact()
+{
+	string cname;
+	string cmobileno;
+	string ct;
+	cout<<"\nEnter Name ";
+	cin>>cname;
+	cout<<"\nEnter Mobile No ";
+	cin>>cmobileno;
+	ct=cname+","+cmobileno;
+	std::ofstream file("c:\\temp\\contacts.txt",ios::app);
+	file << ct;
+    file<<endl;
+    file.close();
+}
+void tokenize(std::string const &str, const char delim,
+            std::vector<std::string> &out)
+{
+    size_t start;
+    size_t end = 0;
+
+    while ((start = str.find_first_not_of(delim, end)) != std::string::npos)
+    {
+        end = str.find(delim, start);
+        out.push_back(str.substr(start, end - start));
+    }
+}
+
+void showcontacts()
+{
+int count=0;
+const char delim = ',';
+	 string ct;
+	 std::ifstream file("c:\\temp\\contacts.txt");
+	while (getline (file, ct)) {
+
+
+
+    std::vector<std::string> out;
+	tokenize(ct, delim, out);
+
+
+		std::cout << "Contact Name : "<<out[0] << "   Contact Mobile : "<<out[1]<< std::endl;
+		cout<<endl;
+		count++;
+	   //	cout << ct<<endl;
+}
+cout<<"\nTotal Number of Contacts in File "<<count;
+}
+int main()
+{
+int ch=0;
+char d;
+	while(1)
+	{
+		cout<<"\n1. Add Contact";
+		cout<<"\n2. Show All Contacts";
+		cout<<"\n3. Exit";
+		cout<<"\nEnter Your Choice ";
+		cin>>ch;
+		if(ch==1)
+		{
+			addcontact();
+		}
+		if(ch==2)
+		{
+			showcontacts();
+		}
+		if(ch==3)
+		{
+			exit(0);
+        }
+    }
+	cin>>d;
+	return 0;
+}

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaconstructors.html"> Back To Java Constructors Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate parameterized constructor in class employee
+
+class employeeone
+{
+	int ecode;
+	String ename;
+	int esalary;
+	String edesignation;
+public	employeeone(int code,String name,int salary,String designation)
+	{
+		ecode=code;
+		ename=name;
+		esalary=salary;
+		edesignation=designation;
+	}
+	void showdata()
+	{
+		System.out.println("employee code is "+ ecode);
+		System.out.println("employee name is " + ename);
+		System.out.println("employee salary is " + esalary);
+		System.out.println("employee designation is " + edesignation);
+	}
+};
+
+public class employeeconsparameter {
+             public static void main(String[] args) {
+    employeeone ob=new employeeone(1,"abcdef",10000,"xyxyx");
+  	ob.showdata();
+         employeeone ob1=new employeeone(2,"abcxyz",20000,"abcabc");
+        ob1.showdata();
+}
+}
+
+        </textarea>
+    </body>
+</html>

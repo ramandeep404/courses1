@@ -1,0 +1,380 @@
+1. //program to demonstrate example of class student that contains two public member functions getdata() and showdata() and four data members (rollno,name,clas and marks)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class student
+    {
+        private int rollno;
+        private string name;
+        private int marks;
+        private int clas;
+        public void getdata()
+        {
+            rollno = 1;
+            name = "abcdef";
+            marks = 80;
+            clas = 11;
+        }
+        public void showdata()
+	{
+		Console.WriteLine("rollno of the student is " + rollno);
+		Console.WriteLine("name of student is " + name);
+		Console.WriteLine("marks of student are " + marks);
+        Console.WriteLine("class of student is " + clas);
+	}
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            student ob = new student();
+            ob.getdata();
+            ob.showdata();
+            Console.ReadLine();
+        }
+    }
+}
+
+2. //program to demonstrate example of class employee that contains two public member functions getdata() and showdata() and four data members (ecode,name,salary and designation)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class employee
+    {
+        private int ecode;
+        private String name;
+        private float salary;
+        private String designation;
+        public void getdata()
+        {
+            ecode = 1;
+            name = "abcdef";
+            salary = 10000;
+            designation = "Employee";
+
+        }
+        public void showdata()
+	{
+		Console.WriteLine("employee code is " + ecode);
+		Console.WriteLine("name of employee is " + name);
+		Console.WriteLine("salary of employee is " + salary);
+        Console.WriteLine("designation of employee is " + designation);
+	}
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            employee ob = new employee();
+            ob.getdata();
+            ob.showdata();
+            Console.ReadLine();
+        }
+    }
+}
+
+3. //program to demonstrate example of class book that contains two public member functions getdata() and showdata() and four data members (bookid,name,price and author)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class book
+    {
+        private int bookid;
+        private String name;
+        private float price;
+        private String author;
+        public void getdata()
+        {
+            bookid = 1;
+            name = "abcdef";
+            price = 300;
+            author = "abcxyz";
+        }
+        public void showdata()
+	{
+		Console.WriteLine("book id is " + bookid);
+		Console.WriteLine("book name is " + name);
+		Console.WriteLine("price of book is " + price);
+		Console.WriteLine("author of the book is " + author);
+	}
+    };
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            book ob = new book();
+            ob.getdata();
+            ob.showdata();
+            Console.ReadLine();
+        }
+    }
+}
+
+4. //program to create a class box with data members (width,depth and height) and member functions (getdata,showdata and volume)(volume member function calculates the volume of the box )
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+        class box
+        {
+            private int width;
+            private int depth;
+            private int height;
+            public void getdata()
+            {
+                width = 10;
+                depth = 20;
+                height = 30;
+            }
+            public void volume()
+	    {
+		    int vol;
+		    vol=width*depth*height;
+		    Console.WriteLine("volume of box is " + vol);
+	    }
+            public void showdata()
+	    {
+		    Console.WriteLine("width of box is "+ width);
+		    Console.WriteLine("depth of box is " + depth);
+            Console.WriteLine("height of box is " + height);
+	    }
+        };
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            box ob = new box();
+            ob.getdata();
+            ob.showdata();
+            ob.volume();
+            Console.ReadLine();
+        }
+    }
+}
+
+5. //program to demonstrate example of class employee with data members as ecode,ename,designation,basic,hra,da and total) calculate total function calculates the total salary as sum of basic,da and hra , getdata function inputs data from user and showdata member function displays data 
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class employeesal
+    {
+        private int ecode;
+        private String ename;
+        private float basic;
+        private float da;
+        private float hra;
+        private float total;
+        private String designation;
+
+        public void getdata()
+        {
+            ecode = 1;
+            ename = "abcdef";
+            designation = "employee";
+            basic = 10000;
+            da = 3000;
+            hra = 2000;
+
+        }
+        public void calculatetotal()
+        {
+            total = basic + da + hra;
+        }
+        public void showdata()
+        {
+	        Console.WriteLine("employee code is " + ecode);
+	        Console.WriteLine("employee name is " + ename);
+	        Console.WriteLine("employee designation is " + designation);
+            Console.WriteLine("total salary (basic+da+hra) is " + total);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            employeesal ob = new employeesal();
+            ob.getdata();
+            ob.calculatetotal();
+            ob.showdata();
+            Console.ReadLine();
+        }
+    }
+}
+
+6. //program to demonstrate a class studentone which has a parameterized method
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class studentone
+    {
+        private int rollno;
+        private String name;
+        private int marks;
+        private int clas;
+        public void getdata(int rno, String n, int m, int cl)
+        {
+            rollno = rno;
+            name = n;
+            marks = m;
+            clas = cl;
+        }
+        public void showdata()
+	{
+		Console.WriteLine("rollno of the student is " + rollno);
+		Console.WriteLine("name of student is " + name);
+		Console.WriteLine("marks of student are " + marks);
+        Console.WriteLine("class of student is " + clas);
+	}
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            studentone ob = new studentone();
+            ob.getdata(1, "abcdef", 80, 11);
+            ob.showdata();
+            Console.ReadLine();
+        }
+    }
+}
+
+7. //program to demonstrate a class boxone which has a method that returns a value
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class boxone
+    {
+        private int width;
+        private int depth;
+        private int height;
+        public void getdata()
+        {
+            width = 10;
+            depth = 20;
+            height = 30;
+        }
+        public int volume()
+        {
+            int vol;
+            vol = width * depth * height;
+
+            return vol;
+        }
+        public void showdata()
+	{
+		Console.WriteLine("width of box is "+ width);
+		Console.WriteLine("depth of box is " + depth);
+        Console.WriteLine("height of box is " + height);
+	}
+    };
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int v;
+            boxone ob=new boxone();
+            ob.getdata();
+            ob.showdata();
+            v= ob.volume();
+            Console.WriteLine("Volume of box is " + v);
+            Console.ReadLine();
+        }
+    }
+}
+
+8. //program to demonstrate nested classes
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class marks
+    {
+        private int physics;
+        private int maths;
+        private int chemistry;
+        public void getmarks(int p, int m, int c)
+        {
+            physics = p;
+            maths = m;
+            chemistry = c;
+        }
+        public void showmarks()
+	{
+		Console.WriteLine("marks in physics are " + physics);
+		Console.WriteLine("marks in maths are " + maths);
+        Console.WriteLine("marks in chemistry are " + chemistry);
+
+	}
+    }
+    class studentmarks
+    {
+        private int rollno;
+        private String name;
+        private int clas;
+        private marks ma;
+        public void getdata()
+        {
+            rollno = 1;
+            name = "abcdef";
+            clas = 11;
+            ma = new marks();
+            ma.getmarks(89, 90, 91);
+        }
+        public void showdata()
+	{
+		Console.WriteLine("rollno of student is " + rollno);
+		Console.WriteLine("name of student is "+ name);
+        Console.WriteLine("class of student is " + clas);
+		ma.showmarks();
+	}
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            studentmarks ob = new studentmarks();
+            ob.getdata();
+            ob.showdata();
+            Console.ReadLine();
+        }
+    }
+}

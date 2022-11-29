@@ -1,0 +1,55 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpclasses.html"> Back To PHP Classes and Inheritance Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//program to demonstrate inheritance example 2
+class box
+{
+    var $height;
+    var $width;
+    var $depth;
+    function bgetdata()
+    {
+        $this->height=10;
+        $this->width=20;
+        $this->depth=30;
+    }
+    function volume()
+    {
+        $vol=$this->height*$this->width*$this->depth;
+        print('volume of box is ' . $vol);
+        print('<br>');
+    }
+}
+class colourbox extends box
+{
+    var $colour;
+    function getdata()
+    {
+        $this->colour='blue';
+        box::bgetdata();
+    }
+    function showdata()
+    {
+        print('colour of box is ' . $this->colour);
+        print('<br>');
+        box::volume();
+    }
+}
+$ob=new colourbox;
+$ob->getdata();
+$ob->showdata();
+?>
+
+        </textarea>
+    </body>
+</html>

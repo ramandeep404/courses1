@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javajdbc.html"> Back To Java JDBC Database Connectivity Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+ String URL="localhost:3306";
+String USERNAME="root";
+String PASSWORD="root";
+String DATABASE="demo";
+int id=0;
+try {String driverName = "com.mysql.jdbc.Driver";
+		    Class.forName(driverName);
+String url ="jdbc:mysql://127.0.0.1:3306/studentsrno";
+
+		Connection con =DriverManager.getConnection(url,"root", "");
+PreparedStatement ps=con.prepareStatement("insert into students(name,marks) values(?,?)",Statement.RETURN_GENERATED_KEYS);
+ps.setString(1,"Neeraj");
+ps.setInt(2, 90);
+ps.executeUpdate();
+ResultSet rs=ps.getGeneratedKeys();
+if(rs.next()){
+id=rs.getInt(1);
+}
+System.out.println(id);
+} catch (Exception e) {
+e.printStackTrace();
+}
+
+        </textarea>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpclasses.html"> Back To PHP Classes and Inheritance Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to demonstrate private member function
+class abc
+{
+    private function a()
+    {
+        print('cannot be called through an object');
+    }
+    public function b()
+    {
+        print('can be called through an object');
+    }
+}
+$ob=new abc;
+$ob->b();
+?>
+
+        </textarea>
+    </body>
+</html>

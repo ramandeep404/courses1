@@ -1,0 +1,5 @@
+select max(salary) from employees
+where salary<(select max(salary) from employees where salary<(select max(salary) from employees));
+
+60.query to retrieve third highest salary from employees
+

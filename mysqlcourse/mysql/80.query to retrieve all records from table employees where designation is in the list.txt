@@ -1,0 +1,1 @@
+select * from employees where designation in ("accountant","clerk","officer");

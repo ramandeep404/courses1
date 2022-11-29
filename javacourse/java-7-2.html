@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javaclasses.html"> Back To Java Classes Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate example of class employee that contains two public member functions getdata() and showdata() and four data members (ecode,name,salary and designation)
+
+class employee
+{
+	private int ecode;
+	private String name;
+	private float salary;
+	private String designation;
+public void getdata()
+	{
+		ecode=1;
+                name=new String("abcdef");
+                salary=10000;
+                designation=new String("Employee");
+		
+	}
+	public void showdata()
+	{
+		System.out.println("employee code is " + ecode);
+		System.out.println("name of employee is " + name);
+		System.out.println("salary of employee is " + salary);
+		System.out.println("designation of employee is " + designation);
+	}
+};
+
+public class classemployee {
+     public static void main(String[] args) {
+        
+        employee ob=new employee();
+        ob.getdata();
+        ob.showdata();
+}
+}
+
+        </textarea>
+    </body>
+</html>

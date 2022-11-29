@@ -1,0 +1,726 @@
+1. program to demonstrate if statement example 1 , check whether number is equal to 10 or not
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a = 10 Then
+            Console.WriteLine("Value of a is equal to 10")
+        End If
+    End Sub
+End Module
+
+2. Program to check whether value of a is greater than 10 or not
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a > 10 Then
+            Console.WriteLine("Value of a is greater than 10")
+        End If
+    End Sub
+End Module
+
+3. Program to check whether value of a is less than 10
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a < 10 Then
+            Console.WriteLine("Value of a is less than 10")
+        End If
+    End Sub
+End Module
+
+4. program to demonstrate if statement example 4 , check whether number is less than or equal to 10
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a <= 10 Then
+            Console.WriteLine("Value of a is less than 10 or equal to 10 ")
+        End If
+    End Sub
+End Module
+
+5. program to demonstrate if statement example 5 , check whether number is greater than or equal to 10
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a >= 10 Then
+            Console.WriteLine("Value of a is greater than 10 or equal to 10 ")
+        End If
+    End Sub
+End Module
+
+6. program to demonstrate if statement example 6 , check whether number is not equal to 10
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a <> 10 Then
+            Console.WriteLine("Value of a is not equal to 10 ")
+        End If
+    End Sub
+End Module
+
+7. program to demonstrate if-else statement example 1 , check whether number is equal to 10 or not
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a = 10 Then
+            Console.WriteLine("Value of a is equal to 10 ")
+        Else
+            Console.WriteLine("Value of a is not equal to 10 ")
+        End If
+    End Sub
+End Module
+
+8. program to demonstrate if-else statement example 2 , check whether number is greater than 10 or not
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a > 10 Then
+            Console.WriteLine("Value of a is greater than 10 ")
+        Else
+            Console.WriteLine("Value of a is less than or equal to 10 ")
+        End If
+    End Sub
+End Module
+
+9. program to demonstrate if-else statement example 3 , check whether number is less than 10 or not
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a < 10 Then
+            Console.WriteLine("Value of a is less than 10 ")
+        Else
+            Console.WriteLine("Value of a is greater than or equal to 10 ")
+        End If
+    End Sub
+End Module
+
+10. program to demonstrate if-else statement example 4, check whether number is equal to 10 or not
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a <> 10 Then
+            Console.WriteLine("Value of a is not equal to 10")
+        Else
+            Console.WriteLine("Value of a is equal to 10 ")
+        End If
+    End Sub
+End Module
+
+11. program to demonstrate if-else statement example 5, check whether number is greater than 10 or not
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a > 10 Then
+            Console.WriteLine("Value of a is greater than 10")
+        Else
+            Console.WriteLine("Value of a is less than or equal to 10 ")
+        End If
+    End Sub
+End Module
+
+12. program to demonstrate if-else statement example 6, check whether a is less than or equal to 10 or greater than 10
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a < 10 Then
+            Console.WriteLine("Value of a is less than 10")
+        Else
+            Console.WriteLine("Value of a is equal to 10 or greater than 10 ")
+        End If
+    End Sub
+End Module
+
+13. program to demonstrate if-else statement example 7, check whether a is greater than or equal to 10 or less than 10
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a > 10 Then
+            Console.WriteLine("Value of a is greater than 10")
+        Else
+            Console.WriteLine("Value of a is less than 10 or equal to 10")
+        End If
+    End Sub
+End Module
+
+14. program to demonstrate if-else statement example 8, check whether a is greater than or equal to 10 or less than 10 
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a >= 10 Then
+            Console.WriteLine("Value of a is greater than 10 or equal to 10")
+        Else
+            Console.WriteLine("Value of a is less than 10")
+        End If
+    End Sub
+End Module
+
+15. program to demonstrate if-else statement example 9, check whether a is less than or equal to 10 or greater than 10
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter Value of a")
+        a = Convert.ToInt32(Console.ReadLine())
+        If a <= 10 Then
+            Console.WriteLine("Value of a is less than 10 or equal to 10")
+        Else
+            Console.WriteLine("Value of a is greater than 10")
+        End If
+    End Sub
+End Module
+
+
+16. program to input temperature in celsius and check whether it is boiling point of water or not 
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim temp As Integer
+        Console.WriteLine("Enter Temperature in Celsius")
+        temp = Convert.ToInt32(Console.ReadLine())
+        If temp = 100 Then
+            Console.WriteLine("It is Boiling Point of Water")
+        Else
+            Console.WriteLine("It is not Boiling Point of Water")
+        End If
+    End Sub
+End Module
+
+17. program to input marks and check whether student is passed with distinction or not
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim marks As Integer
+        Console.WriteLine("Enter Marks of Student")
+        marks = Convert.ToInt32(Console.ReadLine())
+        If marks >= 75 Then
+            Console.WriteLine("Passed with Distinction")
+        Else
+            Console.WriteLine("Pass")
+        End If
+    End Sub
+End Module
+
+18. program to input age and check whether person is eligible to vote or not
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim age As Integer
+        Console.WriteLine("Enter Age of Citizen")
+        age = Convert.ToInt32(Console.ReadLine())
+        If age >= 18 Then
+            Console.WriteLine("Citizen is Eligible to Vote")
+        Else
+            Console.WriteLine("Citizen is not Eligible to Vote")
+        End If
+    End Sub
+End Module
+
+19. program to input three numbers and find largest of three numbers using if-else statement without using fourth variable
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, c As Integer
+        Console.WriteLine("Enter First Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Third Number")
+        c = Convert.ToInt32(Console.ReadLine())
+        If a > b And a > c Then
+            Console.WriteLine(a & " is largest")
+        End If
+        If b > a And b > c Then
+            Console.WriteLine(b & " is largest")
+        End If
+        If c > a And c > b Then
+            Console.WriteLine(c & " is largest")
+        End If
+    End Sub
+End Module
+
+20. program to input three numbers and find largest of three numbers using if-else statement with using fourth variable
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, c, max As Integer
+        Console.WriteLine("Enter First Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Third Number")
+        c = Convert.ToInt32(Console.ReadLine())
+        max = a
+        If b > max Then
+            max = b
+        End If
+        If c > max Then
+            max = c
+        End If
+        Console.WriteLine(max & " is largest")
+    End Sub
+End Module
+
+21. program to input three numbers and find smallest of three numbers using if-else statement without using fourth variable
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, c As Integer
+        Console.WriteLine("Enter First Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Third Number")
+        c = Convert.ToInt32(Console.ReadLine())
+        If a < b And a < c Then
+            Console.WriteLine(a & " is smallest")
+        End If
+        If b < a And b < c Then
+            Console.WriteLine(b & " is smallest")
+        End If
+        If c < a And c < b Then
+            Console.WriteLine(c & " is smallest")
+        End If
+    End Sub
+End Module
+
+22. program to input three numbers and find smallest of three numbers using if-else statement with using fourth variable
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, c, min As Integer
+        Console.WriteLine("Enter First Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Third Number")
+        c = Convert.ToInt32(Console.ReadLine())
+        min = a
+        If b < min Then
+            min = b
+        End If
+        If c < min Then
+            min = c
+        End If
+        Console.WriteLine(min & " is smallest")
+    End Sub
+End Module
+
+23. program to demonstrate if-else statement and (check whether marks are between 80 and 90)
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim marks As Integer
+        Console.WriteLine("Enter marks of student")
+        marks = Convert.ToInt32(Console.ReadLine())
+        If marks >= 80 And marks <= 90 Then
+            Console.WriteLine("Marks are between 80 and 90")
+        Else
+            Console.WriteLine("Marks are not between 80 and 90")
+        End If
+    End Sub
+End Module
+
+24. program to demonstrate if-else statement program to demonstrate if or (check whether marks are equal to either 80 or 90)
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim marks As Integer
+        Console.WriteLine("Enter marks of student")
+        marks = Convert.ToInt32(Console.ReadLine())
+        If marks = 80 Or marks = 90 Then
+            Console.WriteLine("Marks are either 80 or 90")
+        Else
+            Console.WriteLine("Marks are neither 80 nor 90")
+        End If
+    End Sub
+End Module
+
+25. program to input a character and check whether it is equal to a or b using if statement example of OR  operator
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim ch As Char
+        Dim a As String
+        Console.WriteLine("Enter a Character")
+        a = Console.ReadLine()
+        ch = Convert.ToChar(a)
+        If ch = "a" Or ch = "b" Then
+            Console.WriteLine("Character is either a or b")
+        Else
+            Console.WriteLine("Character is neither a nor b")
+        End If
+    End Sub
+End Module
+
+26. program to compute grade of a student based on marks using if else statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim marks As Integer
+        Dim grade As String
+        Console.WriteLine("Enter Marks of Student")
+        marks = Convert.ToInt32(Console.ReadLine())
+        If marks >= 80 And marks <= 100 Then
+            grade = "A"
+        ElseIf marks >= 70 And marks < 80 Then
+            grade = "B"
+        ElseIf marks >= 60 And marks < 70 Then
+            grade = "C"
+        Else
+            grade = "D"
+        End If
+        Console.WriteLine("Grade is " & grade)
+    End Sub
+End Module
+
+27. program to check whether number entered is odd or even using if-else statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim num As Integer
+        Console.WriteLine("Enter Number ")
+        num = Convert.ToInt32(Console.ReadLine)
+        If num Mod 2 = 0 Then
+            Console.WriteLine("Number is Even")
+        Else
+            Console.WriteLine("Number is Odd")
+        End If
+    End Sub
+End Module
+
+28. program to input two numbers a and b and check whether a is divisible by b or not using if-else
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b As Integer
+        Console.WriteLine("Enter First Number")
+        a = Convert.ToInt32(Console.ReadLine)
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        If a Mod b = 0 Then
+            Console.WriteLine("First Number is Divisible by Second Number")
+        Else
+            Console.WriteLine("First Number is not Divisible by Second Number")
+        End If
+    End Sub
+End Module
+
+29. program to check whether user has entered vowel or not using if-else statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As String
+        Dim b As Char
+        Console.WriteLine("Enter a Character")
+        a = Console.ReadLine()
+        b = Convert.ToChar(a)
+        If b = "a" Or b = "e" Or b = "i" Or b = "o" Or b = "u" Then
+            Console.WriteLine("Character is vowel")
+        Else
+            Console.WriteLine("Character is not vowel")
+        End If
+    End Sub
+End Module
+
+30. program to calculate discount on a price,if price is above 1000 then discount is 10% otherwise 5 %
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim price, discount As Double
+        Console.WriteLine("Enter Price of Item")
+        price = Convert.ToDouble(Console.ReadLine())
+        If price >= 1000 Then
+            discount = 0.1 * price
+        Else
+            discount = 0.05 * price
+        End If
+        Console.WriteLine("Discount is " & discount)
+    End Sub
+End Module
+
+31. program to demonstrate switch-case statement example 1, displaying day of the week
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim day As Integer
+        Console.WriteLine("Enter day of Week")
+        day = Convert.ToInt32(Console.ReadLine())
+        Select Case day
+            Case 1
+                Console.WriteLine("Monday")
+            Case 2
+                Console.WriteLine("Tuesday")
+            Case 3
+                Console.WriteLine("Wednesday")
+            Case 4
+                Console.WriteLine("Thursday")
+            Case 5
+                Console.WriteLine("Friday")
+            Case 6
+                Console.WriteLine("Saturday")
+            Case 7
+                Console.WriteLine("Sunday")
+            Case Else
+                Console.WriteLine("Enter a day between 1 and 7")
+        End Select
+    End Sub
+End Module
+
+32. program to demonstrate switch-case statement example 1, displaying month of year
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim month As Integer
+        Console.WriteLine("Enter month of Year")
+        month = Convert.ToInt32(Console.ReadLine())
+        Select Case month
+            Case 1
+                Console.WriteLine("January")
+            Case 2
+                Console.WriteLine("February")
+            Case 3
+                Console.WriteLine("March")
+            Case 4
+                Console.WriteLine("April")
+            Case 5
+                Console.WriteLine("May")
+            Case 6
+                Console.WriteLine("June")
+            Case 7
+                Console.WriteLine("July")
+            Case 8
+                Console.WriteLine("August")
+            Case 9
+                Console.WriteLine("September")
+            Case 10
+                Console.WriteLine("October")
+            Case 11
+                Console.WriteLine("November")
+            Case 12
+                Console.WriteLine("December")
+            Case Else
+                Console.WriteLine("Enter a month between 1 and 12")
+        End Select
+    End Sub
+End Module
+
+13. calculate da,hra based on basic example of if-else statement
+basic between 4000 and 8000
+hra=30% da=25%
+basic between 2500 and 4000
+hra=25% da=20%
+basic less than 2500
+hra=20% da=15%
+netpay=basic+hra+da
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim basic, hra, da, netpay As Double
+        Console.WriteLine("Enter Basic Salary")
+        basic = Convert.ToInt32(Console.ReadLine())
+        If basic >= 4000 And basic <= 8000 Then
+            hra = 0.3 * basic
+            da = 0.25 * basic
+        ElseIf basic >= 2500 And basic < 4000 Then
+            hra = 0.25 * basic
+            da = 0.2 * basic
+        Else
+            hra = 0.2 * basic
+            da = 0.15 * basic
+        End If
+        netpay = basic + da + hra
+        Console.WriteLine("Basic Salary is " & basic)
+        Console.WriteLine("Dearness Allowance is " & da)
+        Console.WriteLine("House Rent Allowance is " & hra)
+        Console.WriteLine("Net Salary is " & netpay)
+    End Sub
+End Module
+
+14. program to convert fahrenheit temp to celsius
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim temp, conv As Double
+        Console.WriteLine("Enter Temperature in Celsius")
+        temp = Convert.ToDouble(Console.ReadLine())
+        conv = (temp * 1.8) + 32
+        Console.WriteLine("Temperature in Fahrenheit is " & conv)
+    End Sub
+End Module
+
+15. program to convert celsius temp to fahrenheit 
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim temp, conv As Double
+        Console.WriteLine("Enter Temperature in Fahrenheit")
+        temp = Convert.ToDouble(Console.ReadLine())
+        conv = (temp - 32) / 1.8
+        Console.WriteLine("Temperature in Celsius is " & conv)
+    End Sub
+End Module
+
+16. program to input a character and check whether it is a vowel or not using select case statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim ch As Char
+        Console.WriteLine("Enter a Character")
+        ch = Convert.ToChar(Console.ReadLine())
+        Select Case ch
+            Case "a"
+                Console.WriteLine("You entered a vowel")
+                Exit Select
+            Case "e"
+                Console.WriteLine("You entered a vowel")
+                Exit Select
+            Case "i"
+                Console.WriteLine("You entered a vowel")
+                Exit Select
+            Case "o"
+                Console.WriteLine("You entered a vowel")
+                Exit Select
+            Case "u"
+                Console.WriteLine("You entered a vowel")
+                Exit Select
+            Case Else
+                Console.WriteLine("You have not entered a vowel")
+        End Select
+    End Sub
+End Module
+
+17. program to input a character and check whether it is a vowel or not using switch statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim year As Integer
+        Console.WriteLine("Enter a Year")
+        year = Convert.ToInt32(Console.ReadLine())
+        If year Mod 100 = 0 And year Mod 400 = 0 Then
+            Console.WriteLine("It is a Leap Year")
+        Else
+            If year Mod 4 = 0 Then
+                Console.WriteLine("It is a Leap Year")
+            Else
+                Console.WriteLine("It is not a Leap Year")
+            End If
+        End If
+    End Sub
+End Module
+

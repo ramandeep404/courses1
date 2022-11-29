@@ -1,0 +1,1 @@
+insert into students(rollno,name) values(1,"abcdef");

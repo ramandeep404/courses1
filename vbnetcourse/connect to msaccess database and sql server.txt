@@ -1,0 +1,107 @@
+Imports System.Data.OleDb
+
+Public Class Form1
+    Dim dbProvider As String
+    Dim dbSource As String
+
+    Dim dbPathAndFilename As String
+    Dim con As New OleDb.OleDbConnection
+    Dim ds As New DataSet
+    Dim da As OleDb.OleDbDataAdapter
+    Dim sql As String
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        
+
+
+    End Sub
+    Sub LoadData()
+        Dim dbProvider As String
+        Dim dbSource As String
+        'dbProvider = "PROVIDER=Microsoft.Jet.OLEDB.4.0;" ' MDB
+        dbProvider = "PROVIDER=Microsoft.Ace.OLEDB.12.0;" 'ACCDB
+        dbSource = "Data Source="
+        Dim dbPathAndFilename As String
+        Dim con As New OleDb.OleDbConnection
+        Dim ds As New DataSet
+        Dim da As OleDb.OleDbDataAdapter
+        Dim sql As String
+        'Connect to db
+        'You could store the db path in the Settings of the App.
+        'dbPathAndFilename = My.Settings.dbPath
+        dbPathAndFilename = "file1.accdb"
+        con.ConnectionString = dbProvider & dbSource & dbPathAndFilename
+
+        con.Open()
+        sql = "SELECT * FROM Table1"
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        'Give it a name.
+        da.Fill(ds, "TABLE")
+
+        con.Close()
+
+        'Populate the DataGridView
+        DataGridView1.DataSource = ds.Tables("TABLE")
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        LoadData()
+    End Sub
+End Class
+________________________________________________________________________
+
+connect to sql server
+
+Imports System.Data.SqlClient
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim connetionString As String
+        Dim cnn As SqlConnection
+        Dim cmd As SqlCommand
+        Dim sql As String
+
+        connetionString = "Server=localhost;Database=students;Trusted_Connection=True;"
+        sql = "insert into dbo.students values (1,'hghg',78)"
+
+        cnn = New SqlConnection(connetionString)
+        Try
+            cnn.Open()
+            cmd = New SqlCommand(sql, cnn)
+            cmd.ExecuteNonQuery()
+            cmd.Dispose()
+            cnn.Close()
+            MsgBox(" ExecuteNonQuery in SqlCommand executed !!")
+        Catch ex As Exception
+            MsgBox("Can not open connection ! ")
+        End Try
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim connetionString As String
+        Dim cnn As SqlConnection
+        Dim cmd As SqlCommand
+        Dim sql As String
+        Dim str As String
+        Dim reader As SqlDataReader
+
+        connetionString = "Server=localhost;Database=students;Trusted_Connection=True;"
+        sql = "select * from students"
+        TextBox1.Text = ""
+        cnn = New SqlConnection(connetionString)
+        Try
+            cnn.Open()
+            cmd = New SqlCommand(sql, cnn)
+            reader = cmd.ExecuteReader()
+            While reader.Read()
+                str = str & reader.Item(0) & "  -  " & reader.Item(1) & "  -  " & reader.Item(2) & vbCrLf
+
+            End While
+
+            reader.Close()
+            cmd.Dispose()
+            cnn.Close()
+            TextBox4.Text = str
+        Catch ex As Exception
+            MsgBox("Can not open connection ! ")
+        End Try
+    End Sub
+End Class

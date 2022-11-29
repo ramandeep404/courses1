@@ -1,0 +1,4 @@
+select designation,count(*) as count
+from employees
+group by designation
+having count>1;

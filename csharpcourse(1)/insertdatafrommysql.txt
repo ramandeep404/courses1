@@ -1,0 +1,58 @@
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using Devart.Data.MySql;
+
+namespace devartmysqlcon
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int rno;
+            string name;
+            int marks;
+            rno = Convert.ToInt32(textBox1.Text);
+            name = textBox2.Text;
+            marks = Convert.ToInt32(textBox3.Text);
+            MySqlConnectionStringBuilder myCSB = new MySqlConnectionStringBuilder();
+            myCSB.Port = 3306;
+            myCSB.Host = "localhost";
+            myCSB.UserId = "root";
+            myCSB.Password = "";
+            myCSB.Direct = true;
+
+            myCSB.Database = "students";
+            myCSB.MaxPoolSize = 150;
+            myCSB.ConnectionTimeout = 30;
+            MySqlConnection myConnection = new MySqlConnection(myCSB.ConnectionString);
+            myConnection.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "INSERT INTO students(rollno,name,marks) VALUES (" + rno + ",'" + name + "'," + marks + ")";
+            cmd.Connection = myConnection;
+            
+            try
+            {
+                int aff = cmd.ExecuteNonQuery();
+                MessageBox.Show(aff + " rows were affected.");
+            }
+            catch
+            {
+                MessageBox.Show("Error encountered during INSERT operation.");
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+        }
+    }
+}

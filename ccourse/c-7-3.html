@@ -1,0 +1,264 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="cfilehandling.html">Back To C File Handling</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to read write and append to file
+#pragma hdrstop
+#pragma argsused
+
+#include <stdio.h>
+#include<process.h>
+
+#ifdef _WIN32
+#include <tchar.h>
+#else
+  typedef char _TCHAR;
+  #define _tmain main
+#endif
+struct student
+{
+	char name[20];
+	char address[20];
+	char mobile[20];
+	int clas;
+};
+void addstudent()
+{
+	struct student s;
+	printf("\nEnter Student Name ");
+	scanf("%s",s.name);
+	printf("\nEnter Student Address ");
+	scanf("%s",s.address);
+	printf("\nEnter Student Mobile");
+	scanf("%s",s.mobile);
+	printf("\nEnter Student Class ");
+	scanf("%d",&s.clas);
+	FILE *fp;
+	fp=fopen("c:\\temp\\studentsc.dat","a");
+	fwrite (&s, sizeof(struct student), 1, fp);
+	fclose(fp);
+    printf("\nData Written");
+}
+void viewallstudents()
+{
+	 FILE *fp;
+	 int count=0;
+	struct student s;
+	fp = fopen ("c:\\temp\\studentsc.dat", "r");
+	while(fread(&s, sizeof(struct student), 1, fp))
+	{
+	printf ("\nName = %s Address = %s Mobile No = %s Class = %d\n", s.name,s.address,s.mobile,s.clas);
+	count++;
+	}
+	fclose(fp);
+    printf("\nNumber of Records Found %d",count);
+	printf("\nData Read");
+}
+void searchstudent()
+{
+	char name[20];
+	int count=0;
+	printf("\nEnter Student Name to Search for ");
+	scanf("%s",name);
+	FILE *fp;
+	struct student s;
+	fp = fopen ("c:\\temp\\studentsc.dat", "r");
+	while(fread(&s, sizeof(struct student), 1, fp))
+	{
+	if(strcmp(s.name,name)==0)
+	{
+		printf ("\nName = %s Address = %s Mobile No = %s Class = %d\n", s.name,s.address,s.mobile,s.clas);
+		count++;
+    }
+	}
+	if(count==0)
+	{
+		printf("No Record Found");
+    }
+	fclose(fp);
+
+}
+int search(char str1[20],char str2[20])
+{
+int r=0;
+int l, i, j;
+for (l = 0; str2[l] != '\0'; l++);
+
+    for (i = 0, j = 0; str1[i] != '\0' && str2[j] != '\0'; i++)
+    {
+        if (str1[i] == str2[j])
+        {
+            j++;
+        }
+        else
+        {
+            j = 0;
+        }
+    }
+
+    if (j == l)
+    {
+		r=1;
+    }
+    else
+    {
+		r=0;
+	}
+	return r;
+	}
+void testsearch()
+{
+	int y=0;
+int c;
+char a[20];
+char b[20];
+printf("\nEnter String 1 ");
+scanf("%s",a);
+printf("\nEnter String 2 ");
+scanf("%s",b);
+y=search(a,b);
+printf("%d",y);
+scanf("%d",&c);
+}
+
+void searchstudentp()
+{
+	char name[20];
+	int count=0;
+	printf("\nEnter Partial Name to Search for ");
+	scanf("%s",name);
+	FILE *fp;
+	struct student s;
+	fp = fopen ("c:\\temp\\studentsc.dat", "r");
+	while(fread(&s, sizeof(struct student), 1, fp))
+	{
+	if(search(s.name,name)==1)
+	{
+		printf ("\nName = %s Address = %s Mobile No = %s Class = %d\n", s.name,s.address,s.mobile,s.clas);
+		count++;
+    }
+	}
+	if(count==0)
+	{
+		printf("\nNo Record Found");
+	}
+	else
+	{
+		printf("\nTotal Number of Records Found %d",count);
+    }
+	fclose(fp);
+
+}
+void searchstudentpa()
+{
+	char address[20];
+	int count=0;
+	printf("\nEnter Partial Address to Search for ");
+	scanf("%s",address);
+	FILE *fp;
+	struct student s;
+	fp = fopen ("c:\\temp\\studentsc.dat", "r");
+	while(fread(&s, sizeof(struct student), 1, fp))
+	{
+	if(search(s.address,address)==1)
+	{
+		printf ("\nName = %s Address = %s Mobile No = %s Class = %d\n", s.name,s.address,s.mobile,s.clas);
+		count++;
+	}
+	}
+	if(count==0)
+	{
+		printf("\nNo Record Found");
+	}
+	else
+	{
+		printf("\nTotal Number of Records Found %d",count);
+    }
+	fclose(fp);
+
+}
+void searchstudentpm()
+{
+	char mobile[20];
+	int count=0;
+	printf("\nEnter Partial Mobile Number to Search for ");
+	scanf("%s",mobile);
+	FILE *fp;
+	struct student s;
+	fp = fopen ("c:\\temp\\employeesc.dat", "r");
+	while(fread(&s, sizeof(struct student), 1, fp))
+	{
+	if(search(s.mobile,mobile)==1)
+	{
+		printf ("\nName = %s Address = %s Mobile No = %s Class = %d\n", s.name,s.address,s.mobile,s.clas);
+		count++;
+	}
+	}
+	if(count==0)
+	{
+		printf("\nNo Record Found");
+	}
+	else
+	{
+		printf("\nTotal Number of Records Found %d",count);
+    }
+	fclose(fp);
+
+}
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int ch;
+	while(1)
+	{
+		printf("\n1. Add Student ");
+		printf("\n2. View All Students ");
+		printf("\n3. Search Student By Name ");
+		printf("\n4. Search Partial Name ");
+		printf("\n5. Search Partial Address ");
+        printf("\n6. Search Partial Mobile No ");
+		printf("\n7. Exit");
+		printf("\nEnter Your Choice ");
+		scanf("%d",&ch);
+		if(ch==1)
+		{
+			addstudent();
+		}
+		if(ch==2)
+		{
+			viewallstudents();
+		}
+		if(ch==3)
+		{
+		   searchstudent();
+		}
+		if(ch==4)
+		{
+			searchstudentp();
+        }
+		if(ch==5)
+		{
+			searchstudentpa();
+		}
+		if(ch==6)
+		{
+			searchstudentpm();
+		}
+		if(ch==7)
+		{
+            exit(0);
+        }
+
+    }
+	return 0;
+}
+    </textarea>
+    </body>
+</html>

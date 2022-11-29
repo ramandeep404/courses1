@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaexceptions.html"> Back To Java Exceptions Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to create subclass of exception class
+
+class MyException extends Exception
+{
+    private int detail;
+    MyException(int a)
+    {
+        detail=a;
+    }
+    public String toString()
+    {
+        return "MyException[" + detail + "]";
+    }
+}
+
+public class exceptionsublass {
+static void compute(int a) throws MyException
+{
+    System.out.println("Called compute(" + a + ")");
+    if(a>10)
+   throw new MyException(a);
+    System.out.println("Normal exit");
+}
+public static void main(String args[])
+{
+    try{
+        compute(1);
+        compute(20);
+        }
+    catch(MyException e)
+    {
+        System.out.println("Caught " + e);
+    }
+}
+}
+
+        </textarea>
+    </body>
+</html>

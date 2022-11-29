@@ -1,0 +1,30 @@
+write to csv file
+
+import csv;
+rollno=int(input("enter rollno"))
+name=input("enter name")
+marks=int(input("enter marks"))
+with open('eexample.csv', 'a', newline='') as csvfile:
+    a=csv.writer(csvfile)
+    a.writerow([rollno,name,marks])
+
+_____________________________________________________
+
+read from csv file
+
+import csv
+with open('eexample.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        print("Rollno : " , row[0]," Name : " , row[1], " Marks : ", row[2])
+
+________________________________________________________
+
+read csv file through pandas
+
+import pandas as pd;
+a=pd.read_csv("eexample.csv")
+print(a)
+
+________________________________________________________
+

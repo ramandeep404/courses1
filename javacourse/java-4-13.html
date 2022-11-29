@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javauserdefined.html"> Back To Java User Defined Methods Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to create two functions that find area and circumference of circle (radius of circle is passed to functions as argument)
+
+class circle
+{
+    public void area(int radius)
+{
+	float ar;
+	ar=3.14f*radius*radius;
+	System.out.println("area of circle is " + ar);
+}
+public void circumference(int radius)
+{
+	float cir;
+	cir=2*3.14f*radius;
+	System.out.println("circumference of circle is " + cir);
+}
+}
+public class circleareacircum {
+        public static void main(String[] args) {
+   
+circle ob=new circle();
+ob.area(10);
+ob.circumference(10);             
+
+}
+}
+
+        </textarea>
+    </body>
+</html>

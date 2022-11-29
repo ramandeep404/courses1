@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaconstructors.html"> Back To Java Constructors Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate example of class student with data members (rollno, name, marks, clas) and contains member functions (showdata), class also contains a default constructor which initializes the data members
+
+class student
+{
+	int rollno;
+	String name;
+	int marks;
+	int clas;
+public	student() //a default constructor
+	{
+		rollno=10;
+		name=new String("abcdef");
+		marks=90;
+		clas=11;
+	}
+	void showdata()
+	{
+		System.out.println("rollno of student is " + rollno);
+		System.out.println("name of student is " + name);
+		System.out.println("marks of student are " + marks);
+		System.out.println("class of student is " + clas);
+	}
+}
+
+public class studentcons {
+     public static void main(String[] args) {
+        
+   student ob=new student(); //object of class student is created and constructor is called which initialises the data members
+	
+        ob.showdata();
+}
+}
+
+        </textarea>
+    </body>
+</html>

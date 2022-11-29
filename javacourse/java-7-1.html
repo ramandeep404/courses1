@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaclasses.html"> Back To Java Classes Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate example of class student that contains two public member functions getdata() and showdata() and four data members (rollno,name,clas and marks)
+
+class student
+{
+	private int rollno;
+	private String name;
+	private int marks;
+	private int clas;
+public 	void getdata()
+	{
+		rollno=1;
+                name=new String("abcdef");
+                marks=80;
+                clas=11;
+	}
+public void showdata()
+	{
+		System.out.println("rollno of the student is " + rollno);
+		System.out.println("name of student is " + name);
+		System.out.println("marks of student are " + marks);
+		System.out.println("class of student is " + clas);
+	}
+}
+
+public class classstudent {
+
+   
+    public static void main(String[] args) {
+
+        student ob=new student();
+        ob.getdata();
+        ob.showdata();
+    }
+}
+
+        </textarea>
+    </body>
+</html>

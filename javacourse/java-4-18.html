@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javauserdefined.html"> Back To Java User Defined Methods Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to create two functions that prints the three numbers in ascending order and descending order passed to functions as arguments
+
+class ascdesc
+{
+  public void asc(int a,int b,int c)
+{
+	int low,low2,low3;
+	low=a;
+        low2=a;
+        low3=a;
+	if(b<low)
+	{
+		low=b;
+	}
+	if(c<low)
+	{
+		low=c;
+	}
+	if(a==low)
+	{
+		if(b<c)
+		{
+			low2=b;
+			low3=c;
+		}
+		else
+		{
+			low2=c;
+			low3=b;
+		}
+	}
+	else
+		if(b==low)
+		{
+			if(a<c)
+			{
+				low2=a;
+				low3=c;
+			}
+			else
+			{
+				low2=c;
+				low3=a;
+			}
+		}
+		else
+			if(c==low)
+			{
+				if(a<b)
+				{
+					low2=a;
+					low3=b;
+				}
+				else
+				{
+					low2=b;
+					low3=a;
+				}
+			}
+	System.out.println("printing the numbers in ascending order ");
+	System.out.println(low+ "," + low2 + "," + low3);
+}
+
+public void desc(int a,int b,int c)
+{
+	int big,big2,big3;
+
+	big=a;
+        big2=a;
+        big3=a;
+	if(b>big)
+	{
+		big=b;
+	}
+	if(c>big)
+	{
+		big=c;
+	}
+	if(a==big)
+	{
+		if(b>c)
+		{
+			big2=b;
+			big3=c;
+		}
+		else
+		{
+			big2=c;
+			big3=b;
+		}
+	}
+	else
+		if(b==big)
+		{
+			if(a>c)
+			{
+				big2=a;
+				big3=c;
+			}
+			else
+			{
+				big2=c;
+				big3=a;
+			}
+		}
+		else
+			if(c==big)
+			{
+				if(a>b)
+				{
+					big2=a;
+					big3=b;
+				}
+				else
+				{
+					big2=b;
+					big3=a;
+				}
+			}
+	System.out.println("printing the numbers in descending order ");
+	System.out.println(big + "," + big2 + "," + big3);
+}
+
+}
+public class ascdescending {
+                        public static void main(String[] args) {
+   
+ascdesc ob=new ascdesc();
+ob.asc(10,8,9);
+ob.desc(10,8,9);
+
+}
+}
+
+
+
+        </textarea>
+    </body>
+</html>

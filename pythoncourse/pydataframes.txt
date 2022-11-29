@@ -1,0 +1,921 @@
+creating empty dataframe
+
+#import the pandas library and aliasing as pd
+import pandas as pd
+df = pd.DataFrame()
+print df
+
+_____________________________________
+
+create dataframe from list
+
+import pandas as pd
+data = [1,2,3,4,5]
+df = pd.DataFrame(data)
+print df
+
+______________________________________
+
+create dataframe from list example 2
+
+import pandas as pd
+data = [['Alex',10],['Bob',12],['Clarke',13]]
+df = pd.DataFrame(data,columns=['Name','Age'])
+print df
+
+________________________________________
+
+example 3
+
+import pandas as pd
+data = [['Alex',10],['Bob',12],['Clarke',13]]
+df = pd.DataFrame(data,columns=['Name','Age'],dtype=float)
+print df
+
+__________________________________________
+
+Create a DataFrame from Dict of ndarrays / Lists
+
+import pandas as pd
+data = {'Name':['Tom', 'Jack', 'Steve', 'Ricky'],'Age':[28,34,29,42]}
+df = pd.DataFrame(data)
+print df
+
+__________________________________________
+
+example 2
+
+import pandas as pd
+data = {'Name':['Tom', 'Jack', 'Steve', 'Ricky'],'Age':[28,34,29,42]}
+df = pd.DataFrame(data, index=['rank1','rank2','rank3','rank4'])
+print df
+
+_______________________________________________
+
+Create a DataFrame from List of Dicts
+
+example 1
+
+import pandas as pd
+data = [{'a': 1, 'b': 2},{'a': 5, 'b': 10, 'c': 20}]
+df = pd.DataFrame(data)
+print df
+
+_____________________________________________
+
+example 2
+
+import pandas as pd
+data = [{'a': 1, 'b': 2},{'a': 5, 'b': 10, 'c': 20}]
+df = pd.DataFrame(data, index=['first', 'second'])
+print df
+
+______________________________________________
+
+example 3
+
+import pandas as pd
+data = [{'a': 1, 'b': 2},{'a': 5, 'b': 10, 'c': 20}]
+
+#With two column indices, values same as dictionary keys
+df1 = pd.DataFrame(data, index=['first', 'second'], columns=['a', 'b'])
+
+#With two column indices with one index with other name
+df2 = pd.DataFrame(data, index=['first', 'second'], columns=['a', 'b1'])
+print df1
+print df2
+
+________________________________________________
+
+Create a DataFrame from Dict of Series
+
+import pandas as pd
+
+d = {'one' : pd.Series([1, 2, 3], index=['a', 'b', 'c']),
+   'two' : pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])}
+
+df = pd.DataFrame(d)
+print df
+
+_____________________________________________
+
+Column Selection
+
+import pandas as pd
+
+d = {'one' : pd.Series([1, 2, 3], index=['a', 'b', 'c']),
+   'two' : pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])}
+
+df = pd.DataFrame(d)
+print df ['one']
+_________________________________________
+
+adding a new column
+
+import pandas as pd
+
+d = {'one' : pd.Series([1, 2, 3], index=['a', 'b', 'c']),
+   'two' : pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])}
+
+df = pd.DataFrame(d)
+
+# Adding a new column to an existing DataFrame object with column label by passing new series
+
+print ("Adding a new column by passing as Series:")
+df['three']=pd.Series([10,20,30],index=['a','b','c'])
+print df
+
+print ("Adding a new column using the existing columns in DataFrame:")
+df['four']=df['one']+df['three']
+
+print df
+
+_______________________________________________
+
+Column Deletion
+
+# Using the previous DataFrame, we will delete a column
+# using del function
+import pandas as pd
+
+d = {'one' : pd.Series([1, 2, 3], index=['a', 'b', 'c']), 
+   'two' : pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd']), 
+   'three' : pd.Series([10,20,30], index=['a','b','c'])}
+
+df = pd.DataFrame(d)
+print ("Our dataframe is:")
+print df
+
+# using del function
+print ("Deleting the first column using DEL function:")
+del df['one']
+print df
+
+# using pop function
+print ("Deleting another column using POP function:")
+df.pop('two')
+print df
+
+___________________________________________
+
+Row Selection, Addition and Deletion
+
+Selection by label
+
+import pandas as pd
+
+d = {'one' : pd.Series([1, 2, 3], index=['a', 'b', 'c']), 
+   'two' : pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])}
+
+df = pd.DataFrame(d)
+print df.loc['b']
+
+__________________________________________
+
+Selection by integer location
+
+import pandas as pd
+
+d = {'one' : pd.Series([1, 2, 3], index=['a', 'b', 'c']),
+   'two' : pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])}
+
+df = pd.DataFrame(d)
+print df.iloc[2]
+
+______________________________________________
+
+Slice Rows
+
+import pandas as pd
+
+d = {'one' : pd.Series([1, 2, 3], index=['a', 'b', 'c']), 
+   'two' : pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])}
+
+df = pd.DataFrame(d)
+print df[2:4]
+
+_____________________________________
+Addition of Rows
+
+import pandas as pd
+
+df = pd.DataFrame([[1, 2], [3, 4]], columns = ['a','b'])
+df2 = pd.DataFrame([[5, 6], [7, 8]], columns = ['a','b'])
+
+df = df.append(df2)
+print df
+
+___________________________________________
+
+Deletion of Rows
+
+import pandas as pd
+
+df = pd.DataFrame([[1, 2], [3, 4]], columns = ['a','b'])
+df2 = pd.DataFrame([[5, 6], [7, 8]], columns = ['a','b'])
+
+df = df.append(df2)
+
+# Drop rows with label 0
+df = df.drop(0)
+
+print df
+
+_________________________________________
+
+iteritems()
+
+import pandas as pd
+import numpy as np
+dc={2015:{'Qtr1':34500,'Qtr2':56000,'Qtr3':47000,'Qtr4':49000},2016:{'Qtr1':44900,'Qtr2':46100,'Qtr3':57000,'Qtr4':59000},2017:{'Qtr1':54500,'Qtr2':51000,'Qtr3':57000,'Qtr4':58500}}
+df=pd.DataFrame(dc)
+for key,value in df.iteritems():
+   print(key,value)
+
+_____________________________________________________
+
+iterrows
+
+import pandas as pd
+import numpy as np
+dc={2015:{'Qtr1':34500,'Qtr2':56000,'Qtr3':47000,'Qtr4':49000},2016:{'Qtr1':44900,'Qtr2':46100,'Qtr3':57000,'Qtr4':59000},2017:{'Qtr1':54500,'Qtr2':51000,'Qtr3':57000,'Qtr4':58500}}
+df=pd.DataFrame(dc)
+for key,value in df.iterrows():
+   print(key,value)
+
+__________________________________________________________
+
+loc function to get a value from dataframe
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+result = df.loc['Row_2', 'Name']
+
+# Print the result 
+print(result)
+___________________________________________________
+
+loc function to access multiple rows
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+result = df.loc['Row_2':'Row_4',:]
+
+# Print the result
+print(result)
+
+___________________________________________________________
+
+loc function to access selective columns
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+result = df.loc[:,'Name':'Age',]
+
+# Print the result
+print(result)
+
+_________________________________________________________
+
+loc function to access range of columns from a range of rows
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+result = df.loc["Row_1":"Row_3",'Name':'Age',]
+
+# Print the result
+print(result)
+
+_____________________________________________________
+
+iloc function to access rows and columns from dataframe
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+result = df.iloc[0:2,1:3]
+
+# Print the result
+print(result)
+
+____________________________________________________
+
+select or accessing individual value using column name
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+result = df.Weight[0]
+
+# Print the result
+print(result)
+
+__________________________________________________________
+
+access individual element using index and column name
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+result = df.Weight['Row_1']
+
+# Print the result
+print(result)
+
+_____________________________________________________
+
+modify column value in a dataframe
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+df.Weight['Row_1']=90
+
+print(df)
+______________________________________________
+
+modify row in a dataframe using at function
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+df.at['Row_1']=99
+
+print(df)
+
+____________________________________________________
+
+modify row in a dataframe using loc function
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+df.loc['Row_1']=99
+
+print(df)
+
+_________________________________________________
+
+adding column to a dataframe
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+df['Class']=[12,11,10,9,9]
+
+print(df)
+
+________________________________________________________
+
+delete a column from a dataframe using del statement
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+# return the value
+del df["Weight"]
+
+print(df)
+
+__________________________________________
+
+min function to get minimum values from a dataframe
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+print(df.min())
+
+________________________________________________
+
+max function to get maximum values in a dataframe
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+print(df.max())
+
+__________________________________________________________
+
+mode function to sort the records
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+print(df.mode())
+
+__________________________________________________
+
+mean function to find mean of values
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+print(df.mean())
+
+________________________________________________________
+
+median function to get median value
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+print(df.median())
+
+____________________________________________________
+
+count function
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+print(df.count())
+
+___________________________________________________
+
+sum function
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+
+print(df.sum())
+
+____________________________________________________
+
+apply a function on a column
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+print(df['Weight'].min())
+
+______________________________________________
+
+apply functions on multiple columns
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+print(df[['Weight','Age']].min())
+
+___________________________________________________
+
+example 2 apply function on multiple columns
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+print(df[['Weight','Age']].count())
+
+______________________________________________________________
+
+apply functions on a row of a dataframe
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+print(df.loc['Row_1':].max())
+
+________________________________________
+
+apply function on a range of rows of a dataframe
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+print(df.loc['Row_1':'Row_3'].count())
+
+_______________________________________________________
+
+apply function to subset of dataframe
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+
+print(df.loc['Row_1':'Row_2','Weight':'Age'].max())
+
+____________________________________________________
+
+pivot function
+
+# importing pandas as pd
+import pandas as pd
+d1={'Tutor':['Tahira','Gurjyot','Anusha','Jacob','Venkat'],
+'Classes':[28,36,41,32,40],
+'Country':['USA','UK','Japan','USA','Brazil']
+}
+dfd=pd.DataFrame(d1)
+print(dfd)
+dfd2=dfd.pivot(index='Country',columns='Tutor',values='Classes')
+print(dfd2)
+
+_________________________________________________________
+
+sort_values function
+
+# importing pandas as pd
+import pandas as pd
+d1={'Tutor':['Tahira','Gurjyot','Anusha','Jacob','Venkat'],
+'Classes':[28,36,41,32,40],
+'Country':['USA','UK','Japan','USA','Brazil']
+}
+dfd=pd.DataFrame(d1)
+print(dfd)
+dfd2=dfd.sort_values('Country')
+print(dfd2)
+
+_________________________________________________
+
+create histogram 
+
+# importing pandas as pd
+import pandas as pd
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame({'Weight':[45, 88, 56, 15, 71],
+                   'Name':['Sam', 'Andrea', 'Alex', 'Robin', 'Kia'],
+                   'Age':[14, 25, 55, 8, 21]},index=index_)
+print(df)
+import matplotlib.pyplot as plt
+plt.interactive(True)
+
+plt.show(df.hist(column='Age'))
+
+_________________________________________________________
+
+pipe function
+
+import pandas as pd
+import numpy as np
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+# Creating the DataFrame
+df = pd.DataFrame([45, 88, 56, 15, 71])
+print(df)
+df=df.pipe(np.add,30).pipe(np.multiply,3)
+print(df)
+
+________________________________________________________________________
+
+apply function
+
+import pandas as pd;
+def fun(num):
+  
+    if num<200: 
+        return "Low"
+  
+    elif num>= 200 and num<400: 
+        return "Normal"
+  
+    else: 
+        return "High"
+
+src=pd.Series([1000,20,300,400]);
+print(src);
+new=src.apply(fun)
+print(new)
+
+________________________________________________________
+
+applymap
+
+import pandas as pd;
+src=pd.DataFrame(['abc','xyx','xyz']);
+src=src.applymap(lambda x: str(x) + '_X')
+print(src)
+
+_______________________________________________________________
+
+group by function
+
+import pandas as pd
+
+# Define a dictionary containing employee data
+data1 = {'Name':['Jai', 'Anuj', 'Jai', 'Princi',
+                 'Gaurav', 'Anuj', 'Princi', 'Abhi'],
+        'Age':[27, 24, 22, 32,
+               33, 36, 27, 32],
+        'Address':['Nagpur', 'Kanpur', 'Allahabad', 'Kannuaj',
+                   'Jaunpur', 'Kanpur', 'Allahabad', 'Aligarh'],
+        'Qualification':['Msc', 'MA', 'MCA', 'Phd',
+                         'B.Tech', 'B.com', 'Msc', 'MA']}
+
+
+# Convert the dictionary into DataFrame
+df = pd.DataFrame(data1)
+
+print(df)
+
+df.groupby('Name')
+print(df.groupby('Name').groups) 
+
+____________________________________________________________________
+
+agg function
+
+
+# importing pandas module
+import pandas as pd
+
+# importing numpy module
+import numpy as np
+
+# creating random arr of 10 elements
+arr=np.random.randn(10)
+
+# creating series from array
+series=pd.Series(arr)
+
+# calling .agg() method 
+result=series.agg(lambda num : num + 2)
+
+# display
+print('Array before operation: \n', series,
+      '\n\nArray after operation: \n',result)
+
+______________________________________________________
+
+transform function
+
+import pandas as pd
+
+# Creating the DataFrame
+df = pd.DataFrame({"A":[12, 4, 5, None, 1],
+                   "B":[7, 2, 54, 3, None],
+                   "C":[20, 16, 11, 3, 8],
+                   "D":[14, 3, None, 2, 6]})
+
+# Create the index
+index_ = ['Row_1', 'Row_2', 'Row_3', 'Row_4', 'Row_5']
+
+# Set the index
+df.index = index_
+
+# Print the DataFrame
+print(df)
+
+
+# add 10 to each element of the dataframe
+result = df.transform(func = lambda x : x + 10)
+
+# Print the result
+print(result)
+
+_____________________________________________________
+
+rename function
+
+import pandas as pd
+
+d = {'one' : pd.Series([1, 2, 3], index=['a', 'b', 'c']),
+   'two' : pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd']),
+   'three' : pd.Series([10,20,30], index=['a','b','c'])}
+
+df = pd.DataFrame(d)
+print ("Our dataframe is:")
+print(df)
+df.rename(index = {"a": "A",
+                     "b":"B","c":"C","d":"D"},
+                                 inplace = True)
+
+print(df)
+
+_______________________________________________
+
+reindex function
+
+
+# importing pandas as pd
+import pandas as pd
+
+# Creating the dataframe
+df = pd.DataFrame({"A":[1, 5, 3, 4, 2],
+                   "B":[3, 2, 4, 3, 4],
+                   "C":[2, 2, 7, 3, 4],
+                   "D":[4, 3, 6, 12, 7]},
+                   index =["first", "second", "third", "fourth", "fifth"])
+
+# Print the dataframe
+print(df)
+df=df.reindex(["first", "dues", "trois", "fourth", "fifth"])
+print(df)
+
+_________________________________________________________________
+
+reindex_like function
+
+# importing pandas as pd
+import pandas as pd
+
+# Creating the first dataframe
+df1 = pd.DataFrame({"A":[1, 5, 3, 4, 2],
+                    "B":[3, 2, 4, 3, 4],
+                    "C":[2, 2, 7, 3, 4],
+                    "D":[4, 3, 6, 12, 7]},
+                    index =["A1", "A2", "A3", "A4", "A5"])
+
+# Creating the second dataframe
+df2 = pd.DataFrame({"A":[10, 11, 7, 8, 5],
+                    "B":[21, 5, 32, 4, 6],
+                    "C":[11, 21, 23, 7, 9],
+                    "D":[1, 5, 3, 8, 6]},
+                     index =["A1", "A3", "A4", "A7", "A8"])
+
+# Print the first dataframe
+print(df1)
+
+# Print the second dataframe
+print(df2)
+
+
+# find matching indexes
+df1=df1.reindex_like(df2)
+
+print(df1)
+____________________________________________________________
+
+

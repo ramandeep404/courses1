@@ -1,0 +1,1 @@
+select * from employees where date_of_joining>='2000-1-1';

@@ -1,0 +1,1317 @@
+1. //program to demonstrate if statement example 1 , check whether number is equal to 10 or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a == 10)
+            {
+                Console.WriteLine("value of a is equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+2. //program to demonstrate if statement example 2, check whether a number is greater than 10 or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a > 10)
+            {
+                Console.WriteLine("value of a is greater than 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+3. //program to demonstrate if statement example 3,program to find whether number is less than 10 or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a < 10)
+            {
+                Console.WriteLine("value of a is less than 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+4. //program to demonstrate if statement example 4 , check whether number is less than or equal to 10
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a <= 10)
+            {
+                Console.WriteLine("value of a is less than 10 or equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+5. //program to demonstrate if statement example 5 , check whether number is greater than or equal to 10
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a >= 10)
+            {
+                Console.WriteLine("value of a is greater than 10 or equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+6. //program to demonstrate if statement example 6 , check whether number is not equal to 10
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a != 10)
+            {
+                Console.WriteLine("value of a is not equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+7. //program to demonstrate if-else statement example 1 , check whether number is equal to 10 or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a == 10)
+            {
+                Console.WriteLine("value of a is equal to 10");
+            }
+            else
+            {
+                Console.WriteLine("value of a is not equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+8. //program to demonstrate if-else statement example 2 , check whether number is greater than 10 or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a > 10)
+            {
+                Console.WriteLine("value of a is greater than 10");
+            }
+            else
+            {
+                Console.WriteLine("value of a is less than 10 or equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+9. //program to demonstrate if-else statement example 3 , check whether number is less than 10 or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a < 10)
+            {
+                Console.WriteLine("value of a is less than 10");
+            }
+            else
+            {
+                Console.WriteLine("value of a is greater than 10 or equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+10. //program to demonstrate if-else statement example 4, check whether number is equal to 10 or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a != 10)
+            {
+                Console.WriteLine("value of a is not equal to 10");
+            }
+            else
+            {
+                Console.WriteLine("value of a is equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+11. //program to demonstrate if-else statement example 5, check whether number is greater than 10 or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a > 10)
+            {
+                Console.WriteLine("value of a is greater than 10");
+            }
+            else
+            {
+                Console.WriteLine("value of a is less than 10 or equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+12. //program to demonstrate if-else statement example 6, check whether a is less than or equal to 10 or greater than 10
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a < 10)
+            {
+                Console.WriteLine("value of a is less than 10");
+            }
+            else
+            {
+                Console.WriteLine("value of a is greater than 10 or equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+13. //program to demonstrate if-else statement example 7, check whether a is greater than or equal to 10 or less than 10
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a > 10)
+            {
+                Console.WriteLine("value of a is greater than 10");
+            }
+            else
+            {
+                Console.WriteLine("value of a is less than 10 or equal to 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+14. //program to demonstrate if-else statement example 8, check whether a is greater than or equal to 10 or less than 10 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a >= 10)
+            {
+                Console.WriteLine("value of a is greater than 10 or equal to 10");
+            }
+            else
+            {
+                Console.WriteLine("value of a is less than 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+15. //program to demonstrate if-else statement example 9, check whether a is less than or equal to 10 or greater than 10
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a <= 10)
+            {
+                Console.WriteLine("value of a is less than 10 or equal to 10");
+            }
+            else
+            {
+                Console.WriteLine("value of a is greater than 10");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+16. //program to input temperature in celsius and check whether it is boiling point of water or not 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int temp;
+            Console.WriteLine("Enter temperature");
+            temp = Convert.ToInt32(Console.ReadLine());
+            if (temp == 100)
+            {
+                Console.WriteLine("It is boiling point of water");
+            }
+            else
+            {
+                Console.WriteLine("It is not boiling point of water");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+17. //program to input marks and check whether student is passed with distinction or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int marks;
+            Console.WriteLine("Enter temperature");
+            marks = Convert.ToInt32(Console.ReadLine());
+            if (marks >=75 )
+            {
+                Console.WriteLine("Passed with distinction");
+            }
+            else
+            {
+                Console.WriteLine("Pass");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+18. //program to input age and check whether person is eligible to vote or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int age;
+            Console.WriteLine("Enter age");
+            age = Convert.ToInt32(Console.ReadLine());
+            if (age >=18 )
+            {
+                Console.WriteLine("Eligible to Vote");
+            }
+            else
+            {
+                Console.WriteLine("Not Eligible to Vote");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+19. //program to input three numbers and find largest of three numbers using if-else statement without using fourth variable
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c;
+            Console.WriteLine("Enter value for a ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for b ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for c ");
+            c = Convert.ToInt32(Console.ReadLine());
+            if ((a > b) && (a > c))
+            {
+                Console.WriteLine(a + " is largest");
+            }
+            if ((b > a) && (b > c))
+            {
+                Console.WriteLine(b + " is largest");
+            }
+            if ((c > a) && (c > b))
+            {
+                Console.WriteLine(c + " is largest");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+20. //program to input three numbers and find largest of three numbers using if-else statement with using fourth variable
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c, max;
+            Console.WriteLine("Enter value for a ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for b ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for c ");
+            c = Convert.ToInt32(Console.ReadLine());
+            max = a;
+            if (b > max)
+            {
+                max = b;
+            }
+            if (c > max)
+            {
+                max = c;
+            }
+            Console.WriteLine(max + " is largest");
+            Console.ReadLine();
+        }
+    }
+}
+
+21. //program to input three numbers and find smallest of three numbers using if-else statement without using fourth variable
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c;
+            Console.WriteLine("Enter value for a ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for b ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for c ");
+            c = Convert.ToInt32(Console.ReadLine());
+            if ((a < b) && (a < c))
+            {
+                Console.WriteLine(a + " is smallest");
+            }
+            if ((b < a) && (b < c))
+            {
+                Console.WriteLine(b + " is smallest");
+            }
+            if ((c < a) && (c < b))
+            {
+                Console.WriteLine(c + " is smallest");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+22. //program to input three numbers and find smallest of three numbers using if-else statement with using fourth variable
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c, min;
+            Console.WriteLine("Enter value for a ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for b ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for c ");
+            c = Convert.ToInt32(Console.ReadLine());
+            min = a;
+            if (b < min)
+            {
+                min = b;
+            }
+            if (c < min)
+            {
+                min = c;
+            }
+            Console.WriteLine(min + " is smallest");
+            Console.ReadLine();
+        }
+    }
+}
+
+23. //program to demonstrate if-else statement and (check whether marks are between 80 and 90)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int marks;
+            Console.WriteLine("Enter Marks ");
+            marks = Convert.ToInt32(Console.ReadLine());
+            if ((marks >= 80) && (marks <= 90))
+            {
+                Console.WriteLine("Marks are between 80 and 90");
+            }
+            else
+            {
+                Console.WriteLine("Marks are not between 80 and 90");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+
+24. //program to demonstrate if-else statement program to demonstrate if or (check whether marks are equal to either 80 or 90
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int marks;
+            Console.WriteLine("Enter Marks ");
+            marks = Convert.ToInt32(Console.ReadLine());
+            if ((marks == 80) || (marks == 90))
+            {
+                Console.WriteLine("Marks are either 80 or 90");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+25. //program to input a character and check whether it is equal to a or b using if statement example of OR ( || ) operator
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char ch = 'a';
+            if ((ch == 'a') || (ch == 'b'))
+            {
+                Console.WriteLine("Character is either a or b");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+26. //program to compute grade of a student based on marks using if else statement
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int marks;
+            char grade;
+            Console.WriteLine("Enter marks");
+            marks = Convert.ToInt32(Console.ReadLine());
+            if ((marks >= 80) && (marks <= 100))
+            {
+                grade = 'a';
+            }
+            else if ((marks >= 70) && (marks < 80))
+            {
+                grade = 'b';
+            }
+            else if ((marks >= 60) && (marks < 70))
+            {
+                grade = 'c';
+            }
+            else
+            {
+                grade = 'd';
+            }
+            Console.WriteLine("Grade obtained by student is " + grade);
+            Console.ReadLine();
+        }
+    }
+}
+
+27. //program to check whether number entered is odd or even using if-else statement
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a=Convert.ToInt32(Console.ReadLine());
+            if(a%2==0)
+	        {
+		        Console.WriteLine("a is an even number");
+	        }
+	        else
+	        {
+		        Console.WriteLine("a is an odd number");
+	        }
+            Console.ReadLine();
+        }
+    }
+}
+
+28. //program to input two numbers a and b and check whether a is divisible by b or not using if-else
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b;
+            a=10;
+            b=5;
+            Console.WriteLine("Enter first number");
+            a=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b=Convert.ToInt32(Console.ReadLine());
+	        if(a%b==0)
+	        {
+		        Console.WriteLine("a is divisible by b");
+	        }
+	        else
+	        {
+		        Console.WriteLine("a is not divisible by b");
+	        }
+            Console.ReadLine();
+        }
+    }
+}
+
+29. //program to check whether user has entered vowel or not using if-else statement
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char ch;
+            string str= Console.ReadLine().Substring(0, 1);
+            ch = Convert.ToChar(str);
+	    if((ch=='a') || (ch=='e') || (ch=='i') || (ch=='o') || (ch=='u'))
+	    {
+		Console.WriteLine("you entered a vowel");
+	    }
+	    else
+	    {
+		Console.WriteLine("you have not entered a vowel");
+	    }
+
+            Console.ReadLine();
+        }
+    }
+}
+
+30. //program to calculate discount on a price,if price is above 1000 then discount is 10% otherwise 5 %
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double price,discount;
+            Console.WriteLine("Enter amount");
+            price=Convert.ToDouble(Console.ReadLine());
+	        if(price>=1000)
+	        {
+		        discount=0.1*price;
+	        }
+	        else
+	        {
+		        discount=0.05*price;
+	        }
+	        Console.WriteLine("discount is " + discount);
+
+            Console.ReadLine();
+        }
+    }
+}
+
+31. //program to demonstrate switch-case statement example 1, displaying day of the week
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int day;
+            Console.WriteLine("Enter a day in number");
+            day=Convert.ToInt32(Console.ReadLine());
+	        switch(day)
+	        {
+	            case 1:
+		                Console.WriteLine("monday");
+		                break;
+	            case 2:
+		                Console.WriteLine("tuesday");
+                        break;
+	            case 3:
+		                Console.WriteLine("wednesday");
+		                break;
+	            case 4:
+		                Console.WriteLine("thursday");
+		                break;
+	            case 5:
+		                Console.WriteLine("friday");
+		                break;
+	            case 6:
+		                Console.WriteLine("saturday");
+		                break;
+	            case 7:
+		               Console.WriteLine("sunday");
+		                break;
+	            default:
+                       Console.WriteLine("enter a day between 1 and 7");
+                       break;
+	        }
+
+
+            Console.ReadLine();
+        }
+    }
+}
+
+32. //program to demonstrate switch-case statement example 1, displaying day of the week
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int month;
+            Console.WriteLine("Enter a month in number");
+            month=Convert.ToInt32(Console.ReadLine());
+	        switch(month)
+	        {
+	            case 1:
+		                Console.WriteLine("January");
+		                break;
+	            case 2:
+		                Console.WriteLine("February");
+                        break;
+	            case 3:
+		                Console.WriteLine("March");
+		                break;
+	            case 4:
+		                Console.WriteLine("April");
+		                break;
+	            case 5:
+		                Console.WriteLine("May");
+		                break;
+	            case 6:
+		                Console.WriteLine("June");
+		                break;
+	            case 7:
+		               Console.WriteLine("July");
+		                break;
+                case 8:
+                        Console.WriteLine("August");
+                        break;
+                case 9:
+                        Console.WriteLine("September");
+                        break;
+                case 10:
+                        Console.WriteLine("October");
+                        break;
+                case 11:
+                        Console.WriteLine("November");
+                        break;
+                case 12:
+                        Console.WriteLine("December");
+                        break;
+	            default:
+                       Console.WriteLine("enter a month between 1 and 12");
+                       break;
+	        }
+
+
+            Console.ReadLine();
+        }
+    }
+}
+
+33. //calculate da,hra based on basic example of if-else statement
+//(if basic<=2500,hra=da=0,if basic>=2500&&<4000,hra=20%,da=15% if basic>=4000&&<8000,hra=25,da=20,if basic>8000,hra=30,da=25)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double basic,hra,da,netsal;
+            Console.WriteLine("Enter basic salary");
+            basic=Convert.ToDouble(Console.ReadLine());
+            if(basic<=2500)
+            {
+                hra=0;
+                da=0;
+            }
+            else if((basic>=2500) && (basic<4000))
+                {
+                    hra=0.2f*basic;
+                    da=0.15f*basic;
+                }
+            else if((basic>=4000) && (basic<8000))
+                {
+                    hra=0.25f*basic;
+                    da=0.2f*basic;
+                }
+            else
+                {
+                    hra=0.3f*basic;
+                    da=0.25f*basic;
+                }
+        netsal=basic+hra+da;
+        Console.WriteLine("hra is " + hra);
+        Console.WriteLine("da is " + da);
+        Console.WriteLine("net salary is " + netsal);
+
+
+            Console.ReadLine();
+        }
+    }
+}
+
+34. //program to input three numbers and print them in ascending order using if-else statement
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c,low,low2,low3;
+            Console.WriteLine("Enter first number");
+            a=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter third number");
+            c=Convert.ToInt32(Console.ReadLine());
+	        low=a;
+            low2=a;
+            low3=a;
+	        if(b<low)
+	        {
+		        low=b;
+	        }
+	        if(c<low)
+	        {
+		        low=c;
+	        }
+	        if(a==low)
+	        {
+		        if(b<c)
+		        {
+			        low2=b;
+			        low3=c;
+		        }
+		        else
+		        {
+			        low2=c;
+			        low3=b;
+		        }
+	        }
+	        else
+		        if(b==low)
+		        {
+			        if(a<c)
+			        {
+				        low2=a;
+				        low3=c;
+			        }
+			        else
+			        {
+				        low2=c;
+				        low3=a;
+			        }
+		        }
+		        else
+			        if(c==low)
+			        {
+				        if(a<b)
+				        {
+					        low2=a;
+					        low3=b;
+				        }
+				        else
+				        {
+					        low2=b;
+					        low3=a;
+				        }
+			        }
+	        Console.WriteLine(low + "," + low2 + "," + low3);
+            Console.ReadLine();
+        }
+    }
+}
+
+35. //program to input three numbers and print them in descending order using if-else statement
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c,big,big2,big3;
+            Console.WriteLine("Enter first number");
+            a=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter third number");
+            c=Convert.ToInt32(Console.ReadLine());
+
+	            big=a;
+                big2=a;
+                big3=a;
+	            if(b>big)
+	            {
+		            big=b;
+	            }
+	            if(c>big)
+	            {
+		            big=c;
+	            }
+	            if(a==big)
+	            {
+		            if(b>c)
+		            {
+			            big2=b;
+			            big3=c;
+		            }
+		            else
+		            {
+			            big2=c;
+			            big3=b;
+		            }
+	            }
+	            else
+		            if(b==big)
+		            {
+			            if(a>c)
+			            {
+				            big2=a;
+				            big3=c;
+			            }
+			            else
+			            {
+				            big2=c;
+				            big3=a;
+			            }
+		            }
+		            else
+			            if(c==big)
+			            {
+				            if(a>b)
+				            {
+					            big2=a;
+					            big3=b;
+				            }
+				            else
+				            {
+					            big2=b;
+					            big3=a;
+				            }
+			            }
+	        Console.WriteLine(big + "," + big2 + "," + big3);
+            Console.ReadLine();
+        }
+    }
+}
+
+36. //program to convert fahrenheit temp to celsius and vice versa using if-else statement
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int choice;
+            double temp,conv;
+            Console.WriteLine("Enter your choice 1 for fahrenheit to celsius and 2 for celsius to fahrenheit");
+            choice=Convert.ToInt32(Console.ReadLine());
+            if(choice==1)
+            {
+                Console.WriteLine("Enter tempearture in fahrenheit");
+                temp=Convert.ToDouble(Console.ReadLine());
+                conv=(temp-32)/1.8;
+                Console.WriteLine("temperature in celsius is " + conv);
+            }
+            else
+            {
+                Console.WriteLine("Enter tempearture in celsius");
+                temp=Convert.ToDouble(Console.ReadLine());
+                conv=(1.8*temp)+32;
+                Console.WriteLine("temperature in fahrenheit is " + conv);
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+37. //program to input a character and check whether it is a vowel or not using switch statement
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+                char ch;
+                Console.WriteLine("Enter a character");
+                string str= Console.ReadLine().Substring(0, 1);
+                ch = Convert.ToChar(str);
+	            switch(ch)
+	            {
+	            case 'a':
+		            Console.WriteLine("you entered a vowel");
+	                break;
+	            case 'e':
+		            Console.WriteLine("you entered a vowel");
+		            break;
+	            case 'i':
+		            Console.WriteLine("you enetred a vowel");
+		            break;
+	            case 'o':
+		            Console.WriteLine("you enetred a vowel");
+		            break;
+	            case 'u':
+		            Console.WriteLine("you entered a vowel");
+		            break;
+	            default:
+                    Console.WriteLine("enter a vowel (a,e,i,o,u)");
+                    break;
+
+	            }
+            Console.ReadLine();
+        }
+    }
+}
+
+38. //program to input a character and check whether it is a vowel or not using switch statement
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int year;
+            Console.WriteLine("Enter a year");
+            year=Convert.ToInt32(Console.ReadLine());
+            if((year%100==0) || (year%400==0))
+            {
+                Console.WriteLine("leap year");
+            }
+            else
+            {
+                if(year%4==0)
+                {
+                    Console.WriteLine("leap year");
+                }
+                else
+                {
+                    Console.WriteLine("not a leap year");
+                }
+    }
+            Console.ReadLine();
+        }
+    }
+}

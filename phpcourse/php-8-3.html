@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phppdomysql.html"> Back To PHP PDO MySql</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to insert a record in a mysql database table
+$hostname = 'localhost';
+
+$username = 'root';
+
+$password = '';
+
+try {
+    $dbh = new PDO("mysql:host=$hostname;dbname=students", $username, $password);
+    
+    print('Connected to database<br />');
+
+    $count = $dbh->exec("INSERT INTO student VALUES (3,'abcdfg',11,78)");
+
+    print($count);
+
+    $dbh = null;
+    }
+catch(PDOException $e)
+    {
+    print($e->getMessage());
+    }
+?>
+
+
+
+        </textarea>
+    </body>
+</html>

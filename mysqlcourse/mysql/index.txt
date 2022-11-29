@@ -1,0 +1,87 @@
+1. query to create a database with name abc
+2. query to create table students with primary key as rollno
+3. query to create table students without primary key
+4. query to set the default database as abc
+5. query to show or list tables in the current database
+6. query to show the structure of table students (no data is displayed only structure is displayed
+7. query to insert a row into table students
+8. query to insert data in selected columns of table students (only rollno and name) for other columns NULL value will be inserted
+9. query to insert NULL values in some columns of the table
+10. query to delete the table and all its contents
+11. query to create the table employees with a column as data_of_joining) 
+12. query to show all the databases
+13. query to retrieve all the data from the table students
+14. query to retrieve only column name from table students
+15. query to retrieve name and rollno (2 columns) from table students
+16. query to retrieve records from table students where marks are greater than 90 (marks>90)
+17. query to insert date of joining in table employees, example of inserting date values
+18. query to create a table students1 with rollno as primary key and auto_increment
+19. query to create a table students1 with rollno as unique ( no duplicate values can be inserted) 
+20.query to create table students3 with marks given default value of 11
+21.query to insert today's date if no date is entered
+22.query to retrieve records from table students where name is abcdef
+23.query to retrieve records from table students where name is abcdef and marks are above or equal to 80
+24.query to retrieve records from table students where marks are greater than 80 and less than 90
+25.query to retrieve records from table students where class is either 11 or 12
+26.query to retrieve records from table students where class is 11 and marks are greater than or equal to 80
+27.query to retrieve records from table students where rollno is greater than 10 or equal to 10
+28. query to retrieve records from table students where class is in the list (10,11,12)
+29. query to retrieve records from table students where marks are between 80 and 90 (80 and 90 are inclusive) example of between and operator
+30.query to retrieve records from table students where marks are greater than or equal to 80 and class is 11 or 12
+31.query to retrieve records where name is abcdef or name is xyzxyz
+32.query to retrieve records from table employees where date_of_joining comes after 2000-1-1
+33.query to retrieve records from table students where name begins with letter a
+34.query to retrieve records from table students where name begins with ab
+35.query to retrieve records from table students where second letter in name is b
+36.query to retrieve records from table students where marks are not equal to 80 (example of NOT operator)
+37.query to retrieve records from table students where marks are null
+38.query to retrieve records from table students where marks are not null
+39.query to retrieve records from table students where marks are not equal to 80 (example of !=)
+40.query to retrieve records from table students where marks are not equal to 80 (example of <>)
+41.query to sort records of table students according to name in ascending order(example of order by)
+42.query to sort records of table students according to name in descending order(example of order by)
+43.query to sort records of table students first by name in ascending order and if name contains duplicate values(then these duplicate values are sorted by marks in ascending order)
+44.query to sort records of table students first by name in ascending order and if name contains duplicate values(then these duplicate values are sorted by marks in descending order
+45.query to retrieve records from table students from record number 0 to 10 using limit
+46.query to retrieve number of years from table employees between two dates(date_of_joining and retrdate)
+47.query to retrieve number of years from table employees between date_of_joining and current date
+48.query to retrieve records from table students where name contains b using like operator
+49.query to retrieve records from table students where name contains bc using like operator
+50.query to retrieve records from table students where length of name is only four characters using like operator
+51.query to retrieve unique set of values in column designation from table employees
+52.query to retrieve unique set of values in column designation from table employees sorted by designation in descending order
+53.query to count the number of records in table employees
+54.query to count the number of records where designation=accountant in table employees
+55.query to count number of different or distinct designations from the table employees
+56.query to count number of designations according to groups
+57.query to count number of designations according to groups where count is greater than 1
+58.query to retrieve maximum or highest salary from table employees (max function)
+59.query to retrieve second highest salary from employees
+60.query to retrieve third highest salary from employees
+61.query to retrieve minimum salary from employees (min function)
+62.query to retrieve second lowest salary from employees 
+63.query to retrieve third lowest salary from employees
+64.query to retrieve sum of column salary from table employees
+65.query to retrieve sum of column salary from table employees where designation is accountant
+66.query to retrieve average of column salary from table employees
+67.query to retrieve month from the column date_of_joining from table employees
+68.query to retrieve day from the column date_of_joining from table employees
+69.query to retrieve year from the column date_of_joining from table employees
+70.query to display current date using function curdate()
+71.query to update salary to 11000 in table employees where designation is accountant
+72.query to update salary by 1000 in table employees where designation is clerk
+73.query to update salary by 5 percent in table employees where designation is clerk
+74.query to delete records from table employees where salary is greater than 20000
+75.query to delete records from table employees where designation is clerk
+76.query to delete all records from table employees and not the structure of the table(table will exist in the database with zero records)
+77.query to delete the table employees with all the records in it from the database 
+78.query to add a column hra of datatype int to table employees using alter table command
+79.query to change the datatype of column designation from char(20) to char(30) from table employees using alter table command
+80.query to retrieve all records from table employees where designation is in the list (accountant,clerk,officer)
+81.query to create a view with name empview from table employees containing records where deisgnation is accountant
+82.query to retrieve all records from view empview
+83.query to retrieve all records from view empview where salary is greater than 10000
+84.query to rename a table from students to students_new using alter table command
+85.query to delete view with name empview
+86.query to create table employees_clerk from select command on employees table
+87.query to delete a database with name abc using drop database command

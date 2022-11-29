@@ -1,0 +1,76 @@
+Imports System.IO
+
+Module Module1
+    Class contact
+        Public cname As String
+        Public caddress As String
+        Public cmobile As String
+        Public cemail As String
+        Public Sub New(ByVal cn As String, ByVal ca As String, ByVal cm As String, ByVal ce As String)
+            cname = cn
+            caddress = ca
+            cmobile = cm
+            cemail = ce
+        End Sub
+        Public Function convert() As String
+            Dim contactstr As String
+            contactstr = cname & "," & caddress & "," & cmobile & "," & cemail
+            convert = contactstr
+        End Function
+
+    End Class
+    Sub addcontact()
+        Dim ca As contact
+        Dim cname As String
+        Dim caddress As String
+        Dim cmobile As String
+        Dim cemail As String
+        Dim constr As String
+        Console.WriteLine("Enter Contact Name ")
+        cname = Console.ReadLine()
+        Console.WriteLine("Enter Contact Address ")
+        caddress = Console.ReadLine()
+        Console.WriteLine("Enter Contact Mobile")
+        cmobile = Console.ReadLine()
+        Console.WriteLine("Enter Contact Email ")
+        cemail = Console.ReadLine()
+        ca = New contact(cname, caddress, cmobile, cemail)
+        constr = ca.convert()
+        Dim strFile As String = "c:\\temp\\contactsvbnet.txt"
+
+        Using sw As New StreamWriter(File.Open(strFile, FileMode.Append))
+            sw.WriteLine(constr)
+        End Using
+        Console.WriteLine("Data Written")
+    End Sub
+    Sub viewcontacts()
+        Dim strFile As String = "c:\\temp\\contactsvbnet.txt"
+        Dim a As String
+        Using sr As New StreamReader(File.Open(strFile, FileMode.Open))
+            Do
+                a = sr.ReadLine()
+                Console.WriteLine(a)
+            Loop Until a Is Nothing
+
+        End Using
+    End Sub
+    Sub Main()
+        Dim ch As Integer
+        While True
+            Console.WriteLine("1. Add Contact ")
+            Console.WriteLine("2. View All Contacts ")
+            Console.WriteLine("3. Exit ")
+            ch = Convert.ToInt32(Console.ReadLine())
+            If ch = 1 Then
+                addcontact()
+            End If
+            If ch = 2 Then
+                viewcontacts()
+            End If
+            If ch = 3 Then
+                Exit While
+            End If
+        End While
+    End Sub
+
+End Module

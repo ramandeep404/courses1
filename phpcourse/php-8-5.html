@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phppdomysql.html"> Back To PHP PDO MySql</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to update a record in a table
+
+$hostname = 'localhost';
+
+$username = 'root';
+
+$password = '';
+
+try {
+    $dbh = new PDO("mysql:host=$hostname;dbname=students", $username, $password);
+   
+    echo 'Connected to database<br />';
+
+   
+    $count = $dbh->exec("UPDATE student SET name='abcdef' WHERE rollno=3");
+
+    echo $count;
+
+    $dbh = null;
+    }
+catch(PDOException $e)
+    {
+    echo $e->getMessage();
+    }
+?>
+
+
+
+        </textarea>
+    </body>
+</html>

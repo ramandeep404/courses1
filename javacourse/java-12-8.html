@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javajdbc.html"> Back To Java JDBC Database Connectivity Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package oracleconn;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.sql.*;
+/**
+ *
+ * @author raman
+ */
+public class NewClass {
+ public static void main(String[] args) {
+        // TODO code application logic here
+        try {
+		Statement stmt;
+		int rs;
+
+FileOutputStream fs=null;
+
+		Class.forName("oracle.jdbc.driver.OracleDriver");  
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","waheguru345");  
+                 PreparedStatement ps= con.prepareStatement("SELECT * FROM images");
+  
+                  ResultSet rset=ps.executeQuery();
+     	    
+     byte b[];
+     Blob blob;
+     int i=1;
+     while(rset.next())
+     {
+      
+      
+      File f=new File("c:\\temp\\abcdefromoracle.jpg");
+     fs=new FileOutputStream(f);
+      blob=rset.getBlob("image");
+      b=blob.getBytes(1, (int)blob.length());
+      fs.write(b);
+     }
+     System.out.println("Image Read");
+                  
+		}
+		catch(Exception e)
+		{
+		System.out.println(e.toString());
+		}
+    }
+    
+}
+
+
+
+        
+
+
+
+        </textarea>
+    </body>
+</html>

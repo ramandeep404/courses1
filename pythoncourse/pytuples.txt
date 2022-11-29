@@ -1,0 +1,126 @@
+creating empty tuple
+
+t=tuple()
+print(t)
+
+_______________________________________________
+
+creating single element tuple
+
+t=(1)
+print(t)
+
+_______________________
+
+creating tuple from sequence using tuple method
+
+t=tuple("hello")
+print(t)
+
+________________________________________________
+
+accessing individual elements of a tuple
+
+t=tuple("hello")
+print(t[0])
+
+____________________________________________________
+
+traversing a tuple
+
+T=tuple("hello")
+for i in range (0,len(T)):
+    print(T[i])
+
+______________________________________________________
+
+joining tuples
+
+t1=(1,2,3)
+t2=(4,5,6)
+t3=t1+t2;
+print(t1)
+print(t2)
+print(t3)
+
+_____________________________________________________
+
+slicing tuple
+
+t1=(1,2,3,6,7,9)
+print(t1[3:5])
+
+____________________________________________________
+
+comparing two tuples for equality
+
+t1=(1,2,3)
+t2=(1,2,3)
+print(t1==t2)
+
+_____________________________________________________
+
+unpacking tuple
+
+t1=(1,2,3,"raman")
+a,b,c,d=t1
+print(a)
+print(b)
+print(c)
+print(d)
+
+_____________________________________________________
+
+deleting an individual element from tuple results in error
+
+deleting whole tuple
+
+t1=(1,2,3)
+del t1
+
+_____________________________________________________
+
+tuple functions and methods
+
+t1=(1,2,3)
+print(len(t1))
+
+_______________________________________________________
+
+max function
+
+t1=(1,2,3)
+print(max(t1))
+
+_______________________________________________________
+
+min function or method
+
+t1=(1,2,3)
+print(min(t1))
+
+_______________________________________________________
+
+index method
+
+t1=(1,2,3)
+print(t1.index(2))
+
+____________________________________________________
+
+count function to count number of occurences of an element
+
+t1=(1,2,3,3)
+print(t1.count(3))
+_____________________________________________________
+
+creating a tuple using tuple method
+
+t1=tuple("hello")
+print(t1)
+
+______________________________________________________
+
+ 
+
+

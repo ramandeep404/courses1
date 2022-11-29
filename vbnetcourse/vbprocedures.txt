@@ -1,0 +1,325 @@
+1. Create a procedure to print hello world on the output screen
+
+Imports System
+
+Module Program
+    Sub printhello()
+        Console.WriteLine("Hello World")
+    End Sub
+    Sub Main(args As String())
+        printhello()
+    End Sub
+End Module
+
+2. Create a procedure that accepts a number as argument and checks whether it is even or odd
+
+Imports System
+
+Module Program
+    Sub checkevenodd(ByVal a As Integer)
+        If a Mod 2 = 0 Then
+            Console.WriteLine("Number is Even")
+        Else
+            Console.WriteLine("Number is Odd")
+        End If
+    End Sub
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        checkevenodd(a)
+    End Sub
+End Module
+
+3. Create a procedure that accepts a number as argument and checks whether it is prime or not
+
+Imports System
+
+Module Program
+    Sub checkprime(ByVal a As Integer)
+        Dim prime As Boolean = True
+        Dim i As Integer
+        For i = 2 To a / 2
+            If a Mod i = 0 Then
+                prime = False
+                Exit For
+            End If
+        Next
+        If prime = True Then
+            Console.WriteLine("Number is Prime")
+        Else
+            Console.WriteLine("Number is not Prime")
+        End If
+    End Sub
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        checkprime(a)
+    End Sub
+End Module
+
+4. Create a procedure to accept a number as argument and print its table
+
+Imports System
+
+Module Program
+    Sub printtable(ByVal a As Integer)
+        Dim i As Integer
+        Console.WriteLine("Print Table of " & a)
+        For i = 1 To 10
+            Console.WriteLine(i * a)
+        Next
+    End Sub
+    Sub Main(args As String())
+        Dim a As Integer
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        printtable(a)
+    End Sub
+End Module
+
+5. Create a procedure that accepts two integers and prints their sum
+
+Imports System
+
+Module Program
+    Sub printsum(ByVal a As Integer, ByVal b As Integer)
+        Dim sum As Integer
+        sum = a + b
+        Console.WriteLine("Sum of " & a & " and " & b & " is " & sum)
+    End Sub
+    Sub Main(args As String())
+        Dim a, b As Integer
+        Console.WriteLine("Enter first Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        printsum(a, b)
+    End Sub
+End Module
+
+6. Create a procedure that accepts two integers and find their difference
+
+Imports System
+
+Module Program
+    Sub printdifference(ByVal a As Integer, ByVal b As Integer)
+        Dim diff As Integer
+        diff = a - b
+        Console.WriteLine("Difference of " & a & " and " & b & " is " & diff)
+    End Sub
+    Sub Main(args As String())
+        Dim a, b As Integer
+        Console.WriteLine("Enter first Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        printdifference(a, b)
+    End Sub
+End Module
+
+7. Create a procedure that accepts two integers and find their product
+
+Imports System
+
+Module Program
+    Sub printproduct(ByVal a As Integer, ByVal b As Integer)
+        Dim product As Integer
+        product = a * b
+        Console.WriteLine("Product of " & a & " and " & b & " is " & product)
+    End Sub
+    Sub Main(args As String())
+        Dim a, b As Integer
+        Console.WriteLine("Enter first Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        printproduct(a, b)
+    End Sub
+End Module
+
+8. Create a procedure that accepts three integers and find their sum
+
+Imports System
+
+Module Program
+    Sub printsum(ByVal a As Integer, ByVal b As Integer, ByVal c As Integer)
+        Dim sum As Integer
+        sum = a + b + c
+        Console.WriteLine("Sum of three numbers is " & sum)
+    End Sub
+    Sub Main(args As String())
+        Dim a, b, c As Integer
+        Console.WriteLine("Enter first Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Third Number")
+        c = Convert.ToInt32(Console.ReadLine())
+        printsum(a, b, c)
+    End Sub
+End Module
+
+9. Create a procedure that accepts two numbers and find largest of two numbers
+
+Imports System
+
+Module Program
+    Sub findlarge(ByVal a As Integer, ByVal b As Integer)
+        If a > b Then
+            Console.WriteLine("First Number is greater than Second Number")
+        Else
+            Console.WriteLine("Second Number is greater than First Number")
+        End If
+    End Sub
+    Sub Main(args As String())
+        Dim a, b As Integer
+        Console.WriteLine("Enter first Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        findlarge(a, b)
+    End Sub
+End Module
+
+10. Create a procedure that accepts three arguments and find largest of them without using fourth variable
+
+Imports System
+
+Module Program
+    Sub findlargesthree(ByVal a As Integer, ByVal b As Integer, ByVal c As Integer)
+        If a > b And a > c Then
+            Console.WriteLine(a & " is largest")
+        End If
+        If b > a And b > c Then
+            Console.WriteLine(b & " is largest")
+        End If
+        If c > a And c > b Then
+            Console.WriteLine(c & " is largest")
+        End If
+    End Sub
+    Sub Main(args As String())
+        Dim a, b, c As Integer
+        Console.WriteLine("Enter first Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Third Number")
+        c = Convert.ToInt32(Console.ReadLine())
+        findlargethree(a, b, c)
+    End Sub
+End Module
+
+11. Create a procedure that accepts three integers and find largest of three numbers with using fourth variable
+
+Imports System
+
+Module Program
+    Sub findlargesthree(ByVal a As Integer, ByVal b As Integer, ByVal c As Integer)
+        Dim max As Integer
+        max = a
+        If b > max Then
+            max = b
+        End If
+        If c > max Then
+            max = c
+        End If
+        Console.WriteLine(max & " is largest")
+    End Sub
+    Sub Main(args As String())
+        Dim a, b, c As Integer
+        Console.WriteLine("Enter first Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Third Number")
+        c = Convert.ToInt32(Console.ReadLine())
+        findlargethree(a, b, c)
+    End Sub
+End Module
+
+12. program to find smallest of three numbers without using fourth variable
+
+Imports System
+
+Module Program
+    Sub findsmallestthree(ByVal a As Integer, ByVal b As Integer, ByVal c As Integer)
+        If a < b And a < c Then
+            Console.WriteLine(a & " is smallest")
+        End If
+        If b < a And b < c Then
+            Console.WriteLine(b & " is smallest")
+        End If
+        If c < a And c < b Then
+            Console.WriteLine(c & " is smallest")
+        End If
+    End Sub
+    Sub Main(args As String())
+        Dim a, b, c As Integer
+        Console.WriteLine("Enter first Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Third Number")
+        c = Convert.ToInt32(Console.ReadLine())
+        findsmallestthree(a, b, c)
+    End Sub
+End Module
+
+13. program to find smallest of three numbers using fourth variable
+
+Imports System
+
+Module Program
+    Sub findsmallestthree(ByVal a As Integer, ByVal b As Integer, ByVal c As Integer)
+        Dim min As Integer
+        min = a
+        If b < min Then
+            min = b
+        End If
+        If c < min Then
+            min = c
+        End If
+        Console.WriteLine(min & " is smallest")
+    End Sub
+    Sub Main(args As String())
+        Dim a, b, c As Integer
+        Console.WriteLine("Enter first Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Third Number")
+        c = Convert.ToInt32(Console.ReadLine())
+        findsmallestthree(a, b, c)
+    End Sub
+End Module
+
+
+14. Program to create two procedures to find area and perimeter of rectangle and length and breadth are passed to procedure as arguments
+
+Imports System
+
+Module Program
+    Sub area(ByVal l As Integer, ByVal b As Integer)
+        Dim ar As Integer
+        ar = l * b
+        Console.WriteLine("Area of rectangle is " & ar)
+    End Sub
+    Sub perimeter(ByVal l As Integer, ByVal b As Integer)
+        Dim pr As Integer
+        pr = 2 * (l + b)
+        Console.WriteLine("Perimeter of rectangle is " & pr)
+    End Sub
+    Sub Main(args As String())
+        Dim l, b As Integer
+        Console.WriteLine("Enter Length of Rectangle")
+        l = Convert.ToInt32(Console.ReadLine)
+        Console.WriteLine("Enter Breadth of Rectangle")
+        b = Convert.ToInt32(Console.ReadLine)
+        area(l, b)
+        perimeter(l, b)
+    End Sub
+End Module
+
+15. 

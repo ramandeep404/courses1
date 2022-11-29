@@ -1,0 +1,34 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phploops.html"> Back To PHP Loops Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to find sum of even and odd numbers from 1 to 10 using for statement
+	$sumeven=0;
+        $sumodd=0;
+	for($i=1;$i<=10;$i++)
+	{
+		if($i%2==0)
+		{
+			$sumeven=$sumeven+$i;
+		}
+		else
+		{
+			$sumodd=$sumodd+$i;
+		}
+	}
+	print('sum of even numbers from 1 to 10 is ' . $sumeven);
+        print('<br>');
+	print('sum of odd numbers from 1 to 10 is ' . $sumodd);
+?>
+        </textarea>
+    </body>
+</html>

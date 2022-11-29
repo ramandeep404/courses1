@@ -1,0 +1,22 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpexceptions.html"> Back To PHP Sessions</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php     
+$to_email = 'raman404@rds.com';
+$subject = 'Testing PHP Mail';
+$message = 'This mail is sent using the PHP mail function';
+$headers = 'From: noreply @ company . com';
+mail($to_email,$subject,$message,$headers);
+?>
+        </textarea>
+    </body>
+</html>

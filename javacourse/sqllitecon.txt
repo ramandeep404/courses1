@@ -1,0 +1,41 @@
+int empid=0;
+       String empname="";
+       String empaddress="";
+       String empdesignation="";
+       int empsalary=0;
+       empid=Integer.parseInt(jTextField1.getText());
+       empname=jTextField2.getText();
+       empaddress=jTextField3.getText();
+       empdesignation=jTextField4.getText();
+       empsalary=Integer.parseInt(jTextField5.getText());
+        Connection con = null;
+        try {
+            int rs=0;
+            // db parameters
+            String url = "jdbc:sqlite:C:\\temp\\payroll.db";
+            // create a connection to the database
+            Class.forName("org.sqlite.JDBC");
+            con = DriverManager.getConnection(url);
+            
+          
+		   PreparedStatement ps=con.prepareStatement("insert into employees values(?,?,?,?,?)");
+		  ps.setInt(1, empid);
+               
+		   ps.setString(2, empname);
+		      ps.setString(3, empaddress);
+                         ps.setString(4, empdesignation);
+                         ps.setInt(5,empsalary);
+			rs=ps.executeUpdate();
+            if(rs>0)
+            {
+                JOptionPane.showMessageDialog(null,"Record Inserted");
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null,"Record Can't be Inserted");
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.toString());
+        }// TODO add your handling code here:

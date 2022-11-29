@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaconstructors.html"> Back To Java Constructors Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate example of class employee with data members (ecode,ename,salary and designation) and contains member functions (showdata), class also contains a default constructor which initializes the data members
+
+class employee
+{
+	int ecode;
+	String ename;
+	int salary;
+	String designation;
+public 	employee()
+	{
+		ecode=1;
+		ename=new String("abcdef");
+		salary=10000;
+		designation=new String("xyzxyz");
+	}
+	void showdata()
+	{
+		System.out.println("employee code is " + ecode);
+		System.out.println("employee name is " + ename);
+		System.out.println("employee salary is " + salary);
+		System.out.println("employee designation is " + designation);
+	}
+}
+
+public class employeecons {
+     public static void main(String[] args) {
+    employee ob=new employee();
+       
+	ob.showdata();
+}
+}
+
+        </textarea>
+    </body>
+</html>

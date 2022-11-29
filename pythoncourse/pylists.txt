@@ -1,0 +1,289 @@
+creating a list
+
+lst=[1,2,3,4,5];
+print(lst);
+
+_______________________________
+
+creating an empty list
+
+lst=list();
+print(lst);
+
+__________________________________
+
+creating a nested list
+
+lst=[1,2,[3,15],4,5];
+print(lst);
+
+____________________________________
+
+creating list from sequence
+
+lst=list("hello");
+print(lst);
+
+_____________________________________
+
+creating list from taking input from user
+
+lst=list(input("enter elements of list"));
+print(lst);
+
+___________________________________________
+
+access third element of list
+
+lst=[1,2,3,4,5,7];
+print(lst[3]);
+
+__________________________________________
+
+Strings are not mutable but lists are
+
+change third element in a list with a new element
+
+lst=[1,2,3,4,5,7];
+print(lst);
+lst[3]=10;
+print(lst);
+
+_________________________________________________
+
+traversing a list
+
+lst=[1,2,3,4,5,7];
+for a in lst:
+    print(a);
+
+_______________________________________________
+
+print elements of list with index
+
+lst=[1,2,3,4,5,7];
+l=len(lst);
+for i in range(0,l):
+    print("Element : ",lst[i]," index : ",i);
+
+________________________________________________
+
+compare two lists for equality
+
+lst=[1,2,3];
+lst1=[1,2,3];
+print(lst==lst1);
+
+Output : True
+
+_________________________________________________-
+
+join two lists
+
+lst=[1,2,3];
+lst1=[4,5,8];
+print(lst+lst1);
+
+____________________________________________________
+
+repeating a list
+
+lst=[1,2,3];
+print(lst*3);
+
+____________________________________________________
+
+slice a list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst[3:6]);
+
+___________________________________________________-
+
+another example of slicing a list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst[:6]);
+
+output : first six elements
+1,2,3,4,5,7
+
+_____________________________________________________
+
+another example of slicing a list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst[:-6]);
+
+Output : 1,2
+
+____________________________________________________
+
+appending items to list
+append adds single item to list
+
+lst=[1,2,3,4,5,7,89,90];
+lst.append(101);
+print(lst);
+
+_______________________________________________
+
+update elements in list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst);
+lst[3]=45;
+print(lst);
+
+_________________________________________________
+
+delete item from list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst);
+del lst[3];
+print(lst);
+
+__________________________________________________-
+
+delete items from list based on index
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst);
+del lst[0:3];
+print(lst);
+
+_________________________________________________
+
+pop element from list
+it will extract last element from list
+
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst.pop());
+
+________________________________________________
+
+pop element from list based on index
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst.pop(4));
+
+__________________________________________________
+
+find index of item in list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst.index(4));
+
+____________________________________________________
+
+append item to list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst);
+lst.append(400);
+print(lst);
+
+__________________________________________________
+
+extend one list with another using extend function
+
+lst=[1,2,3,4,5,7,89,90];
+lst1=[34,45,67];
+lst.extend(lst1);
+print(lst);
+
+____________________________________________________
+
+while append() function adds single item to list, extend() function can add multiple items to list
+___________________________________________________
+
+insert elements in list using insert function
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst);
+lst.insert(3,55);
+print(lst);
+
+_____________________________________________________
+
+insert element in the beginning of the list using insert fnction
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst);
+lst.insert(0,55);
+print(lst);
+
+______________________________________________________
+
+insert element at the last of the list using insert function
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst);
+lst.insert(len(lst),55);
+print(lst);
+
+___________________________________________________________
+
+pop method to get last element from list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst.pop());
+______________________________________________
+
+pop third element from list using pop function
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst.pop(2));
+
+___________________________________________________
+
+remove an element from list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst);
+lst.remove(2);
+print(lst);
+
+______________________________________
+
+removing an element from list which is not present in the list gives an error
+_____________________________________________
+
+clear to clear all list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst);
+lst.clear();
+print(lst);
+
+______________________________________________
+
+count function to count occurences of an element in a list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst.count(3));
+
+Ouput : 1
+
+___________________________________________________
+
+reverse method to reverse a list
+
+lst=[1,2,3,4,5,7,89,90];
+print(lst);
+lst.reverse();
+print(lst);
+
+______________________________________________
+
+sort a list using sort function
+
+lst=[1,2,3,4,5,7,890,90];
+print(lst);
+lst.sort();
+print(lst);
+
+________________________________________________
+

@@ -1,0 +1,273 @@
+55. Program to demonstrate for loop to print numbers from 1 to 10
+
+for a in range(1,11):
+    print(a);
+
+56. Generates a sequence of numbers from 2 to 19 excluding 19, incrementing by 3 
+
+for a in range(2,19,3):
+  print(a)
+
+57. Program to print numbers in reverse order from 20 to 1 using for loop
+
+for a in range(20,0,-1):
+  print(a)
+
+58. Program to find sum of numbers from 1 to 10 using for loop
+
+sum=0;
+for i in range(1,11):
+  sum=sum+i;
+print("sum of numbers from 1 to 10 is : ",sum);
+
+59. Program to find sum of even numbers from 1 to 10 using for loop
+
+sumeven=0;
+for i in range(1,11):
+    if(i%2==0):
+        sumeven=sumeven+i;
+print("sum of even numbers from 1 to 10 is : ",sumeven);
+
+60. Program to find sum of odd numbers from 1 to 10 using for loop
+
+sumodd=0;
+for i in range(1,11):
+    if(i%2!=0):
+        sumodd=sumodd+i;
+print("sum of odd numbers from 1 to 10 is : ",sumodd);
+
+61. Program to find sum of even numbers and odd numbers from 1 to 10 using for loop
+
+sumodd=0;
+sumeven=0;
+for i in range(1,11):
+    if(i%2!=0):
+        sumodd=sumodd+i;
+    else:
+        sumeven=sumeven+i;
+print("sum of odd numbers from 1 to 10 is : ",sumodd);
+print("sum of even numbers from 1 to 10 is : ",sumeven);
+
+62. Program to input two numbers and print numbers between them using for loop
+
+a=int(input("Enter first number"));
+b=int(input("Enter second number"));
+for i in range(a,b+1):
+    print(i);
+
+63. Program to input two numbers and print sum of numbers between them using for loop
+
+a=int(input("Enter first number"));
+b=int(input("Enter second number"));
+sum=0;
+for i in range(a,b+1):
+    sum=sum+i;
+print("sum of numbers between a and b is ",sum);
+
+64. Program to input a number and finds its factorial
+
+a=int(input("Enter first number"));
+fact=1;
+for i in range(1,a+1):
+    fact=fact*i;
+print("factorial of number is ",fact);
+
+65. Program to input a number and find whether it is prime or not using for loop
+
+a=int(input("Enter first number"));
+prime=1;
+for i in range(2,a):
+    if(a%i==0):
+        prime=0;
+        break;
+if(prime==1):
+    print("number is prime");
+else:
+    print("number is not prime");
+
+66. Program to print first 11 terms of fibonicci series
+
+a=1;
+b=1;
+print(a);
+print(b);
+for i in range(2,11):
+    c=a+b;
+    print(c);
+    a=b;
+    b=c;
+
+67. Program to print pattern of stars using nested for loop
+
+for i in range(1,6):
+    for j in range(1,i+1):
+        print("*",end="");
+    print("\n");
+
+68. Program to input a number and print its table
+
+a=int(input("Enter a number"));
+for i in range(1,11):
+    print(a*i);
+
+69. Program to print numbers from 0 to 9 using while loop
+
+i = 0;
+while (i < 10):
+   print(i);
+   i=i+1;
+
+70. Program to print numbers from 1 to 10 using while loop
+
+i = 1;
+while (i <= 10):
+   print(i);
+   i=i+1;
+
+71. Program to print numbers from 1 to 10 with a gap of two between the numbers
+
+i = 1;
+while (i <= 10):
+   print(i);
+   i=i+2;
+
+72. Program to find factorial of number using while loop
+
+fact=1;
+a=int(input("enter a number"));
+i=1;
+while(i<=a):
+    fact=fact*i;
+    i=i+1;
+print("factorial of number is ",fact);
+
+73. Program to print table of number using while loop
+
+a=int(input("enter a number"));
+i=1;
+while(i<=10):
+    print(i*a);
+    i=i+1;
+
+74. Program to input two numbers and find sum between these two numbers using while loop
+
+a=int(input("enter a number"));
+b=int(input("enter second number"));
+sum=0;
+i=a;
+while(i<=b):
+    sum=sum+i;
+    i=i+1;
+print("sum of numbers between a and b is ",sum);
+
+75. Program to input two numbers and find sum of even and odd numbers between these two numbers using while loop
+
+a=int(input("enter a number"));
+b=int(input("enter second number"));
+sumeven=0;
+sumodd=0;
+i=a;
+while(i<=b):
+    if(i%2==0):
+        sumeven=sumeven+i;
+    else:
+        sumodd=sumodd+i;
+    i=i+1;
+print("sum of even numbers between a and b is ",sumeven);
+print("sum of odd numbers between a and b is ",sumodd);
+
+76. Program to input a number and check whether it is prime or not using while loop
+
+a=int(input("enter a number"));
+prime=1;
+i=2;
+while(i<a):
+    if(a%i==0):
+        prime=0;
+        break;
+    i=i+1;
+if(prime==1):
+    print("number is prime");
+else:
+    print("number is not prime");
+
+77. Program to print first eleven terms of fibonicci series using while loop
+
+a=1;
+b=1;
+print(a);
+print(b);
+i=1;
+while(i<10):
+    c=a+b;
+    print(c);
+    a=b;
+    b=c;
+    i=i+1;
+
+78. Program to demonstrate break statement in for loop
+
+for i in range(1,10):
+    if(i==5):
+        break;
+    print(i);
+
+79. Program to demonstrate continue statement in for loop
+
+for i in range(1,10):
+    if(i==5):
+        continue;
+    print(i);
+
+80. Program to demonstrate break statement in while loop
+
+i=1;
+while(i<=10):
+    if(i==5):
+        break;
+    print(i);
+    i=i+1;
+
+81. Program to find sum of digits of a number using while loop
+
+a=int(input("Enter a number"));
+sum=0;
+while(int(a)!=0):
+    digit=int(a)%10;
+    sum=sum+digit;
+    a=int(a)/10;
+print("Sum of digits is ",sum);
+
+82. Program to count number of digits using while loop
+
+a=int(input("Enter a number"));
+count=0;
+while(int(a)!=0):
+    digit=int(a)%10;
+    a=int(a)/10;
+    count=count+1;
+print("Count of digits is ",count);
+
+83. Program to print reverse of a number using while loop
+
+a=int(input("Enter a number"));
+rev=0;
+while(int(a)!=0):
+    digit=int(a)%10;
+    rev=(rev*10)+digit;
+    a=int(a)/10;
+print("Reverse of number is ",rev);
+
+84. Program to check whether number is palindrome or not
+
+a=int(input("Enter a number"));
+rev=0;
+num=a;
+while(int(a)!=0):
+    digit=int(a)%10;
+    rev=(rev*10)+digit;
+    a=int(a)/10;
+if(num==rev):
+    print("Number is a palindrome");
+else:
+    print("Number is not a palindrome");

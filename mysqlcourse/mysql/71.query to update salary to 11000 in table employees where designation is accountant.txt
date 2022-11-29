@@ -1,0 +1,1 @@
+update employees set salary=11000 where designation="accountant";

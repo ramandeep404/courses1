@@ -1,0 +1,1 @@
+select day(date_of_joining) from employees;

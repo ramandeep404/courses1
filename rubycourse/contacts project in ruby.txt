@@ -1,0 +1,43 @@
+def addcontact()
+      puts("Enter Contact Name :")
+      cname=gets()
+      puts("Enter Contact Address : ")
+      caddress=gets()
+      puts("Enter Contact Email : ")
+      cemail=gets()
+      puts("Enter Contact Mobile No : ")
+      cmobile=gets()
+      cstr=cname.strip() + "," + caddress.strip() + "," + cemail.strip() + "," + cmobile.strip() + "\n"
+      aFile = File.new("c:\\temp\\rubycontacts.txt", "a")
+      if aFile
+        aFile.syswrite(cstr)
+        puts("Data Written")
+      else
+        puts "Unable to open file!"
+      end
+end
+def viewallcontacts()
+      arr = IO.readlines("c:\\temp\\rubycontacts.txt")
+      $l=arr.length
+      $i=0
+      while $i < $l do
+        puts(arr[$i])
+        $i +=1
+      end
+end
+while (true)
+  puts("1. Add a Contact")
+  puts("2. View All Contacts ")
+  puts("3. Exit")
+  puts("Enter Your Choice ")
+  ch=gets.chomp.to_i
+  if ch==1
+    addcontact
+  end
+  if ch==2
+    viewallcontacts
+  end
+  if ch==3
+    break
+  end
+end

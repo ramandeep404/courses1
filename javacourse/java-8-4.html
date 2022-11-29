@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaconstructors.html"> Back To Java Constructors Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate parameterized constructor in class student
+
+class studentone
+{
+	int rollno;
+	String name;
+	int marks;
+	int clas;
+public	studentone(int srollno,String sname,int smarks,int sclas)
+	{
+		rollno=srollno;
+		name=sname;
+		marks=smarks;
+		clas=sclas;
+	}
+	void showdata()
+	{
+		System.out.println("rollno is " + rollno);
+		System.out.println("name is " + name);
+		System.out.println("marks are " + marks);
+		System.out.println("class is " + clas);
+	}
+};
+public class studentconsparameter {
+         public static void main(String[] args) {
+    studentone ob=new studentone(1,"abcdef",90,12);
+	ob.showdata(); 
+           studentone ob1=new studentone(2,"abcxyz",88,11);
+	ob1.showdata(); 
+}
+}
+
+        </textarea>
+    </body>
+</html>

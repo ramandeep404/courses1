@@ -1,0 +1,41 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpformhandling.html"> Back To PHP Form Handling</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<!-- html program to demonstrate form with a radiobutton  -->
+<html>
+    <head>
+        <title></title>
+        
+    </head>
+    <body>
+   
+         <form action="5radio.php" method="get" name="form1">
+             Select Your Gender :
+             <br>
+          Male :   <input type="radio" name="gender" value="male">
+          <br>
+          Female :   <input type="radio" name="gender" value="female">
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+
+<?php
+//php program to demonstrate checkbox data handling
+if(isset($_GET["gender"]))
+print($_GET["gender"]);
+
+?>
+        </textarea>
+    </body>
+</html>

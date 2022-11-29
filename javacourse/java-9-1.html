@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javainheritance.html"> Back To Java Inheritance Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to inherit a class boxweight from class from box
+
+class box
+{
+    double width;
+    double height;
+    double depth;
+    box(box ob)
+    {
+        width=ob.width;
+        height=ob.height;
+        depth=ob.depth;
+    }
+    box(double w,double h,double d)
+    {
+        width=w;
+        height=h;
+        depth=d;
+    }
+    box()
+    {
+        width=-1;
+        height=-1;
+        depth=-1;
+    }
+    box(double len)
+    {
+        width=height=depth=len;
+    }
+    double volume()
+    {
+        return width*height*depth;
+    }
+}
+class boxweight extends box
+{
+    double weight;
+    boxweight(double w,double h,double d,double m)
+    {
+        width=w;
+        height=h;
+        depth=d;
+        weight=m;
+              
+    } 
+}
+public class boxinheritance {
+    public static void main(String[] args) {
+        boxweight box1=new boxweight(10,20,15,34.3);
+        boxweight box2=new boxweight(2,3,4,0.076);
+        double vol;
+        vol=box1.volume();
+        System.out.println("Volume of box1 is " + vol);
+        System.out.println("Weight of box1 is " + box1.weight);
+        
+        vol=box2.volume();
+        System.out.println("Volume of box2 is " + vol);
+        System.out.println("Weight of box2 is " + box2.weight);
+}
+}
+
+
+        </textarea>
+    </body>
+</html>

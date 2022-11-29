@@ -1,0 +1,4 @@
+create table students1(rollno int primary key auto_increment,
+name char(20),
+class int,
+marks int);

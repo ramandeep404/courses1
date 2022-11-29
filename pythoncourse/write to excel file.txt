@@ -1,0 +1,63 @@
+write to excel file
+
+import xlwt
+from xlwt import Workbook
+
+# Workbook is created
+wb = Workbook()
+
+# add_sheet is used to create sheet.
+sheet1 = wb.add_sheet('Sheet 1')
+sheet1.write(0, 0, 'raman')
+sheet1.write(1, 0, 'gagan')
+sheet1.write(2, 0, 'aman')
+sheet1.write(3, 0, 'harman')
+sheet1.write(4, 0, 'ajay')
+sheet1.write(5, 0, 'vijay')
+
+
+wb.save('c:\\temp\\excel12345678.xls')
+print("File Saved")
+____________________________________________________________________________-
+
+write to excel file using openpyxl
+
+from openpyxl import Workbook
+import time
+
+book = Workbook()
+sheet = book.active
+
+sheet['A1'] = 56
+sheet['A2'] = 43
+
+now = time.strftime("%x")
+sheet['A3'] = now
+
+book.save("c:\\temp\\sample.xlsx")
+print("Done")
+______________________________________________________________________________
+
+write to excel file
+
+from openpyxl import Workbook
+
+book = Workbook()
+sheet = book.active
+
+rows = (
+    (88, 46, 57),
+    (89, 38, 12),
+    (23, 59, 78),
+    (56, 21, 98),
+    (24, 18, 43),
+    (34, 15, 67)
+)
+
+for row in rows:
+    sheet.append(row)
+
+book.save('c:\\temp\\sample2.xlsx')
+print('Done')
+
+________________________________________________________________________________________

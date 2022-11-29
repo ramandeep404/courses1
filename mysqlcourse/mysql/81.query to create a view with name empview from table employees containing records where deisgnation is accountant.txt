@@ -1,0 +1,2 @@
+create view empview as
+select * from employees where designation="accountant";

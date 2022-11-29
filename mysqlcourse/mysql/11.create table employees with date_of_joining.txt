@@ -1,0 +1,1 @@
+create table employees(ecode int,ename char(20),salary int,designation char(20),date_of_joining date);

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaexceptions.html"> Back To Java Exceptions Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate exception arithmetic exception
+
+public class arithmeticexception {
+      public static void main(String[] args) {
+  int d,a;
+  try{
+      d=0;
+      a=42/d;
+      System.out.println("this will not be printed");
+  }
+  catch(ArithmeticException e)
+  {
+      System.out.println("Division By Zero");
+  }
+  System.out.println("After catch statement");
+}
+}
+
+
+        </textarea>
+    </body>
+</html>

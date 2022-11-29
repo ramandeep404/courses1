@@ -1,0 +1,34 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpclasses.html"> Back To PHP Classes and Inheritance Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to demonstrate overriding of methods
+class a
+{
+    function function1()
+    {
+    print('function of class a');
+    }
+ }
+class b extends a
+{
+    function function1()
+    {
+        print('function of class b');
+    }
+}
+$ob=new b;
+$ob->function1();
+?>
+        </textarea>
+    </body>
+</html>

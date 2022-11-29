@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaclasses.html"> Back To Java Classes Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate example of class employee with data members as ecode,ename,designation,basic,hra,da and total) calculate total function calculates the total salary as sum of basic,da and hra , getdata function inputs data from user and showdata member function displays data 
+
+class employeesal
+{
+	private int ecode;
+	private String ename;
+	private float basic;
+	private float da;
+	private float hra;
+	private float total;
+	private String designation;
+
+public void getdata()
+{
+	ecode=1;
+        ename=new String("abcdef");
+        designation=new String("employee");
+	basic=10000;
+        da=3000;
+        hra=2000;
+	
+}
+public void calculatetotal()
+{
+	total=basic+da+hra;
+}
+public void showdata()
+{
+	System.out.println("employee code is " + ecode);
+	System.out.println("employee name is " + ename);
+	System.out.println("employee designation is " + designation);
+	System.out.println("total salary (basic+da+hra) is " + total);
+}
+}
+public class classsalary {
+             public static void main(String[] args) {
+
+      employeesal ob=new employeesal();
+      ob.getdata();
+      ob.calculatetotal();
+      ob.showdata();
+}
+}
+
+
+        </textarea>
+    </body>
+</html>

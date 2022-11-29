@@ -1,0 +1,4 @@
+select * from students order by name asc,marks desc;
+
+44.query to sort records of table students first by name in ascending order and if name contains 
+duplicate values(then these duplicate values are sorted by marks in descending order

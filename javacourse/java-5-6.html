@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaarrays.html"> Back To Java Arrays Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to input an array of 10 integer elements and calculate largest even and odd number from the array
+
+public class largestevenoddintarray {
+       public static void main(String[] args) {
+   
+	int []a={1,20,190,4,7,8,9,10,11,13};
+    int i;
+    int leven=0,lodd=1;
+    
+    
+    for(i=0;i<10;i++)
+    {
+        if(a[i]%2==0)
+        {
+            if(a[i]>leven)
+            {
+                leven=a[i];
+            }
+        }
+        else
+        {
+            if(a[i]>lodd)
+            {
+                lodd=a[i];
+            }
+        }
+    }
+    System.out.println("largest even number is " + leven);
+    System.out.println("largest odd number is " + lodd);
+
+       }
+}
+
+        </textarea>
+    </body>
+</html>

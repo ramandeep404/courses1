@@ -1,0 +1,68 @@
+write to pdf file
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.Barcode128;
+import com.itextpdf.text.pdf.PdfWriter;
+
+String fa="c:\\temp\\pdf1.pdf";
+
+Document document = new Document(new Rectangle(PageSize.A4));    
+    PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(fa));    
+
+
+    document.open();
+    
+	    document.add(new Paragraph(payslip));
+
+		 
+
+    document.close();
+
+_______________________________________________________________________________________________
+
+adding image to pdf file
+
+import com.itextpdf.io.image.ImageData; 
+import com.itextpdf.io.image.ImageDataFactory; 
+
+import com.itextpdf.kernel.pdf.PdfDocument; 
+import com.itextpdf.kernel.pdf.PdfWriter;
+
+import com.itextpdf.layout.Document; 
+import com.itextpdf.layout.element.Image;  
+
+public class AddingImage {      
+   public static void main(String args[]) throws Exception {              
+      
+      // Creating a PdfWriter       
+      String dest = "C:/itextExamples/addingImage.pdf";       
+      PdfWriter writer = new PdfWriter(dest);        
+      
+      // Creating a PdfDocument       
+      PdfDocument pdf = new PdfDocument(writer);              
+      
+      // Creating a Document        
+      Document document = new Document(pdf);              
+      
+      // Creating an ImageData object       
+      String imFile = "C:/itextExamples/logo.jpg";       
+      ImageData data = ImageDataFactory.create(imFile);              
+      
+      // Creating an Image object        
+      Image image = new Image(data);                        
+      
+      // Adding image to the document       
+      document.add(image);              
+      
+      // Closing the document       
+      document.close();              
+      
+      System.out.println("Image added");    
+   } 
+}  
+
+________________________________________________________________________________

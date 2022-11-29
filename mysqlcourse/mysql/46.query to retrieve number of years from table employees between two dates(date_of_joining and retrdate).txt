@@ -1,0 +1,3 @@
+select floor(((to_days(retrdate)-to_days(date_of_joining)))/365) as tper from employees;
+
+you will need to add retirement date as retrdate using alter table command

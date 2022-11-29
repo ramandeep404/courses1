@@ -1,0 +1,276 @@
+create a numpy array from a list
+
+import numpy as np
+List=[1,2,3,4]
+a1=np.array(List)
+print(a1)
+
+________________________________________________________
+
+access individual elements from array
+
+import numpy as np
+List=[1,2,3,4]
+a1=np.array(List)
+print(a1[0])
+
+_____________________________________________________
+
+another example of accessing elements from numpy array
+
+import numpy as np
+a7=np.array([[10,11,12,13],[21,22,23,24]])
+print(a7[1,3])
+print(a7[1][3])
+
+______________________________________________________
+
+type of ndarray, shape and itemsize of ndarray
+
+import numpy as np
+a1=np.array([1,2,3,4])
+a2=np.array([[2,4,6],[1,3,5]])
+print(type(a1),type(a2))
+print(a1.shape)
+print(a2.shape)
+print(a2.itemsize)
+
+________________________________________________
+
+adding number to each element of ndarray
+
+import numpy as np
+a1=np.array([1,2,3,4])
+a1=a1+2
+print(a1)
+
+____________________________________________________
+
+create ndarray from tuple
+
+import numpy as np
+a1=np.array((1,2,3,4))
+print(a1)
+
+____________________________________________________
+
+create ndarray from dictionary
+
+import numpy as np
+dict1={1:'A',2:'B',3:'C'}
+a1=np.array(dict1)
+print(a1)
+
+_____________________________________________________
+
+create ndarray using fromiter function
+
+import numpy as np
+dict1={1:'A',2:'B',3:'C'}
+a1=np.fromiter(dict1,dtype=np.int32)
+print(a1[0])
+
+______________________________________________________
+
+create ndarray from string using fromiter function
+
+import numpy as np
+str="HelloWorld"
+a1=np.fromiter(str,dtype="U2")
+print(a1)
+
+_________________________________________________________
+
+create ndarray with a numerical range using arange()
+
+import numpy as np
+ar5=np.arange(7)
+print(ar5)
+
+__________________________________________________________
+
+create array with a numerical range using linspace()
+
+import numpy as np
+a1=np.linspace(2,10,5)
+print(a1)
+
+___________________________________________________________
+
+create 2d ndarray using array()
+
+import numpy as np
+List1=[[1,3,5],[2,4,6]]
+nd2=np.array(List1)
+print(nd2)
+print(nd2.shape)
+
+__________________________________________
+
+create 2d ndarray using arrange and reshape the ndarray
+
+import numpy as np
+ar=np.arange(10)
+print(ar)
+ar1=ar.reshape(5,2)
+print(ar1)
+ar2=ar.reshape(2,5)
+print(ar2)
+
+_______________________________________________________
+
+create ndarray and reshape in single statement
+
+import numpy as np
+ar=np.arange(10).reshape(5,2)
+print(ar)
+
+_________________________________________________________
+
+create empty array using empty() function array will contain garbage values
+
+import numpy as np
+ar=np.empty(3)
+print(ar)
+
+____________________________________________________________
+
+create ndarray containing zero values using zeros function
+
+import numpy as np
+ar=np.zeros(3)
+print(ar)
+
+_______________________________________________________________
+
+crate ndarray containing one using ones function
+
+import numpy as np
+ar=np.ones(3)
+print(ar)
+
+________________________________________________________________
+
+access 3rd element from ndarray
+
+import numpy as np
+ar=np.array([3,4,5,7,8])
+print(ar[2])
+
+_______________________________________________________________
+
+access individual elements in 2d array
+
+import numpy as np
+ar=np.array([[3,4,5,7,8],[1,2,3,4,5]])
+print(ar[1][2])
+
+_________________________________________________________________
+
+array slices
+
+import numpy as np
+ar=np.array([3,4,5,7,8,1,2,3,4,5])
+print(ar[2:5])
+
+____________________________________________________________________
+
+array slice step=2
+
+import numpy as np
+ar=np.array([3,4,5,7,8,1,2,3,4,5])
+print(ar[2:5:2])
+
+_____________________________________________________________________
+
+combine two ndarray horizontally using hstack function
+
+import numpy as np
+ar=np.array([1,2,3])
+ar1=np.array([4,5,6])
+ar2=np.hstack((ar,ar1))
+print(ar2)
+
+_____________________________________________________________________
+
+combine two ndarray vertically using vstack function
+
+import numpy as np
+ar=np.array([1,2,3])
+ar1=np.array([4,5,6])
+ar2=np.vstack((ar,ar1))
+print(ar2)
+
+______________________________________________________________________
+
+concatenate two ndarray using concatenate function
+
+import numpy as np
+ar=np.array([1,2,3])
+ar1=np.array([4,5,6])
+ar2=np.concatenate((ar,ar1))
+print(ar2)
+
+____________________________________________________________________
+
+hsplit function
+
+import numpy as np
+ar=np.arange(24.0).reshape(4,6)
+print(ar)
+ar1=np.hsplit(ar,2)
+print(ar1)
+
+___________________________________________________________________
+
+vsplit function
+
+import numpy as np
+ar=np.arange(24.0).reshape(4,6)
+print(ar)
+ar1=np.vsplit(ar,2)
+print(ar1)
+
+____________________________________________________________________
+
+split function
+
+import numpy as np
+ar=[10,11,12,13,14,15,16,17,18,19]
+ar1=np.split(ar,[2,6])
+print(ar1)
+
+
+____________________________________________________________________
+
+extract elements using a condition
+
+import numpy as np
+ar=[10,11,12,13,14,15,16,17,18,19]
+cond1=np.mod(ar,5)==0
+ar1=np.extract(cond1,ar)
+print(ar1)
+
+_____________________________________________________________________
+
+add two ndarrays using + operator
+
+import numpy as np
+ar1=np.array([10,11,12,13,14])
+ar2=np.array([15,16,17,18,19])
+ar3=ar1+ar2
+print(ar3)
+
+_________________________________________________________________________
+
+-,*,/,% operators
+
+numpy.add
+numpy.subtract
+multiply
+divide
+mod
+remainder
+
+______________________________________________________________
+

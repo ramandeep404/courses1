@@ -1,0 +1,156 @@
+1. Program to print hello world
+
+print("Hello World");
+
+2. Program to input an integer and display value
+
+a=int(input("Enter a number"));
+print("Number you entered is " , a);
+
+3. Program to input two numbers and find sum
+
+a=input("Enter first number");
+b=input("Enter second number");
+c=int(a)+int(b);
+print("sum of two numbers is ", c);
+
+4. Program to input two numbers and find difference
+
+a=input("Enter first number");
+b=input("Enter second number");
+c=int(a)-int(b);
+print("difference of two numbers is ", c);
+
+5. Program to input two numbers and find product
+
+a=input("Enter first number");
+b=input("Enter second number");
+c=int(a)*int(b);
+print("product of two numbers is ", c);
+
+6. Program to input two numbers and find quotient
+
+a=input("Enter first number");
+b=input("Enter second number");
+c=int(a)/int(b);
+print("quotient of two numbers is ", c);
+
+7. Program to input two numbers and find remainder
+
+a=input("Enter first number");
+b=input("Enter second number");
+c=int(a)%int(b);
+print("remainder of two numbers is ", c);
+
+8. Program to input a string and display its value
+
+str=input("enter a string");
+print("String you entred is ",str);
+
+9. Program to input a float value and display value
+
+a=float(input("Enter a decimal point value"));
+print("Decimal point number you entered is ",a);
+
+10. program to calculate area of square
+side=int(input("Enter side of square"));
+area=side*side;
+print("area of square is ",area);
+
+11. Program to calculate perimeter of square
+
+side=int(input("Enter side of square"));
+perimeter=4*side;
+print("perimeter of square is ",perimeter);
+
+12. Program to input length and breadth of rectangle and calculate area of rectangle
+
+length=int(input("Enter length of rectangle"));
+breadth=int(input("Enter breadth of rectangle"));
+area=length*breadth;
+print("area of rectangle is ",area);
+
+13. Program to input length and breadth of rectangle and calculate perimeter of rectangle
+
+length=int(input("Enter length of rectangle"));
+breadth=int(input("Enter breadth of rectangle"));
+perimeter=2*(length+breadth);
+print("perimeter of rectangle is ",perimeter);
+
+14. Program to input width,depth and height of box and calculate volume
+
+width=int(input("Enter width of box"));
+depth=int(input("Enter depth of box"));
+height=int(input("Enter height of box"));
+vol=width*depth*height;
+print("Volume of box is ",vol);
+
+15. Program to input radius of circle and find its area
+
+radius=float(input("Enter radius of circle"));
+area=3.14*radius*radius;
+print("area of circle is : " ,area);
+
+16. Program to input radius of circle and find circumference
+
+radius=float(input("Enter radius of circle"));
+cr=2*3.14*radius;
+print("circumference of circle is : " ,cr);
+
+17. Program to input base and height of right angled triangle and find area of right area triangle
+
+base=float(input("Enter base of right angled triangle"));
+height=float(input("Enter height of right angled triangle"));
+area=0.5*base*height;
+print("area of right angled triangle is ",area);
+
+18. Program to input principal amount, rate of interest, and time in years and find simple interest
+
+p=float(input("Enter principal amount"));
+r=float(input("Enter rate of interest"));
+t=float(input("Enter time in years"));
+si=(p*r*t)/100;
+print("Simple Interest is ",si);
+
+19. Program to input price of item and calculate 10% discount
+
+price=int(input("Enter price of item"));
+discount=price*0.1;
+print("10% discount is ",discount);
+
+20. Program to demonstrate ** operator to calculate a raise to power of b
+
+a=int(input("Enter a number"));
+b=int(input("Enter second number"));
+c=a**b;
+print("a raise to power of b is ",c);
+
+21. Program to demonstrate += operator
+
+a=int(input("Enter a number"));
+a+=2;
+print("value of a is ",a);
+
+22. Program to demonstrate -= operator
+
+a=int(input("Enter a number"));
+a-=2;
+print("value of a is ",a);
+
+23. Program to demonstrate *= operator
+
+a=int(input("Enter a number"));
+a*=2;
+print("value of a is ",a);
+
+24. Program to demonstrate /= operator
+
+a=int(input("Enter a number"));
+a/=2;
+print("value of a is ",a);
+
+25. Program to demonstrate %= operator
+
+a=int(input("Enter a number"));
+a%=2;
+print("value of a is ",a);

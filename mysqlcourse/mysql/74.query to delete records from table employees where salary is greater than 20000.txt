@@ -1,0 +1,1 @@
+delete from employees where salary>20000;

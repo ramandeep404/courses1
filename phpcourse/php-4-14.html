@@ -1,0 +1,34 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+       <a href="phpuserdefined.html"> Back To PHP User Defined Functions Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to create two functions to find area and perimeter of square (side of square is passed to functions as argument)
+function area($side)
+{
+	
+	$ar=$side*$side;
+	print('area of square is ' . $ar);
+}
+function perimeter($side)
+{
+	
+	$per=4*$side;
+	print('perimeter of square is ' . $per);
+}
+area(10);
+print('<br>');
+perimeter(10);
+?>
+
+        </textarea>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<?php 
+$uploaddir = './uploads/';
+$uploadfile = $uploaddir . $_FILES['billtxt']['name'];
+
+if (move_uploaded_file($_FILES['billtxt']['tmp_name'], $uploadfile)) {
+    print('Electricity Bill Uploaded');
+    
+} else {
+    print "Ebill can't be uploaded:\n";
+   
+}
+?>

@@ -1,0 +1,24 @@
+123. Program to demonstrate abs function
+
+print(abs(-100));
+
+124. Program to demonstrate max function
+
+print(max(100,200,340));
+
+125. Program to demonstrate min function
+
+print(min(100,200,340));
+
+126. Program to demonstrate pow function
+
+print(pow(2,3));
+
+127. Program to demonstrate round function
+
+print(round(32.234,1));
+
+128. Program to demonstrate sqrt function
+
+import math
+print(math.sqrt(36));

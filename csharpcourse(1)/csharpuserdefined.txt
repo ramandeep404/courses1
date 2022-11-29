@@ -1,0 +1,1333 @@
+1. //program to demonstrate user defined function,create a function to display hello world on the screen
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class phello
+    {
+        public void prhello()
+    {
+        Console.WriteLine("Hello World");
+    }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+               phello ob = new phello();
+               ob.prhello();
+               Console.ReadLine();
+        }
+    }
+}
+
+2. //program to create a function that checks whether a number is even or odd (number is passed to function as argument)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class evenodd
+    {
+        public void checkeodd(int a)
+    {
+        if(a%2==0)
+	{
+		Console.WriteLine("number is even");
+	}
+	else
+	{
+		Console.WriteLine("number is odd");
+	}
+    }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            evenodd ob = new evenodd();
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            ob.checkeodd(a);
+            Console.ReadLine();
+        }
+    }
+}
+
+3. //program to find create a function to check whether a number passed to it as argument is prime or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class prime
+    {
+        public void cprime(int a)
+    {
+        int i;
+	    int prime=1;
+	    for(i=2;i<=a/2;i++)
+	    {
+		    if(a%i==0)
+		    {
+			    prime=0;
+			    break;
+		    }
+	    }
+	    if(prime==1)
+	    {
+		    Console.WriteLine("number passed to function is prime");
+	    }
+	    else
+	    {
+		    Console.WriteLine("number passed to function is not prime");
+	    }
+
+    }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            prime ob = new prime();
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            ob.cprime(a);
+            Console.ReadLine();
+        }
+    }
+}
+
+4. //program to create a function that prints the table of the number passed to it as argument
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+    class table
+    {
+        public void ptable(int a)
+    {
+        int i;
+	    for(i=1;i<=10;i++)
+	    {
+		    Console.WriteLine(a*i);
+	    }
+    }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            table ob = new table();
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            ob.ptable(a);
+            Console.ReadLine();
+        }
+    }
+}
+
+5. //program to create a function that takes two integers arguments and calculates their sum
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+    class findsum
+    {
+        public void sum(int a, int b)
+    {
+        int sum;
+	    sum=a+b;
+	    Console.WriteLine("sum of numbers is " + sum);
+    }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            findsum ob = new findsum();
+            int a, b;
+            Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            ob.sum(a,b);
+            Console.ReadLine();
+        }
+    }
+}
+
+6. //program to create a function that takes two integer arguments calculates difference between them
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+    class diff
+    {
+        public void difftwo(int a, int b)
+    {
+        int dif;
+	    dif=a-b;
+	    Console.WriteLine("difference between two numbers is " + dif);
+    }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            diff ob = new diff();
+            int a, b;
+            Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            ob.difftwo(a, b);
+            Console.ReadLine();
+        }
+    }
+}
+
+7. //program to create a function that inputs two numbers and finds their product
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+        class prod
+        {
+            public void product(int a, int b)
+        {
+        	    int pro;
+	            pro=a*b;
+	            Console.WriteLine("product of two numbers is " + pro);
+        }
+        }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            prod ob = new prod();
+            int a, b;
+            Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            ob.product(a, b);
+            Console.ReadLine();
+        }
+    }
+}
+
+8. //program to create a function that takes three integer arguments and calculates their sum
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+    class calcsum
+    {
+        public void csum(int a, int b, int c)
+    {
+        	int sum;
+	        sum=a+b+c;
+	        Console.WriteLine("sum of three numbers is " + sum);
+    }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            calcsum ob = new calcsum();
+            int a, b,c;
+            Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter third number");
+            c = Convert.ToInt32(Console.ReadLine());
+            ob.csum(a, b, c);
+            Console.ReadLine();
+        }
+    }
+}
+
+9. //program to create a function that takes two integer arguments and finds largest of them
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+    class largest
+    {
+        public void flarge(int a, int b)
+        {
+            if(a>b)
+	    {
+		    Console.WriteLine(a + " is largest of two numbers");
+	    }
+	    else
+	    {
+		    Console.WriteLine(b + " is largest of two numbers");
+	    }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            largest ob = new largest();           
+            int a, b;
+            Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            ob.flarge(a, b);
+            Console.ReadLine();
+        }
+    }
+}
+
+10. //program to create a function that takes three integer arguments and finds largest of them
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+    class largethree
+    {
+        public void flarge(int a, int b, int c)
+        {
+            int max;
+	        max=a;
+	        if(b>max)
+	        {
+		        max=b;
+	        }
+	        if(c>max)
+	        {
+		        max=c;
+	        }
+	        Console.WriteLine("largest of three numbers is " + max);
+         }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            largethree ob = new largethree();
+            int a, b, c;
+            Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter third number");
+            c = Convert.ToInt32(Console.ReadLine());
+            ob.flarge(a, b, c);
+            Console.ReadLine();
+        }
+    }
+}
+
+11. //program to create a function that takes three integer arguments and finds smallest of them
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+
+        class smallest
+        {
+            public void small(int a, int b, int c)
+            {
+                int min;
+	            min=a;
+	            if(b<min)
+	            {
+		            min=b;
+	            }
+	            if(c<min)
+	            {
+		            min=c;
+	            }
+	            Console.WriteLine("smallest of three numbers is " + min);
+            }
+        }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            smallest ob = new smallest();
+            int a, b, c;
+            Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter third number");
+            c = Convert.ToInt32(Console.ReadLine());
+            ob.small(a, b, c);
+            Console.ReadLine();
+        }
+    }
+}
+
+12. //program to create two functions to calculate area and perimeter of rectangle (length and breadth of rectangle are passed to functions as arguments)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+            class rectangle
+            {
+                public void area(int length, int breadth)
+                {
+	                int ar;
+	                ar=length*breadth;
+	                Console.WriteLine("area of rectangle is " + ar);
+                }
+                public void perimeter(int length, int breadth)
+                {
+	                int per;
+	                per=2*(length+breadth);
+	                Console.WriteLine("perimeter of rectangle is " + per);
+                }
+            }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int l, b;
+            Console.WriteLine("Enter length of rectangle");
+            l = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter breadth of rectangle");
+            b = Convert.ToInt32(Console.ReadLine());
+            rectangle ob = new rectangle();
+            ob.area(l,b);
+            ob.perimeter(l,b);
+            Console.ReadLine();
+        }
+    }
+}
+
+13. //program to create two functions that find area and circumference of circle (radius of circle is passed to functions as argument)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+        class circle
+        {
+            public void area(int radius)
+            {
+	            float ar;
+	            ar=3.14f*radius*radius;
+	            Console.WriteLine("area of circle is " + ar);
+            }
+            public void circumference(int radius)
+            {
+	            float cir;
+	            cir=2*3.14f*radius;
+	            Console.WriteLine("circumference of circle is " + cir);
+            }
+        }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int radius;
+            Console.WriteLine("Enter radius");
+            radius = Convert.ToInt32(Console.ReadLine());
+            circle ob = new circle();
+            ob.area(radius);
+            ob.circumference(radius);
+            Console.ReadLine();
+        }
+    }
+}
+
+14. //program to create two functions to find area and perimeter of square (side of square is passed to functions as argument)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class square
+    {
+        public void area(int side)
+        {
+	        int ar;
+	        ar=side*side;
+	        Console.WriteLine("area of square is " + ar);
+        }
+                public void perimeter(int side)
+        {
+	        int per;
+	        per=4*side;
+	        Console.WriteLine("perimeter of square is " + per);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int side;
+            Console.WriteLine("Enter side of square");
+            side = Convert.ToInt32(Console.ReadLine());
+            square ob = new square();
+            ob.area(side);
+            ob.perimeter(side);
+            Console.ReadLine();
+        }
+    }
+}
+
+15. //program to create a function that finds volume of a box (width, depth and height of box are passed to function as arguments)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class volumea
+    {
+        public void volume(int width, int depth, int height)
+        {
+	        int vol;
+	        vol=width*depth*height;
+	        Console.WriteLine("volume of box is " + vol);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int w, d, h;
+            Console.WriteLine("Enter Width of box");
+            w = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Depth of box");
+            d = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Height of box");
+            h = Convert.ToInt32(Console.ReadLine());
+            volumea ob = new volumea();
+            ob.volume(w, d, h);
+            Console.ReadLine();
+        }
+    }
+}
+
+16. //program to create a function that check whether character passed to it as argument is vowel or not using switch case statement
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class chvowel
+    {
+        public void cvowel(char ch)
+    {
+        switch(ch)
+	        {
+	        case 'a':
+		        Console.WriteLine("you entered a vowel");
+		        break;
+	        case 'e':
+		        Console.WriteLine("you entered a vowel");
+		        break;
+	        case 'i':
+                Console.WriteLine("you entered a vowel");
+                break;
+	        case 'o':
+		        Console.WriteLine("you entered a vowel");
+		        break;
+	        case 'u':
+		        Console.WriteLine("you entered a vowel");
+		        break;
+	        default:
+                Console.WriteLine("please enter a vowel  (a,e,i,o,u)");
+                break;
+	        }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            chvowel ob=new chvowel();
+            char a = 'a';
+            ob.cvowel(a);
+            Console.ReadLine();
+        }
+    }
+}
+
+17. //program to create a function that calculates sum of numbers between two numbers a and b (a nd b are passed to function as integer arguments )
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class sumnumbers
+    {
+        public void sum(int a, int b)
+        {
+	        int sum=0;
+	        int i;
+	        for(i=a;i<=b;i++)
+	        {
+		        sum=sum+i;
+	        }
+	        Console.WriteLine("sum of numbers between a and b is " + sum);
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a, b;
+            Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            sumnumbers ob = new sumnumbers();
+            ob.sum(a,b);
+            Console.ReadLine();
+        }
+    }
+}
+
+18. //program to create two functions that prints the three numbers in ascending order and descending order passed to functions as arguments
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class ascdesc
+    {
+        public void asc(int a, int b, int c)
+{
+	int low,low2,low3;
+	low=a;
+        low2=a;
+        low3=a;
+	if(b<low)
+	{
+		low=b;
+	}
+	if(c<low)
+	{
+		low=c;
+	}
+	if(a==low)
+	{
+		if(b<c)
+		{
+			low2=b;
+			low3=c;
+		}
+		else
+		{
+			low2=c;
+			low3=b;
+		}
+	}
+	else
+		if(b==low)
+		{
+			if(a<c)
+			{
+				low2=a;
+				low3=c;
+			}
+			else
+			{
+				low2=c;
+				low3=a;
+			}
+		}
+		else
+			if(c==low)
+			{
+				if(a<b)
+				{
+					low2=a;
+					low3=b;
+				}
+				else
+				{
+					low2=b;
+					low3=a;
+				}
+			}
+	Console.WriteLine("printing the numbers in ascending order ");
+	Console.WriteLine(low+ "," + low2 + "," + low3);
+}
+
+        public void desc(int a, int b, int c)
+{
+	int big,big2,big3;
+
+	big=a;
+        big2=a;
+        big3=a;
+	if(b>big)
+	{
+		big=b;
+	}
+	if(c>big)
+	{
+		big=c;
+	}
+	if(a==big)
+	{
+		if(b>c)
+		{
+			big2=b;
+			big3=c;
+		}
+		else
+		{
+			big2=c;
+			big3=b;
+		}
+	}
+	else
+		if(b==big)
+		{
+			if(a>c)
+			{
+				big2=a;
+				big3=c;
+			}
+			else
+			{
+				big2=c;
+				big3=a;
+			}
+		}
+		else
+			if(c==big)
+			{
+				if(a>b)
+				{
+					big2=a;
+					big3=b;
+				}
+				else
+				{
+					big2=b;
+					big3=a;
+				}
+			}
+	Console.WriteLine("printing the numbers in descending order ");
+	Console.WriteLine(big + "," + big2 + "," + big3);
+}
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a, b, c;
+            Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter third number");
+            c = Convert.ToInt32(Console.ReadLine());
+            ascdesc ob = new ascdesc();
+            ob.asc(a,b,c);
+            ob.desc(a,b,c);
+            Console.ReadLine();
+        }
+    }
+}
+
+19. //program to create two functions that prints sum of even numbers and odd numbers between two numbers a and b (a nd b are passed to functions as integer arguments )
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class sumevenodd
+    {
+        public void sumeven(int a, int b)
+{
+	    int sume=0;
+	    int i;
+	    for(i=a;i<=b;i++)
+	    {
+		    if(i%2==0)
+		    {
+			    sume=sume+i;
+		    }
+	    }
+	    Console.WriteLine("sum of even numbers between a and b is " + sume);
+}
+        public void sumodd(int a, int b)
+        {
+	        int sumo=0;
+	        int i;
+	        for(i=a;i<=b;i++)
+	        {
+		        if(i%2!=0)
+		        {
+			        sumo=sumo+i;
+		        }
+		        }
+	        Console.WriteLine("sum of odd numbers between a and b is " + sumo);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a, b, c;
+            Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            sumevenodd ob = new sumevenodd();
+            ob.sumeven(a,b);
+            ob.sumodd(a,b);
+            Console.ReadLine();
+        }
+    }
+}
+
+20. //program to create a function to calculate simple interest based on principal amount,rate of interest and time (principal,rate and time are passed to functions as arguments, principal and rate are passed as float arguments , time is passed as integer argument )
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class si
+    {
+        public void csi(double principal, double rate, double time)
+        {
+            double si;
+            si = (principal * rate * time) / 100;
+            Console.WriteLine("simple interest is " + si);
+
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double p,r,t;
+            Console.WriteLine("Enter Principal Amount");
+            p=Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter Rate of Interest");
+            r=Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter Time in Years");
+            t=Convert.ToDouble(Console.ReadLine());
+            si ob=new si();
+            ob.csi(p,r,t);
+            Console.ReadLine();
+        }
+    }
+}
+
+21. //program to create a function that computes discount based on price entered by the user (price is passed to function as integer argument , if price is greater than or equal to 1000, discount is calculated as 10 percent else 5 percent )
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class cdiscount
+    {
+        public void calcdis(int price)
+        {
+	        double discount;
+	        if(price>=1000)
+	        {
+		        discount=0.1*price;
+	        }
+	        else
+	        {
+		        discount=0.05*price;
+	        }
+	        Console.WriteLine("discount is " + discount);
+}
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int p;
+            Console.WriteLine("Enter Price");
+            p=Convert.ToInt32(Console.ReadLine());
+            cdiscount ob = new cdiscount();
+            ob.calcdis(p);
+            Console.ReadLine();
+        }
+    }
+}
+
+22. //program to create a function that display hello world for a specified number of times
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+    class displayntimes
+    {
+        public void display(int n)
+        {
+	        int i;
+	        for(i=1;i<=n;i++)
+	        {
+		        Console.WriteLine("hello world");
+	        }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            displayntimes ob = new displayntimes();
+            ob.display(a);
+            Console.ReadLine();
+        }
+    }
+}
+
+23. //program to create a function that returns factorial of a number passed to it as argument
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class cfact
+    {
+        public int factorial(int n)
+        {
+            int fact = 1;
+            int i;
+            for (i = 1; i <= n; i++)
+            {
+                fact = fact * i;
+            }
+            return fact;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            cfact ob=new cfact();
+            int result;
+            result=ob.factorial(5);
+            Console.WriteLine("factorial is " + result);
+            Console.ReadLine();
+        }
+    }
+}
+
+24. //program to create a function that returns 1 if number passed to it is prime and returns 0 if number passed to it is not prime
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class chprime
+    {
+        public int checkprime(int n)
+        {
+            int i;
+            int prime = 1;
+            for (i = 2; i <= n / 2; i++)
+            {
+                if (n % i == 0)
+                {
+                    prime = 0;
+                    break;
+                }
+            }
+            if (prime == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            chprime ob=new chprime();
+            int result;
+            result=ob.checkprime(5);
+            if(result==1)
+            {
+                Console.WriteLine("number is prime");
+            }
+            else
+            {
+                Console.WriteLine("number is not prime");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+25. //program to create a function that returns area of circle based on radius passed to function as argument
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class cirarea
+    {
+        public double area(int radius)
+        {
+            double ar;
+            ar = 3.14f * radius * radius;
+            return ar;
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            cirarea ob=new cirarea();
+            double result;
+            result=ob.area(10);
+            Console.WriteLine("area of circle is " + result);
+            Console.ReadLine();
+        }
+    }
+}
+
+26. //program to create a function that returns sum of numbers between a and b passed to function as integer arguments
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class sumnumbersatb
+    {
+        public int sum(int a, int b)
+        {
+            int i;
+            int s = 0;
+            for (i = a; i <= b; i++)
+            {
+                s = s + i;
+            }
+            return s;
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            sumnumbersatb ob=new sumnumbersatb();
+            int result;
+            result=ob.sum(5,15);
+            Console.WriteLine("Sum of numbers is " + result);
+            Console.ReadLine();
+        }
+    }
+}
+
+27. //program to create a function that returns largest of three numbers passed to it as arguments
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class findlarge
+    {
+        public int finlarge(int a, int b, int c)
+        {
+            int max;
+            max = a;
+            if (b > max)
+            {
+                max = b;
+            }
+            if (c > max)
+            {
+                max = c;
+            }
+            return max;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            findlarge ob=new findlarge();
+            int result;
+            result=ob.finlarge(10,8,9);
+            Console.WriteLine("largest of three numbers is " + result);
+            Console.ReadLine();
+        }
+    }
+}
+
+28. //program to create a function that returns smallest of three numbers passed to function as integer arguments
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class findsmall
+    {
+        public int finsmall(int a, int b, int c)
+        {
+            int min;
+            min = a;
+            if (b < min)
+            {
+                min = b;
+            }
+            if (c < min)
+            {
+                min = c;
+            }
+            return min;
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            findsmall ob=new findsmall();
+            int result;
+            result=ob.finsmall(10,8,9);
+            Console.WriteLine("smallest of three numbers is " + result);
+            Console.ReadLine();
+        }
+    }
+}
+
+29. //program to create a function that returns volume of box based on width,depth and height passed to function as integer arguments
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class volumebox
+    {
+        public int volume(int width, int depth, int height)
+        {
+            int vol;
+            vol = width * depth * height;
+            return vol;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            volumebox ob=new volumebox();
+            int result;
+            result=ob.volume(10,20,30);
+            Console.WriteLine("volume of box is " + result);
+            Console.ReadLine();
+        }
+    }
+}
+
+30. //program to create a function that finds yearly salary based on monthly salary passed to function as integer argument
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class salmonthyear
+    {
+        public void yearly(int monthly)
+            {
+	            int yearlysalary;
+	            yearlysalary=12*monthly;
+	            Console.WriteLine("yearly salary is " + yearlysalary);
+            }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            salmonthyear ob = new salmonthyear();
+            ob.yearly(5000);
+            Console.ReadLine();
+        }
+    }
+}
+
+31. //program to create a function that calculates compound interest based on principal amount, rate of interest and time passed to the function as arguments
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class ci
+    {
+        public void calccint(double p, double r, double t)
+    {
+        double ci;
+       
+        ci=(p*Math.Pow(1+(r/100),t));
+        Console.WriteLine("\ncompound interest is " + ci);
+    }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            ci ob = new ci();
+            ob.calccint(1000, 3, 5);
+            Console.ReadLine();
+        }
+    }
+}

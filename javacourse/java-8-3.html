@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaconstructors.html"> Back To Java Constructors Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate example of class bankaccount with data members ( account_no,name,type,balance) and contains member functions (deposit,withdraw and showdata), class also contains a default constructor
+
+class account
+{
+	int account_no;
+	String name;
+	char type;
+	int balance;
+public	account()
+	{
+		account_no=1001;
+		name=new String("abcdef");
+		type='s';
+		balance=1000;
+	}
+	void deposit(int amount)
+	{
+		balance=balance+amount;
+		System.out.println(amount + " deposited in account no " + account_no);
+	}
+	void withdraw(int amount)
+	{
+		if(balance>=1000)
+		{
+			balance=balance=amount;
+			System.out.println(amount + " withdrawn from account no " + account_no);
+		}
+		else
+		{
+			System.out.println("amount can't be withdrawn (balance in account is less than 1000 ");
+		}
+	}
+	void showdata()
+	{
+		System.out.println("account no is " + account_no);
+		System.out.println("name of account is " + name);
+		if(type=='s')
+		{
+			System.out.println("type of account is savings");
+		}
+		else
+		{
+			System.out.println("type of account is current");
+		}
+		System.out.println("balance in the account is " + balance);
+	}
+}
+
+public class bankaccountcons {
+     public static void main(String[] args) {
+        
+     account ob=new account();
+       
+	ob.showdata();
+	ob.deposit(3000);
+	ob.withdraw(2000);
+	ob.showdata();
+}
+}
+        </textarea>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+read excel file using pandas
+
+import xlrd
+import pandas as pd
+from pandas import ExcelWriter
+from pandas import ExcelFile
+df = pd.read_excel('c:\\temp\\data123.xls')
+print(df)
+
+______________________________________________________
+
+read excel file using openpyxl
+
+import openpyxl
+book = openpyxl.load_workbook('c:\\temp\\excel123.xlsx')
+
+sheet = book.active
+
+cells = sheet['A1': 'B3']
+
+for c1, c2 in cells:
+    print("{0:8} {1:8}".format(c1.value, c2.value))
+
+______________________________________________________
+
+read excel file using pandas
+
+import xlrd
+import pandas as pd
+from pandas import ExcelWriter
+from pandas import ExcelFile
+df = pd.read_excel('c:\\temp\\sample2.xlsx')
+print(df)
+
+____________________________________________________

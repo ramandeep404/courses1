@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpclasses.html"> Back To PHP Classes and Inheritance Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to demonstrate constructor in a class
+class student
+{
+    var $rollno;
+    var $name;
+    var $clas;
+    var $marks;
+    
+    function student()
+    {
+        $this->rollno=1;
+        $this->name="abcdef";
+        $this->clas=11;
+        $this->marks=90;
+    }
+    function showdata()
+    {
+        print('rollno of student is ' . $this->rollno);
+        print('<br>');
+        print('name of student is ' . $this->name);
+        print('<br>');
+        print('class of student is ' . $this->clas);
+        print('<br>');
+        print('marks of student is ' . $this->marks);
+        print('<br>');
+    }
+}
+$ob=new student;
+$ob->showdata();
+?>
+
+
+
+        </textarea>
+    </body>
+</html>

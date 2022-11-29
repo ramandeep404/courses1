@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javajdbc.html"> Back To Java JDBC Database Connectivity Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to update a record in the table
+package javajdbc;
+import java.sql.*;
+public class javajdbc2 {
+    public static void main(String[] args) {
+       	try {
+			
+		   
+		   String driverName = "com.mysql.jdbc.Driver";
+		    Class.forName(driverName);
+String url ="jdbc:mysql://127.0.0.1:3306/students";
+Statement stmt;
+		int rs;
+		Connection con =DriverManager.getConnection(url,"root", "");
+		   		   
+		   stmt = con.createStatement();
+		   int g;
+		   g=stmt.executeUpdate("update student set name='abcghj' where rollno=1");
+	
+			
+			}
+			catch(Exception e)
+			{
+			System.out.println(e.toString());
+			}
+	
+    }
+}        </textarea>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javacollections.html"> Back To Java Images Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+
+//Java program to create an ArrayList and run Iterator to get Values
+import java.util.*;
+
+public class NewClass {
+    public static void main(String args[])
+    {
+        ArrayList arr=new ArrayList();
+        arr.add("Raman");
+        arr.add("Abcdef");
+        arr.add("xyz");
+        arr.add("qwerty");
+        Iterator itr=arr.iterator();
+        while(itr.hasNext())
+        {
+            System.out.println(itr.next());
+        }
+    }
+}
+        </textarea>
+    </body>
+</html>

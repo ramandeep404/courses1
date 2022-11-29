@@ -1,0 +1,687 @@
+1. program to demonstrate for statement to display numbers from 1 to 2
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        For i = 1 To 10
+            Console.WriteLine(i)
+        Next
+
+    End Sub
+End Module
+
+2. program to display numbers from 9 to 0 (in reverse order) using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        For i = 9 To 0 Step -1
+            Console.WriteLine(i)
+        Next
+
+    End Sub
+End Module
+
+3. program to display numbers from 10 to 0 (in reverse order) using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        For i = 10 To 0 Step -1
+            Console.WriteLine(i)
+        Next
+
+    End Sub
+End Module
+
+4. program to display numbers 0 to 10 with a gap of 2 between the numbers using for statement 
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        For i = 1 To 10 Step 2
+            Console.WriteLine(i)
+        Next
+
+    End Sub
+End Module
+
+5. program to display numbers 0 to 50 with a gap of 5 between the numbers using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        For i = 0 To 50 Step 5
+            Console.WriteLine(i)
+        Next
+
+    End Sub
+End Module
+
+6. program to display numbers 50 to 1 (in reverse order) with a gap of 5 between the numbers using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        For i = 50 To 1 Step -5
+            Console.WriteLine(i)
+        Next
+
+    End Sub
+End Module
+
+7. program to find sum of numbers from 1 to 10 using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim sum As Integer = 0
+
+        For i = 1 To 10
+            sum = sum + i
+        Next
+        Console.WriteLine("Sum of numbers from 1 to 10 is " & sum)
+    End Sub
+End Module
+
+8. program to find sum of even numbers from 1 to 10 using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim sumeven As Integer = 0
+
+        For i = 1 To 10
+            If i Mod 2 = 0 Then
+                sumeven = sumeven + i
+            End If
+        Next
+        Console.WriteLine("Sum of even numbers from 1 to 10 is " & sumeven)
+    End Sub
+End Module
+
+9. program to find sum of odd numbers from 1 to 10 using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim sumodd As Integer = 0
+
+        For i = 1 To 10
+            If i Mod 2 <> 0 Then
+                sumodd = sumodd + i
+            End If
+        Next
+        Console.WriteLine("Sum of odd numbers from 1 to 10 is " & sumodd)
+    End Sub
+End Module
+
+10. program to find sum of even and odd numbers from 1 to 10 using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim sumodd As Integer = 0
+        Dim sumeven As Integer = 0
+        For i = 1 To 10
+            If i Mod 2 <> 0 Then
+                sumodd = sumodd + i
+            Else
+                sumeven = sumeven + i
+            End If
+        Next
+        Console.WriteLine("Sum of odd numbers from 1 to 10 is " & sumodd)
+        Console.WriteLine("Sum of even numbers from 1 to 10 is " & sumeven)
+    End Sub
+End Module
+
+11. program to input two numbers a and b and display numbers between them using for loop
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim a, b As Integer
+        Console.WriteLine("Enter First Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        For i = a To b
+            Console.WriteLine(i)
+        Next
+    End Sub
+End Module
+
+12. program to input two numbers a and b and find sum of numbers between them using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim a, b As Integer
+        Dim sum As Integer = 0
+        Console.WriteLine("Enter First Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        For i = a To b
+            sum = sum + i
+        Next
+        Console.WriteLine("Sum of Numbers from a to b is " & sum)
+    End Sub
+End Module
+
+13. program to find factorial of a number using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim fact As Integer = 1
+        Dim a As Integer
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        For i = 1 To a
+            fact = fact * i
+        Next
+        Console.WriteLine("Factorial of Number is " & fact)
+    End Sub
+End Module
+
+14. program to find whether number entered is prime or not using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim prime As Boolean = True
+        Dim a As Integer
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        For i = 2 To a / 2
+            If a Mod i = 0 Then
+                prime = False
+                Exit For
+            End If
+        Next
+        If prime = True Then
+            Console.WriteLine("Number is Prime")
+        Else
+            Console.WriteLine("Number is not Prime")
+        End If
+    End Sub
+End Module
+
+15. program to print first 1 to 10 terms of fibonicci series using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim a, b, c As Integer
+        a = 1
+        b = 1
+        Console.WriteLine(a)
+        Console.WriteLine(b)
+        For i = 1 To 10
+            c = a + b
+            Console.WriteLine(c)
+            a = b
+            b = c
+        Next
+    End Sub
+End Module
+
+16. program to print pattern of stars using for statement (example of nested for loop)
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i, j As Integer
+        For i = 1 To 5
+            For j = 1 To i
+                Console.Write("*")
+            Next
+            Console.WriteLine("")
+        Next
+    End Sub
+End Module
+
+17. program to print table of a number entered by the user using for statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim a As Integer
+        Console.WriteLine("Enter a number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Table of Number is ")
+        For i = 1 To 10
+            Console.WriteLine(a * i)
+        Next
+    End Sub
+End Module
+
+18. program to print numbers from 0 to 9 using while statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        i = 0
+        While i < 10
+            Console.WriteLine(i)
+            i = i + 1
+        End While
+    End Sub
+End Module
+
+19. program to print numbers from 1 to 10 using while statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        i = 1
+        While i <= 10
+            Console.WriteLine(i)
+            i = i + 1
+        End While
+    End Sub
+End Module
+
+20. program to print numbers from 1 to 10 with a gap of 2 numbers using while statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        i = 1
+        While i <= 10
+            Console.WriteLine(i)
+            i = i + 2
+        End While
+    End Sub
+End Module
+
+21. program to find factorial of a number using while statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer = 1
+        Dim fact As Integer = 1
+        Dim a As Integer
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        While i <= a
+            fact = fact * i
+            i = i + 1
+        End While
+        Console.WriteLine("Factorial of Number is " & fact)
+    End Sub
+End Module
+
+22. program to print table of a number entered by user using while statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer = 1
+        Dim a As Integer
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Table of Number is ")
+        While i <= 10
+            Console.WriteLine(a * i)
+            i = i + 1
+        End While
+    End Sub
+End Module
+
+23. program to find sum of numbers from 1 to 10 using while statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer = 1
+        Dim sum As Integer = 0
+        While i <= 10
+            sum = sum + i
+            i = i + 1
+        End While
+        Console.WriteLine("Sum of Numbers from 1 to 10 is " & sum)
+    End Sub
+End Module
+
+24. program to input two numbers and find sum of numbers between them using while statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer = 1
+        Dim a, b As Integer
+        Dim sum As Integer = 0
+        Console.WriteLine("Enter First Number")
+        a = Convert.ToInt32(Console.ReadLine)
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine)
+        i = a
+        While i <= b
+            sum = sum + i
+            i = i + 1
+        End While
+        Console.WriteLine("Sum of Numbers between a and b is " & sum)
+    End Sub
+End Module
+
+25. program to find sum of even and odd numbers between a and b using while statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer = 1
+        Dim a, b As Integer
+        Dim sumeven As Integer = 0
+        Dim sumodd As Integer = 0
+        Console.WriteLine("Enter First Number")
+        a = Convert.ToInt32(Console.ReadLine)
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine)
+        i = a
+        While i <= b
+            If i Mod 2 = 0 Then
+                sumeven = sumeven + i
+            Else
+                sumodd = sumodd + i
+            End If
+            i = i + 1
+        End While
+        Console.WriteLine("Sum of Even Numbers between a and b is " & sumeven)
+        Console.WriteLine("Sum of Odd Numbers between a and b is " & sumodd)
+    End Sub
+End Module
+
+26. program to check whether a number is prime or not using while statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim prime As Boolean = True
+        Dim a As Integer
+        Console.WriteLine("Enter a number")
+        a = Convert.ToInt32(Console.ReadLine())
+        i = 2
+        While i <= a / 2
+            If a Mod i = 0 Then
+                prime = False
+                Exit While
+            End If
+            i = i + 1
+        End While
+        If prime = True Then
+            Console.WriteLine("Number is Prime")
+        Else
+            Console.WriteLine("Number is not Prime")
+        End If
+    End Sub
+End Module
+
+27. program to print first 1 to 10 terms of fibonicci series using while statement
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        Dim a, b, c As Integer
+        a = 1
+        b = 1
+        Console.WriteLine(a)
+        Console.WriteLine(b)
+        i = 1
+        While i <= 10
+            c = a + b
+            Console.WriteLine(c)
+            a = b
+            b = c
+            i = i + 1
+        End While
+    End Sub
+End Module
+
+28. program to find lcm and hcf of 2 numbers using while loop
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, c As Integer
+        Console.WriteLine("Enter First Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        c = a * b
+        While a <> b
+            If a > b Then
+                a = a - b
+            Else
+                b = b - a
+            End If
+        End While
+        Console.WriteLine("HCF = " & a)
+        Console.WriteLine("LCM = " & c / a)
+    End Sub
+End Module
+
+29. program to demonstrate do while statement example to print numbers 1 to 10
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        i = 1
+        Do While i <= 10
+
+            Console.WriteLine(i)
+            i = i + 1
+        Loop
+
+    End Sub
+End Module
+
+30. program to demonstrate Exit For statement in for loop
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        For i = 1 To 10
+            If i = 5 Then
+                Exit For
+            End If
+            Console.WriteLine("Value of i is " & i)
+        Next
+
+    End Sub
+End Module
+
+31. program to demonstrate break statement in while loop
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        i = 1
+        While i <= 10
+            If i = 5 Then
+                Exit While
+            End If
+            Console.WriteLine("Value of i is " & i)
+            i = i + 1
+        End While
+
+    End Sub
+End Module
+
+32. program to demonstrate continue statement in for loop
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i As Integer
+        i = 1
+        For i = 1 To 10
+            If i = 5 Then
+                Continue For
+            End If
+            Console.WriteLine(i)
+        Next
+    End Sub
+End Module
+
+33. program to input a number and find sum of digits of the number
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, digit As Integer
+        Dim sum As Integer = 0
+
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        While a <> 0
+            digit = a Mod 10
+            sum = sum + digit
+            a = a / 10
+        End While
+        Console.WriteLine("Sum of Digits is " & sum)
+    End Sub
+End Module
+
+34. program to input a number and count number of digits in the number
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, digit As Integer
+        Dim count As Integer = 0
+
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        While a <> 0
+            digit = a Mod 10
+            count = count + 1
+            a = a / 10
+        End While
+        Console.WriteLine("Count of Digits is " & count)
+    End Sub
+End Module
+
+35. program to input a number and find whether it is palindrome or not (1221 is a palindrome and 1234 is not a palindrome)
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, digit, b As Integer
+        Dim rev As Integer = 0
+        Dim count As Integer = 0
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        b = a
+        While a <> 0
+            digit = a Mod 10
+            rev = (rev * 10) + digit
+            a = a / 10
+        End While
+        If b = rev Then
+            Console.WriteLine("Number is Palindrome")
+        Else
+            Console.WriteLine("Number is Not Palindrome")
+        End If
+    End Sub
+End Module
+
+36. program to input a number and print reverse of the number using do while loop
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, digit As Integer
+        Dim rev As Integer = 0
+        Dim count As Integer = 0
+        Console.WriteLine("Enter a Number")
+        a = Convert.ToInt32(Console.ReadLine())
+        While a <> 0
+            digit = a Mod 10
+            rev = (rev * 10) + digit
+            a = a / 10
+        End While
+        Console.WriteLine("Reverse of Number is " & rev)
+    End Sub
+End Module
+
+37. program to input a number n and print pattern of numbers from 1 to n (example of nested loop)
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim i, j As Integer
+        Dim n As Integer = 5
+        For i = 1 To n
+            For j = 1 To i
+                Console.Write("*")
+            Next
+            Console.WriteLine("")
+        Next
+    End Sub
+End Module
+
+38. 

@@ -1,0 +1,377 @@
+85. Program to create a function that prints hello world and after that calling the function
+
+def printme():
+    print("hello world");
+printme();
+
+86. Program to create a function that checks whether number is even or odd
+
+def evenodd(a):
+    if(a%2==0):
+        print("number is even");
+    else:
+        print("number is odd");
+evenodd(10);
+
+87.  Program to create a function that calculates factorial of a number
+
+def factorial(a):
+    fact=1;
+    for i in range(1,a+1):
+         fact=fact*i;
+    print("factorial of number is ",fact);
+factorial(5);
+
+88. Program to create a function that checks whether number passed as argument is prime or not
+
+def checkprime(a):
+    prime=1;
+    for i in range(2,a):
+        if(a%i==0):
+            prime=0;
+            break;
+    if(prime==1):
+        print("number is prime");
+    else:
+        print("number is not prime");
+checkprime(5);
+
+89. Program to create a function that prints table of number passed to it as argument
+
+def printtable(a):
+    for i in range(1,11):
+        print(a*i);
+printtable(3);
+90. Program to create a function that calculates sum of two numbers passed to it as argument
+def sum(a,b):
+    s=a+b;
+    print("sum of numbers is ",s);
+sum(5,10);
+
+91. Program to create a function that takes two arguments and calculates difference between them
+
+def difference(a,b):
+    d=a-b;
+    print("difference between two numbers is ",d);
+    return;
+difference(15,10);
+
+92. Program to create a function that takes two arguments and calculates product of these two arguments
+
+def product(a,b):
+    pro=a*b;
+    print("product of two numbers is ",pro);
+    return;
+product(15,10);
+
+93. Program to create a function that calculates quotient of two arguments passed to it
+
+def quotient(a,b):
+    q=a/b;
+    print("quotient of two numbers is ",q);
+    return;
+quotient(50,10);
+
+94. Program to create a function that calculates remainder of two arguments passed to it
+
+def remainder(a,b):
+    r=a%b;
+    print("remainder of two numbers is ",r);
+    return;
+remainder(50,10);
+
+95. Program to create a function that takes three arguments and calculates their sum
+
+def calcsum(a,b,c):
+    s=a+b+c;
+    print("sum of three numbers is ",s);
+    return;
+calcsum(10,20,30);
+
+96. Program to create a function that takes three numbers as arguments and find the largest of three
+
+def findlargest(a,b,c):
+    if a>b and a>c:
+        print(a ," is largest");
+    if b>a and b>c:
+        print(b, " is largest");
+    if c>a and c>b:
+        print(c , " is largest");
+    return;
+findlargest(10,20,30);
+
+97. Program to create a function that takes three numbers as arguments and find smallest of three
+
+def findsmallest(a,b,c):
+    if a<b and a<c:
+        print(a ," is smallest");
+    if b<a and b<c:
+        print(b, " is smallest");
+    if c<a and c<b:
+        print(c , " is smallest");
+    return;
+findsmallest(10,20,30);
+
+98. Program to create two functions area to calculate area and second function to calculate perimeter of rectangle
+
+def area(l,b):
+    ar=l*b;
+    print("area of rectangle is ",ar);
+    return;
+def perimeter(l,b):
+    pr=2*(l+b);
+    print("perimeter of rectangle is ",pr);
+    return;
+area(10,20);
+perimeter(10,20);
+
+99. Program to create two functions to calculate area and circumference of circle with radius passed to them as argument
+
+def area(r):
+    ar=3.14*r*r;
+    print("area of circle is ",ar);
+    return;
+def circumference(r):
+    cr=2*3.14*r;
+    print("circumference of circle is ",cr);
+    return;
+area(10);
+circumference(10);
+
+100. Program to create two functions area and perimeter to calculate area and perimeter of square
+
+def area(side):
+    ar=side*side;
+    print("Area of square is ",ar);
+    return;
+def perimeter(side):
+    pr=4*side;
+    print("Perimeter of square is ",pr);
+    return;
+area(10);
+perimeter(10);
+
+101. Program to create a function to calculate volume of box based on width, depth and height
+
+def volume(w,d,h):
+    vol=w*d*h;
+    print("Volume of box is ",vol);
+    return;
+volume(10,20,30);
+
+102. Program to create a function that checks whether character passed is a vowel or not using or operator
+
+def checkvowel(ch):
+    if((ch=='a') or (ch=='e') or (ch=='i') or (ch=='o') or (ch=='u')):
+        print("you entered a vowel");
+    else:
+        print("you have not entered a vowel");
+checkvowel('s');
+checkvowel('a');
+
+103. Program to create a function that takes two arguments and calculates sum of numbers between these two arguments
+
+def calcsum(a,b):
+    sum=0;
+    for i in range(a,b+1):
+        sum=sum+i;
+    print("sum of numbers between a and b is : ",sum);
+calcsum(5,15);
+
+104. Program to create two functions that calculates sum of even and odd numbers between two numbers passed as arguments
+
+def calcevensum(a,b):
+    sumeven=0;
+    for i in range(a,b+1):
+        if(i%2==0):
+            sumeven=sumeven+i;
+    print("sum of even numbers between a and b is : ",sumeven);
+def calcoddsum(a,b):
+    sumodd=0;
+    for i in range(a,b+1):
+        if(i%2!=0):
+            sumodd=sumodd+i;
+    print("sum of odd numbers between a and b is : ",sumodd);
+calcevensum(5,15);
+calcoddsum(5,15);
+
+105. Program to create two functions to calculate area and perimeter of square wgich are called based on user choice
+
+def area(side):
+    ar=side*side;
+    print("area is : ",ar);
+    return;
+def perimeter(side):
+    pr=4*side;
+    print("perimeter is : ",pr);
+ch=int(input("Enter your choice 1 for area and 2 for perimeter"));
+if(ch==1):
+    area(10);
+else:
+    perimeter(10);
+
+106. Program to create a function that takes three arguments principal, rate and time and calculates simple interest
+
+def calcsi(p,r,t):
+    si=(p*r*t)/100;
+    print("simple interest is : ",si);
+    return;
+calcsi(1000,3,2);
+
+107. Program to create a function that calculates discount on price if price is more than or equal to 1000 discount is 10% else discount is 5%
+
+def calcdiscount(price):
+    if(price>=1000):
+        discount=0.1*price;
+    else:
+        discount=0.05*price;
+    print("discount is : ",discount);
+calcdiscount(2000);
+calcdiscount(500);
+
+108. Program to create a function that takes two arguments as price and discount percentage and calculates discount based on discount percentage
+
+def calcdiscount(price,dcount):
+    discount=price*(dcount/100);
+    print("discount is : ",discount);
+calcdiscount(2000,10);
+
+109. Program to create a function that displays hello world for n number of times n is passed to function as argument
+
+def displayhello(n):
+    for i in range (1,n+1):
+        print("hello world");
+displayhello(10);
+
+110. Program to create a function factorial that calculates factorial of a number and returns factorial of the number
+
+def factorial(n):
+    fact=1;
+    for i in range(1,n+1):
+        fact=fact*i;
+    return fact;
+f=factorial(5);
+print("factorial is : ",f);
+
+111. Program to create a function checkprime that checks whether number apssed to it is prime or not if number is prime it returns 1 else it returns 0
+
+def checkprime(n):
+    prime=1;
+    for i in range(2,n):
+        if(n%i==0):
+            prime=0;
+            break;
+    if(prime==1):
+        return 1;
+    else:
+        return 0;
+result=checkprime(5);
+print(result);
+result=checkprime(10);
+print(result);
+
+112. Program to create a function that returns area of circle based on radius of circle passed to it as argument
+
+def area(r):
+    ar=3.14*r*r;
+    return ar;
+result=area(10);
+print("Area of circle is : ",result);
+
+113.  Program to create a function that returns sum of numbers from a to b passed to function as arguments
+
+def sumatob(a,b):
+    sum=0;
+    for i in range(a,b+1):
+        sum=sum+i;
+    return sum;
+result=sumatob(5,15);
+print("sum of numbers from 5 to 15 is : ",result);
+
+114. Program to create a function that returns largest of three numbers passed to it as arguments
+
+def checklarge(a,b,c):
+    if((a>b) and (a>c)):
+        return a;
+    if((b>a) and (b>c)):
+        return b;
+    if((c>a) and (c>b)):
+        return c;
+result=checklarge(10,9,7);
+print("largest of 10,9,7 is : ",result);
+
+115. Program to create a function that returns smallest of three numbers passed to it as arguments
+
+def checksmall(a,b,c):
+    if((a<b) and (a<c)):
+        return a;
+    if((b<a) and (b<c)):
+        return b;
+    if((c<a) and (c<b)):
+        return c;
+result=checksmall(10,9,7);
+print("smallest of 10,9,7 is : ",result);
+
+116. Program to create a function that returns volume of box based on width, depth and height passed to it as arguments
+
+def volume(w,d,h):
+    vol=w*d*h;
+    return vol;
+result=volume(10,20,30);
+print("volume of box is : ",result);
+
+117. Program to create a function that returns yearly salary based on monthly salary
+
+def yearly(monthly):
+    yly=monthly*12;
+    return yly;
+result=yearly(5000);
+print("Yearly salary with monthly salary as 5000 is : ", result);
+
+118. Program to demonstrate keyword arguments
+
+def printinfo( name, age ):
+   print("Name: ", name);
+   print("Age ", age);
+   return;
+printinfo( age=50, name="miki" );
+
+119. Program to demonstrate default arguments
+
+def printinfo( name, age = 35 ):
+   "This prints a passed info into this function"
+   print "Name: ", name
+   print "Age ", age
+   return;
+
+# Now you can call printinfo function
+printinfo( age=50, name="miki" )
+printinfo( name="miki" )
+
+120.  Program to demonstrate variable length arguments
+
+def printinfo( arg1, *vartuple ):
+   print("Output is: ");
+   print(arg1);
+   for var in vartuple:
+      print(var);
+   return;
+printinfo( 10 )
+printinfo( 70, 60, 50 )
+
+121. Program to demonstrate lambda functions lambda are single line functions
+
+sum = lambda arg1, arg2: arg1 + arg2;
+print("Value of total : ", sum( 10, 20 ));
+print("Value of total : ", sum( 20, 20 ));
+
+122. Program to demonstrate global and local variables
+
+total = 0; # This is global variable.
+def sum( arg1, arg2 ):
+   total = arg1 + arg2; # Here total is local variable.
+   print("Inside the function local total : ", total);
+   return total;
+# Now you can call sum function
+sum( 10, 20 );
+print("Outside the function global total : ", total);

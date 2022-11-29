@@ -1,0 +1,55 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpformhandling.html"> Back To PHP Form Handling</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<!-- html program to demonstrate form with a checkbox -->
+<html>
+    <head>
+        <title></title>
+        
+    </head>
+    <body>
+      
+       <form action="4checkbox.php" method="get" name="form1">
+            Select the Games You Play :<br>
+            <input type="checkbox" name="cricket" checked>Cricket
+            <br>
+            <input type="checkbox" name="tennis">Tennis
+            <br>
+            <input type="checkbox" name="tabletennis">Table Tennis
+            <br>
+            <input type="checkbox" name="football" checked>Football
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+
+<?php
+//php program to demonstrate checkbox data handling
+if(isset($_GET["cricket"]))
+print($_GET["cricket"]);
+
+print('<br>');
+if(isset($_GET["tennis"]))
+print($_GET["tennis"]);
+print('<br>');
+if(isset($_GET["tabletennis"]))
+print($_GET["tabletennis"]);
+print('<br>');
+if(isset($_GET["football"]))
+print($_GET["football"]);
+print('<br>');
+?>
+
+        </textarea>
+    </body>
+</html>

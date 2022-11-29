@@ -1,0 +1,55 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package jsonread;
+import java.io.*;
+import java.util.*;
+import org.json.simple.*;
+import org.json.simple.parser.*;
+/**
+ *
+ * @author raman
+ */
+public class Jsonread {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        JSONParser parser = new JSONParser();
+      try {
+         Object obj = parser.parse(new FileReader("c:\\temp\\jsonfile.json"));
+         JSONObject jsonObject = (JSONObject)obj;
+         String name = (String)jsonObject.get("Name");
+         String course = (String)jsonObject.get("Course");
+         JSONArray subjects = (JSONArray)jsonObject.get("Subjects");
+         System.out.println("Name: " + name);
+         System.out.println("Course: " + course);
+         System.out.println("Subjects:");
+         Iterator iterator = subjects.iterator();
+         while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+         }
+      } catch(Exception e) {
+         e.printStackTrace();
+      }
+    }
+    
+}
+
+_____________________________________
+
+Sample json file
+
+{
+	"Name":"Raman",
+	"Course":"B.Tech",
+	"Subjects":[
+	"subject1:abc",
+	"subject2:abd",
+	"subject3:xyz"
+	]	
+}

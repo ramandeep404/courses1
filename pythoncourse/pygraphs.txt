@@ -1,0 +1,163 @@
+plot a line chart
+
+import matplotlib.pyplot as plt
+a=[1,2,3,4]
+b=[2,4,6,8]
+plt.plot(a,b)
+plt.show()
+
+___________________________________________________________
+
+plot a line chart and giving xlabel and ylabel
+
+import matplotlib.pyplot as plt
+a=[1,2,3,4]
+b=[2,4,6,8]
+plt.xlabel('X Values')
+plt.ylabel('Y Values')
+plt.plot(a,b)
+plt.show()
+
+___________________________________________________________
+ plot a bar graph
+
+import matplotlib.pyplot as plt; plt.rcdefaults()
+import numpy as np
+import matplotlib.pyplot as plt
+
+objects = ('Python', 'C++', 'Java', 'Perl', 'Scala', 'Lisp')
+y_pos = np.arange(len(objects))
+performance = [10,8,6,4,2,1]
+
+plt.bar(y_pos, performance)
+plt.xticks(y_pos, objects)
+plt.ylabel('Usage')
+plt.title('Programming language usage')
+
+plt.show()
+______________________________________________________
+
+scatter plot
+
+import matplotlib.pyplot as plt
+a=[1,2,3,4]
+b=[2,4,6,8]
+plt.scatter(a,b)
+plt.show()
+
+_______________________________________________________
+
+plot a bar graph
+
+import matplotlib.pyplot as plt;
+a=["java","c++","python","html"];
+b=[10,8,6,7];
+plt.bar(a,b);
+plt.show()
+
+__________________________________________________________
+ plot a bar graph with ylabel
+
+import matplotlib.pyplot as plt;
+a=["java","c++","python","html"];
+b=[10,8,6,7];
+plt.ylabel("Users in Millions")
+plt.bar(a,b);
+plt.show()
+_________________________________________________________
+ line chart with title
+
+import matplotlib.pyplot as plt
+a=[1,2,3,4]
+b=[2,4,6,8]
+plt.title("My Chart 1")
+plt.plot(a,b)
+plt.show()
+_________________________________
+ bar chart with yticks
+
+import matplotlib.pyplot as plt;
+a=["java","c++","python","html"];
+b=[10,8,6,7];
+plt.yticks([0,1,2,3,4,5,6,7,8,9,10])
+plt.bar(a,b);
+plt.show()
+
+________________________________________
+ savefigure
+
+import matplotlib.pyplot as plt;
+a=["java","c++","python","html"];
+b=[10,8,6,7];
+plt.yticks([0,1,2,3,4,5,6,7,8,9,10])
+plt.bar(a,b);
+plt.savefig("my chart 1.pdf");
+plt.show()
+
+____________________________________________
+
+bar chart with y lim
+
+import matplotlib.pyplot as plt;
+a=["java","c++","python","html"];
+b=[10,8,6,7];
+plt.ylim(0,12);
+plt.bar(a,b);
+plt.show()
+
+________________________________________________
+ pie chart
+
+import matplotlib.pyplot as plt;
+a=["java","c++","python","html"];
+b=[20,30,10,40];
+plt.pie(b,labels=a);
+plt.show()
+
+____________________________________________
+
+pie chart with autopct
+
+import matplotlib.pyplot as plt;
+a=["java","c++","python","html"];
+b=[20,30,10,40];
+plt.pie(b,labels=a,autopct="%1.1f%%");
+plt.show()
+
+__________________________________________
+
+pie chart with explode
+
+import matplotlib.pyplot as plt;
+a=["java","c++","python","html"];
+b=[20,30,10,40];
+expl=[0,0.2,0,0]
+plt.pie(b,labels=a,explode=expl,autopct="%1.1f%%");
+plt.show()
+
+____________________________________________________
+
+pie chart with colours
+
+import matplotlib.pyplot as plt;
+a=["java","c++","python","html"];
+b=[20,30,10,40];
+expl=[0,0.2,0,0]
+colr=["red","blue","green","yellow"]
+plt.pie(b,labels=a,explode=expl,colors=colr,autopct="%1.1f%%");
+plt.show()
+
+___________________________________________________________
+
+
+plot more than one graph
+
+import matplotlib.pyplot as plt
+t1=[1,2,3,4]
+t2=[2,4,6,8]
+t3=[3,7,8,9]
+t4=[4,5,6,7]
+plt.plot(t1,t2,"r",t3,t4,"b")
+plt.show()
+_______________________________________________
+

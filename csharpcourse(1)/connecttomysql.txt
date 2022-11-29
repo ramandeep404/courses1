@@ -1,0 +1,87 @@
+//connect to mysql using devart
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnectionStringBuilder myCSB = new MySqlConnectionStringBuilder();
+            myCSB.Port = 3306;
+            myCSB.Host = "localhost";
+            myCSB.UserId = "root";
+            myCSB.Password = "";
+            myCSB.Direct = true;
+            
+            myCSB.Database = "students";
+            myCSB.MaxPoolSize = 150;
+            myCSB.ConnectionTimeout = 30;
+            MySqlConnection myConnection = new MySqlConnection(myCSB.ConnectionString);
+            myConnection.Open();
+            MessageBox.Show("Connection Established");
+        }
+    }
+}
+______________________________________________________________
+
+fetch records from mysql table using devart
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using Devart.Data.MySql;
+
+namespace devartmysqlcon
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnectionStringBuilder myCSB = new MySqlConnectionStringBuilder();
+            myCSB.Port = 3306;
+            myCSB.Host = "localhost";
+            myCSB.UserId = "root";
+            myCSB.Password = "";
+            myCSB.Direct = true;
+            
+            myCSB.Database = "students";
+            myCSB.MaxPoolSize = 150;
+            myCSB.ConnectionTimeout = 30;
+            MySqlConnection myConnection = new MySqlConnection(myCSB.ConnectionString);
+            myConnection.Open();
+            //MessageBox.Show("Connection Established");
+            string mySelectQuery = "SELECT * from students";
+            //MySqlConnection myConnection = new MySqlConnection(myConnString);
+            MySqlCommand myCommand = new MySqlCommand(mySelectQuery, myConnection);
+            myConnection.Open();
+            MySqlDataReader myReader = myCommand.ExecuteReader();
+            
+            try
+            {
+                string a = "";
+                while (myReader.Read())
+                {
+                    a=a+myReader.GetInt32(0).ToString() + ", " + myReader.GetString(1)+System.Environment.NewLine;
+                }
+                textBox1.Text = a;
+            }
+            finally
+            {
+                // always call Close when done reading.
+                myReader.Close();
+                // always call Close when done reading.
+                myConnection.Close();
+            }
+            
+        }
+    }
+}
+
+
+______________________________________________________________________________________________________

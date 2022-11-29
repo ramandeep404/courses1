@@ -1,0 +1,1 @@
+update employees set salary=salary+2000 where designation="clerk";

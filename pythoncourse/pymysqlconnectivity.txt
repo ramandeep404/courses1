@@ -1,0 +1,185 @@
+program to insert a record in mysql
+
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  passwd="",
+  database="abcdef"
+)
+
+mycursor = mydb.cursor()
+sql = "INSERT INTO students(rollno,name,marks) VALUES (%s,%s,%s)"
+val = (91, "Highway",99)
+mycursor.execute(sql,val)
+
+
+mydb.commit()
+
+print(mycursor.rowcount, "record inserted.")
+
+_______________________________________________________
+
+fetch records
+
+import mysql.connector
+
+conn = mysql.connector.connect(
+         user='root',
+         password='',
+         host='127.0.0.1',
+         database='abcdef')
+
+cur = conn.cursor()
+
+cur.execute("select * from students")
+myresult = cur.fetchall()
+
+for x in myresult:
+  print(x)
+
+
+cur.close()
+conn.close()
+
+_______________________________________________
+
+search for a record
+
+import mysql.connector
+rno=int(input("enter rollno"))
+con = mysql.connector.connect(host="localhost", user="root", passwd="", database="abcdef")
+cur = con.cursor()
+sql_statement = "SELECT * FROM students WHERE rollno={}".format(rno)
+cur.execute(sql_statement)
+rows=cur.fetchall()
+for x in rows:
+    print(x)
+con.close()
+______________________________________________________________
+
+search based on name
+
+import mysql.connector
+rno=input("enter name")
+con = mysql.connector.connect(host="localhost", user="root", passwd="", database="abcdef")
+cur = con.cursor()
+sql_statement = "SELECT * FROM students WHERE name='{}'".format(rno)
+cur.execute(sql_statement)
+rows=cur.fetchall()
+for x in rows:
+    print(x)
+con.close()
+
+_____________________________________________________________________________
+
+import pymysql
+
+conn = pymysql.connect(
+         user='root',
+         password='',
+         host='127.0.0.1',
+         database='abcdef')
+
+cur = conn.cursor()
+
+cur.execute("select * from students")
+myresult = cur.fetchall()
+
+for x in myresult:
+  print(x)
+_________________________________________________________________________________
+
+import pymysql
+
+mydb = pymysql.connect(
+  host="localhost",
+  user="root",
+  passwd="",
+  database="abcdef"
+)
+rollno=int(input("Enter Roll no "))
+name=input("Enter Student Name")
+marks=int(input("Enter Student Marks"))
+mycursor = mydb.cursor()
+sql = "INSERT INTO students(rollno,name,marks) VALUES (%s,%s,%s)"
+val = (rollno,name,marks)
+mycursor.execute(sql,val)
+
+
+mydb.commit()
+
+print(mycursor.rowcount, "record inserted.")
+
+
+_________________________________________________________________________________________
+
+import pymysql
+
+mydb = pymysql.connect(
+  host="localhost",
+  user="root",
+  passwd="",
+  database="abcdef"
+)
+cur = mydb.cursor()
+
+cur.execute("select * from students")
+myresult = cur.fetchall()
+
+for x in myresult:
+  print(x)
+
+
+cur.close()
+mydb.close()
+
+_____________________________________________________________________________________
+
+import pymysql
+
+mydb = pymysql.connect(
+  host="localhost",
+  user="root",
+  passwd="",
+  database="abcdef"
+)
+cur = mydb.cursor()
+count=0
+rno=int(input("Enter rollno to search for"))
+sql_statement = "SELECT * FROM students WHERE rollno={}".format(rno)
+cur.execute(sql_statement)
+rows=cur.fetchall()
+for x in rows:
+    print(x)
+    count=count+1
+if count==0:
+    print("No Records Found for rollno ",rno)
+mydb.close()
+
+__________________________________________________________________________________________
+
+import pymysql
+
+mydb = pymysql.connect(
+  host="localhost",
+  user="root",
+  passwd="",
+  database="abcdef"
+)
+count=0
+cur = mydb.cursor()
+name=input("Enter Name to search for")
+sql_statement = "SELECT * FROM students WHERE name='{}'".format(name)
+cur.execute(sql_statement)
+rows=cur.fetchall()
+for x in rows:
+    print(x)
+    count=count+1
+if count==0:
+    print("No Records Found for rollno ",name)
+mydb.close()
+
+
+______________________________________________________________________________________________

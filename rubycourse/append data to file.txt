@@ -1,0 +1,16 @@
+puts("Enter Contact Name :")
+cname=gets()
+puts("Enter Contact Address : ")
+caddress=gets()
+puts("Enter Contact Email : ")
+cemail=gets()
+puts("Enter Contact Mobile No : ")
+cmobile=gets()
+cstr=cname.strip() + "," + caddress.strip() + "," + cemail.strip() + "," + cmobile.strip() + "\n"
+aFile = File.new("c:\\temp\\rubycontacts.txt", "a")
+if aFile
+  aFile.syswrite(cstr)
+  puts("Data Written")
+else
+  puts "Unable to open file!"
+end

@@ -1,0 +1,5 @@
+select *
+from students
+where name like '%b%';
+
+48.query to retrieve records from table students where name contains b

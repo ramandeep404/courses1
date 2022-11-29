@@ -1,0 +1,131 @@
+1. //program to demonstrate exception handling
+
+using System;
+
+namespace ErrorHandlingApplication
+{
+    class DivNumbers
+    {
+        int result;
+
+        DivNumbers()
+        {
+            result = 0;
+        }
+        public void division(int num1, int num2)
+        {
+            try
+            {
+                result = num1 / num2;
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("Exception caught: {0}", e);
+            }
+            finally
+            {
+                Console.WriteLine("Result: {0}", result);
+            }
+        }
+        static void Main(string[] args)
+        {
+            DivNumbers d = new DivNumbers();
+            d.division(25, 0);
+            Console.ReadLine();
+        }
+    }
+}
+
+2. // program to demonstrate finally keyword
+
+using System; 
+  
+public class GFG { 
+  
+    // Main Method 
+    static public void Main() 
+    { 
+  
+        // variables 
+        int number = 4; 
+        int divisor = 0; 
+  
+        // try block 
+        // This block raise exception 
+        try { 
+  
+            int output = number / divisor; 
+        } 
+  
+        // catch block 
+        // This block handle exception 
+        catch (DivideByZeroException) { 
+  
+            Console.WriteLine("Not possible to divide by zero!"); 
+        } 
+  
+        // finally block 
+        // This block release the  
+        // resources of the system 
+        // and this block always executes 
+        finally { 
+  
+            Console.WriteLine("Finally Block!"); 
+        }
+        Console.ReadLine();
+    } 
+} 
+
+
+3. //program to demonstrate exception handling with multiple catch blocks
+
+using System;
+
+class GFG
+{
+
+    // Main Method 
+    static void Main()
+    {
+
+        // Here, number is greater than divisor 
+        int[] number = { 8, 17, 24, 5, 25 };
+        int[] divisor = { 2, 0, 0, 5 };
+
+        // --------- try block --------- 
+
+        for (int j = 0; j < number.Length; j++)
+
+            // Here this block raises two different 
+            // types of exception, i.e. DivideByZeroException 
+            // and IndexOutOfRangeException 
+            try
+            {
+
+                Console.WriteLine("Number: " + number[j]);
+                Console.WriteLine("Divisor: " + divisor[j]);
+                Console.WriteLine("Quotient: " + number[j] / divisor[j]);
+            }
+
+            // Catch block 1 
+
+            // This Catch block is for 
+            // handling DivideByZeroException 
+            catch (DivideByZeroException)
+            {
+
+                Console.WriteLine("Not possible to Divide by zero");
+            }
+
+            // Catch block 2 
+
+            // This Catch block is for 
+            // handling IndexOutOfRangeException 
+            catch (IndexOutOfRangeException)
+            {
+                Console.WriteLine("Index is Out of Range");
+            }
+        Console.ReadLine();
+    }
+}
+

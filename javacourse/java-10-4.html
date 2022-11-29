@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaexceptions.html"> Back To Java Exceptions Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate finally keyword
+package javaexceptions;
+
+
+public class exceptionfinally {
+    static void proca()
+    {
+        try{
+            System.out.println("inside proca");
+            throw new RuntimeException("demo");
+        }
+        finally
+        {
+            System.out.println("proca finally");
+        }
+    }
+    static void procb()
+    {
+        try{
+            System.out.println("inside procb");
+            return;
+        }
+        finally
+        {
+            System.out.println("procb finally");
+        }
+    }
+    static void procc()
+    {
+        try
+        {
+            System.out.println("inside procc");
+        }
+        finally
+        {
+            System.out.println("procc finally");
+        }
+    }
+    
+    public static void main(String args[])
+    {
+        try{
+            proca();
+        }
+        catch(Exception e)
+        {
+            System.out.println("Exception caught");
+        }
+        procb();
+        procc();
+    }
+}
+
+
+        </textarea>
+    </body>
+</html>

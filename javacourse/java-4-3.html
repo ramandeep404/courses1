@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javauserdefined.html"> Back To Java User Defined Methods Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to find create a function to check whether a number passed to it as argument is prime or not
+
+class prime
+{
+    public void cprime(int a)
+    {
+        int i;
+	int prime=1;
+	for(i=2;i<=a/2;i++)
+	{
+		if(a%i==0)
+		{
+			prime=0;
+			break;
+		}
+	}
+	if(prime==1)
+	{
+		System.out.println("number passed to function is prime");
+	}
+	else
+	{
+		System.out.println("number passed to function is not prime");
+	}
+
+    }
+}
+public class checkprime {
+    public static void main(String[] args) {
+   
+prime ob=new prime();
+ob.cprime(5);
+
+}
+}
+
+        </textarea>
+    </body>
+</html>

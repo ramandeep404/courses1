@@ -1,0 +1,40 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpformhandling.html"> Back To PHP Form Handling</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<!-- html program to demonstrate form with a password field-->
+<html>
+    <head>
+        <title></title>
+       
+    </head>
+    <body>
+        <form action="2password.php" method="get" name="form1">
+          Username :   <input type="text" name="username" maxlength="50" value="abcdef">
+          <br>
+          Password : <input type="password" name="pass1">    
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+
+<?php
+//php program to demonstrate password data handling
+print('Username is ');
+print($_GET["username"]);
+print('<br>');
+print('Password is ');
+print($_GET["pass1"]);
+?>
+        </textarea>
+    </body>
+</html>

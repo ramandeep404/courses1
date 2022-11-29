@@ -1,0 +1,88 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package newassignment;
+import java.util.*;
+import java.io.*;
+class book
+{
+    int noofpages;
+    double price;
+book(int np,double p)
+{
+    this.noofpages=np;
+    this.price=p;
+}
+      
+}
+public class NewClass2 {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int np;
+        int pos=0;
+        int highpages=0;
+        double highprice=0;
+        double bprice=0;
+        
+        double avg=0;
+        int c=0;
+        double total=0;
+        book b[]=new book[20];
+        book g;
+        int i=0;
+        int j=0;
+        int k=0;
+        int m=0;
+        String d;
+        String e;
+        String data;
+        StringTokenizer str1;
+        try {
+      File myObj = new File("c:\\temp\\booksdata.txt");
+      Scanner myReader = new Scanner(myObj);
+     while(myReader.hasNextLine())
+     {
+        data = myReader.nextLine();
+        String a[]=data.split(" ");
+        b[i]=new book(Integer.parseInt(a[0]),Double.parseDouble(a[1]));
+        i++;
+        
+      }
+      myReader.close();
+      
+      for(j=0;j<20;j++)
+      {
+          total=total+b[j].price;
+      }
+      avg=total/20;
+      for(k=0;k<20;k++)
+      {
+          if(b[k].price>avg)
+          {
+              c++;
+          }
+      }
+      highpages=b[0].noofpages;
+      highprice=b[0].price;
+      for(m=1;m<20;m++)
+      {
+          if(b[m].noofpages>highpages)
+          {
+              pos=m;
+              break;
+          }
+      }
+      System.out.println("Average is "+avg);
+      System.out.println("No of books with price greater than average price is " + c);
+      System.out.println("Book with highest No of pages is " + pos);
+
+    } catch (Exception exc) {
+    
+      exc.printStackTrace();
+    }
+        
+    }
+}

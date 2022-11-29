@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaclasses.html"> Back To Java Classes Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate static data members and methods
+
+class studentst
+{
+	int rollno;
+	String name;
+	int marks;
+	int clas;
+	static int count;
+studentst()
+	{
+            count++;
+	 }
+	public void getdata()
+	{
+		rollno=1;
+                name=new String("abcdef");
+		marks=90;
+                clas=11;
+		
+	}
+	public void showdata()
+	{
+		System.out.println("rollno of the student is " + rollno);
+		System.out.println("name of student is " + name);
+		System.out.println("marks of student are " + marks);
+		System.out.println("class of student is " + clas);
+	}
+	public static void showcount()
+	{
+        	System.out.println("number of objects created are " + count);
+	}
+};
+public class staticcount {
+                 public static void main(String[] args) {
+       
+    studentst ob=new studentst(); //object of class student created
+	ob.getdata();
+	ob.showdata();
+	studentst ob1=new studentst();
+	studentst ob2=new studentst();
+	studentst ob3=new studentst();
+	studentst.showcount();
+}
+}
+
+
+
+
+        </textarea>
+    </body>
+</html>

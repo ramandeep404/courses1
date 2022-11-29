@@ -1,0 +1,65 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpclasses.html"> Back To PHP Classes and Inheritance Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to demonstrate inheritance
+class employee
+{
+    var $ecode;
+    var $ename;
+    var $esalary;
+    var $edesignation;
+    
+    function egetdata()
+    {
+        $this->ecode=1;
+        $this->ename="abcdef";
+        $this->esalary=10000;
+        $this->edesignation='accountant';
+    }
+    function eshowdata()
+    {
+        print('ecode of employee is ' . $this->ecode);
+        print('<br>');
+        print('ename of employee is ' . $this->ename);
+        print('<br>');
+        print('salary of employee is ' . $this->esalary);
+        print('<br>');
+        print('designation of employee is ' . $this->edesignation);
+        print('<br>');
+    }
+}
+class manager extends employee
+{
+    var $title;
+    function getdata()
+    {
+        employee::egetdata();
+        $this->title='senior';
+    }
+    function showdata()
+    {
+        employee::eshowdata();
+        print('<br>');
+        print('title is ' . $this->title);
+    }
+    
+}
+$m=new manager;
+$m->getdata();
+$m->showdata();
+?>
+
+
+        </textarea>
+    </body>
+</html>

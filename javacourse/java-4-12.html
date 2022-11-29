@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javauserdefined.html"> Back To Java User Defined Methods Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to create two functions to calculate area and perimeter of rectangle (length and breadth of rectangle are passed to functions as arguments)
+
+class rectangle
+{
+   public void area(int length,int breadth)
+{
+	int ar;
+	ar=length*breadth;
+	System.out.println("area of rectangle is " + ar);
+}
+public void perimeter(int length,int breadth)
+{
+	int per;
+	per=2*(length+breadth);
+	System.out.println("perimeter of rectangle is " + per);
+}
+}
+
+public class rectangleareaperi {
+    public static void main(String[] args) {
+   
+rectangle ob=new rectangle();
+ob.area(10,20);
+ob.perimeter(10,20);
+             
+
+}
+}
+
+        </textarea>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+linear search
+
+
+lst=[1,2,3,4,5,89,90];
+a=int(input("enter number to search for"))
+l=len(lst)
+found=0
+pos=-1;
+for i in range(0,l):
+    if lst[i]==a:
+        found=1
+        pos=i
+        break;
+if found==1:
+    print(a , " found at ",pos)
+else:
+    print("not found")
+
+________________________________________________________________
+binary search
+
+def bsearch(ar,item):
+    beg=0
+    last=len(ar)-1
+    while(beg<=last):
+        mid=int((beg+last)/2)
+        if(item==ar[mid]):
+            return mid
+        elif(item>ar[mid]):
+            beg=mid+1
+        else:
+            last=mid-1
+    else:
+        return False
+# __main__
+N=int(input("enter desired linear list size(max.50)..."))
+print("\nenter element for linear list in ascending order\n")
+ar=[0]*N
+for i in range (N):
+    ar[i]=int(input("element"+str(i)+":"))
+item=int(input("\nenter element to be searched for..."))
+index=bsearch(ar,item)
+if index:
+    print("\nelement found at index:",index,",position :",(index+1))
+else:
+    print("sorry! given element could not be found.\n")
+
+
+__________________________________________________
+
+inserting element in sorted array
+
+def findpos(ar,item):
+    size=len(ar)
+    if item<ar[0]:
+        return 0
+    else:
+        pos=-1
+    for i in range(size-1):
+       if(ar[i]<=item and item<ar[i+1]):
+           pos=i+1
+           break
+       if((pos==-1) and (i<=size-1)):
+           pos=size
+    return pos
+def shift(ar,pos):
+    ar.append(None)
+    size=len(ar)
+
+    i=size-1
+    while i>pos:
+        ar[i]=ar[i-1]
+        i=i-1
+#__main__
+mylist=[10,20,30,40,50,60,70]
+print("the list in sorted order is")
+print(mylist)
+item=int(input("enter new element to be inserted:"))
+position=findpos(mylist,item)
+shift(mylist,position)
+mylist[position]=item
+print("the list after inserting",item,"is")
+print(mylist)
+
+___________________________________________________________
+ bubble sort
+
+alist=[15,6,13,22,3,52,2]
+print("original list is:",alist)
+n=len(alist)
+for i in range(n):
+    for j in range(0,n-i-1):
+        if alist[j]>alist[j+1]:
+            alist[j],alist[j+1]=alist[j+1],alist[j]
+print("list after sorting:",alist)
+_____________________________________________________________
+
+insertion sort
+
+arr=[15,6,13,22,3,52,2]
+print("original list is:",arr)
+for i in range(1, len(arr)):
+
+        key = arr[i]
+        j = i-1
+        while j >=0 and key < arr[j] :
+                arr[j+1] = arr[j]
+                j -= 1
+        arr[j+1] = key
+print(arr)
+
+_____________________________________________________
+
+deletion in sorted array
+
+def bsearch(ar,item):
+    beg=0
+    last=len(ar)-1
+    while(beg<=last):
+        mid=int((beg+last)/2)
+        if(item==ar[mid]):
+            return mid
+        elif(item>ar[mid]):
+            beg=mid+1
+        else:
+            last=mid-1
+    else:
+        return False
+#__main__
+mylist=[10,20,30,40,50,60,70]
+print("the list in sorted order is")
+print(mylist)
+ITEM=int(input("enter element to be searched for"))
+position =bsearch(mylist,ITEM)
+if position>-1:
+    del mylist[position]
+    print("the list after deleating",ITEM,"is")
+    print(mylist)
+else:
+    print("sorry!no such element in the list ")
+
+
+_____________________________________________________________
+
+
+

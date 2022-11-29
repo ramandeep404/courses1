@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javajdbc.html"> Back To Java JDBC Database Connectivity Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to connect to a mysql database and display the records
+package javajdbc;
+import java.sql.*;
+public class Javajdbc {
+    public static void main(String[] args) {
+        try {
+		Statement stmt;
+		ResultSet rs;
+
+
+		Class.forName("com.mysql.jdbc.Driver");
+		String url ="jdbc:mysql://127.0.0.1:3306/students";
+		Connection con =DriverManager.getConnection(url,"root", "");
+		stmt = con.createStatement();
+		rs = stmt.executeQuery("SELECT * from student");
+		System.out.println("Display all results:");
+		String str=new String();
+                int rno;
+		while(rs.next()){
+                rno=rs.getInt("rollno");
+		str = rs.getString("name");
+		System.out.println(str);
+                System.out.println(rno);
+		}
+		}
+		catch(Exception e)
+		{
+		System.out.println(e.toString());
+		}
+
+
+    }
+}
+        </textarea>
+    </body>
+</html>

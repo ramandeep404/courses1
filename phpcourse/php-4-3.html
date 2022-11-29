@@ -1,0 +1,31 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+       <a href="phpuserdefined.html"> Back To PHP User Defined Functions Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to create a function to find factorial of number passed to function as argument
+function factorial($a)
+{
+    $fact=1;
+	for($i=1;$i<=$a;$i++)
+	{
+		$fact=$fact*$i;
+	}
+	print('factorial of number is ' . $fact);
+}
+factorial(5);
+print('<br>');
+factorial(6);
+?>
+
+        </textarea>
+    </body>
+</html>

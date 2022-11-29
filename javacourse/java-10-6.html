@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaexceptions.html"> Back To Java Exceptions Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate throws keyword
+
+public class throwsexception {
+     static void throwone() throws IllegalAccessException{
+         System.out.println("inside throwone");
+         throw new IllegalAccessException("demo");
+     }
+     public static void main(String[] args) {
+ try{
+     throwone();
+     
+ }
+ catch(IllegalAccessException e)
+ {
+     System.out.println("Caught " + e);
+ }
+ 
+}
+}
+
+        </textarea>
+    </body>
+</html>

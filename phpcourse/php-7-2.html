@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpclasses.html"> Back To PHP Classes and Inheritance Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to demonstrate class employee with getdata and showdata member functions
+class employee
+{
+    var $ecode;
+    var $ename;
+    var $esalary;
+    var $edesignation;
+    
+    function getdata()
+    {
+        $this->ecode=1;
+        $this->ename="abcdef";
+        $this->esalary=10000;
+        $this->edesignation='accountant';
+    }
+    function showdata()
+    {
+        print('ecode of employee is ' . $this->ecode);
+        print('<br>');
+        print('ename of employee is ' . $this->ename);
+        print('<br>');
+        print('salary of employee is ' . $this->esalary);
+        print('<br>');
+        print('designation of employee is ' . $this->edesignation);
+        print('<br>');
+    }
+}
+$ob=new employee;
+$ob->getdata();
+$ob->showdata();
+?>
+
+
+        </textarea>
+    </body>
+</html>

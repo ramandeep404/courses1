@@ -1,0 +1,32 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phploops.html"> Back To PHP Loops Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to print first 1 to 10 terms of fibonicci series using for statement
+	$a=1;$b=1;
+        print($a);
+        print('<br>');
+        print($b);
+        print('<br>');
+	for($i=2;$i<=10;$i++)
+	{
+		$c=$a+$b;
+		print($c);
+                print('<br>');
+		$a=$b;
+		$b=$c;
+	}
+?>
+
+        </textarea>
+    </body>
+</html>

@@ -1,0 +1,2 @@
+select sum(salary) from employees
+where designation="accountant";

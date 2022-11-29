@@ -1,0 +1,1 @@
+select * from students where marks>=80 and marks<=90;

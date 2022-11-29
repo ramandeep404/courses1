@@ -1,0 +1,163 @@
+open jfilechooser
+
+ try
+ {
+     JFileChooser j = new JFileChooser("c:\\");
+  
+            // invoke the showsOpenDialog function to show the save dialog
+            int r = j.showOpenDialog(null);
+  
+            // if the user selects a file
+            if (r == JFileChooser.APPROVE_OPTION)
+  
+            {
+                // set the label to the path of the selected file
+                jTextField1.setText(j.getSelectedFile().getAbsolutePath());
+            }
+            // if the user cancelled the operation
+            else
+                jTextField1.setText("the user cancelled the operation");
+        }    
+    
+catch(Exception e)
+{
+System.out.println(e.toString());
+}
+____________________________________________________________________________________
+
+file filter
+
+try
+ {
+     JFileChooser j = new JFileChooser("c:\\");
+  FileNameExtensionFilter filter = new FileNameExtensionFilter("TEXT FILES", "txt", "text");
+j.setFileFilter(filter);
+            // invoke the showsOpenDialog function to show the save dialog
+            int r = j.showOpenDialog(null);
+  
+            // if the user selects a file
+            if (r == JFileChooser.APPROVE_OPTION)
+  
+            {
+                // set the label to the path of the selected file
+                jTextField1.setText(j.getSelectedFile().getAbsolutePath());
+            }
+            // if the user cancelled the operation
+            else
+                jTextField1.setText("the user cancelled the operation");
+        }    
+    
+catch(Exception e)
+{
+System.out.println(e.toString());
+}
+
+_____________________________________________________________________________________
+
+file filters
+
+try
+ {
+     JFileChooser j = new JFileChooser("c:\\");
+  FileNameExtensionFilter filter = new FileNameExtensionFilter("Image FILES", "jpg", "png","gif");
+j.setFileFilter(filter);
+            // invoke the showsOpenDialog function to show the save dialog
+            int r = j.showOpenDialog(null);
+  
+            
+                // set the label to the path of the selected file
+                jTextField1.setText(j.getSelectedFile().getPath());
+                String imagename=j.getSelectedFile().getPath();
+                
+                ImageIcon ic=new ImageIcon(imagename);
+                jLabel1.setIcon(ic);
+            
+        }    
+    
+catch(Exception e)
+{
+System.out.println(e.toString());
+}
+
+_____________________________________________________________________
+
+open rtf file in editor pane
+
+String filename="";
+        try
+ {
+     JFileChooser j = new JFileChooser("c:\\");
+  FileNameExtensionFilter filter = new FileNameExtensionFilter("RTF FILES", "rtf");
+j.setFileFilter(filter);
+            // invoke the showsOpenDialog function to show the save dialog
+            int r = j.showOpenDialog(null);
+  
+            // if the user selects a file
+            if (r == JFileChooser.APPROVE_OPTION)
+  
+            {
+                // set the label to the path of the selected file
+                filename=j.getSelectedFile().getPath();
+            }
+            RTFEditorKit rtf = new RTFEditorKit();
+         jEditorPane1.setEditorKit(rtf);
+      
+      FileInputStream fi = new FileInputStream(filename);
+      rtf.read(fi, jEditorPane1.getDocument(), 0);
+    } 
+        
+        
+    
+catch(Exception e)
+{
+System.out.println(e.toString());
+}       
+
+_________________________________________________________________________________
+java table
+
+try
+ {
+    DefaultTableModel model = new DefaultTableModel();
+ String[] columnNames = {"Ecode","Employee Name","Salary","Date of Joining","Address"};
+model.setColumnIdentifiers(columnNames);
+jTable1.setModel(model);
+String source;
+String destination;
+
+
+Statement stmt;
+		ResultSet rs;
+
+
+		Class.forName("com.mysql.jdbc.Driver");
+		String url ="jdbc:mysql://127.0.0.1:3306/payroll3";
+		Connection con =DriverManager.getConnection(url,"root", "");
+		stmt = con.createStatement();
+                String query="SELECT * from employees";
+                System.out.println(query);
+		rs = stmt.executeQuery(query);
+		
+		int ecode;
+                String ename;
+                int esalary;
+                String doj;
+                String eaddress;
+		while(rs.next()){
+               ecode=rs.getInt("ecode");
+               ename=rs.getString("ename");
+               esalary=rs.getInt("esalary");
+               doj=rs.getString("doj");
+               eaddress=rs.getString("eaddress");
+                model.addRow(new Object[]{ecode,ename,esalary,doj,eaddress});
+		
+                }
+}
+		catch(Exception e)
+		{
+		System.out.println(e.toString());
+		}        // TODO add your handling code here:
+    }              
+
+
+_______________________________________________________________________

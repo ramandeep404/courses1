@@ -1,0 +1,27 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phpexceptions.html"> Back To PHP Sessions</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php 
+$uploaddir = './uploads/';
+$uploadfile = $uploaddir . $_FILES['billtxt']['name'];
+
+if (move_uploaded_file($_FILES['billtxt']['tmp_name'], $uploadfile)) {
+    print('File Uploaded');
+    
+} else {
+    print "File cannot be uploaded:\n";
+   
+}
+?>
+        </textarea>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+Imports System.Data.OleDb
+
+Public Class Form1
+    Dim dbProvider As String
+    Dim dbSource As String
+
+    Dim dbPathAndFilename As String
+    Dim con As New OleDb.OleDbConnection
+    Dim ds As New DataSet
+    Dim da As OleDb.OleDbDataAdapter
+    Dim sql As String
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        
+
+
+    End Sub
+    Sub LoadData()
+        Dim dbProvider As String
+        Dim dbSource As String
+        'dbProvider = "PROVIDER=Microsoft.Jet.OLEDB.4.0;" ' MDB
+        dbProvider = "PROVIDER=Microsoft.Ace.OLEDB.12.0;" 'ACCDB
+        dbSource = "Data Source="
+        Dim dbPathAndFilename As String
+        Dim con As New OleDb.OleDbConnection
+        Dim ds As New DataSet
+        Dim da As OleDb.OleDbDataAdapter
+        Dim sql As String
+        'Connect to db
+        'You could store the db path in the Settings of the App.
+        'dbPathAndFilename = My.Settings.dbPath
+        dbPathAndFilename = "file1.accdb"
+        con.ConnectionString = dbProvider & dbSource & dbPathAndFilename
+
+        con.Open()
+        sql = "SELECT * FROM Table1"
+        da = New OleDb.OleDbDataAdapter(sql, con)
+        'Give it a name.
+        da.Fill(ds, "TABLE")
+
+        con.Close()
+
+        'Populate the DataGridView
+        DataGridView1.DataSource = ds.Tables("TABLE")
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        LoadData()
+    End Sub
+End Class

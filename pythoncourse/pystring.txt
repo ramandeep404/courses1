@@ -1,0 +1,177 @@
+traversing a string
+
+str="raman";
+for i in range(0,len(str)):
+    print(str[i]);
+
+__________________________________________
+reverse a string
+
+str='raman'
+print(str[::-1])
+____________________________________________
+reverse a string
+
+str="raman";
+for i in range(len(str)-1,-1,-1):
+    print(str[i]);
+
+________________________________________-
+
+program to read a string and display it in the form
+
+first character  -- last character
+second character  -- second last character
+
+str="raman";
+l=len(str);
+for i in range(0,l):
+    print(str[i] , "-", str[l-i-1]);
+
+______________________________________________________
+
+String operators
+
+String concatenation operator
+
+str="raman";
+str1="deep";
+print(str+str1);
+
+String replication operator
+
+str="raman";
+print(str*3);
+
+Membership Operators
+in operator
+
+str="raman";
+print("r" in str);
+
+not in operator
+
+str="raman";
+print("r" not in str);
+
+_____________________________________________
+
+string slices
+
+str="raman";
+print(str[2:4]);
+
+output : ma
+
+str="raman";
+print(str[:4]);
+
+output : rama
+
+str="raman";
+print(str[4:]);
+
+output : n
+
+str="raman";
+print(str[-3:]);
+
+output : man
+
+str="raman";
+print(str[:-3]);
+
+output : ra
+
+String functions and methods
+
+capitalize method 
+
+str="raman";
+print(str.capitalize());
+
+output : Raman
+
+find method
+
+str="raman";
+print(str.find("m"));
+
+output : 2
+
+str="raman";
+print(str.isalnum());
+
+output : True
+
+str="raman";
+print(str.isalpha());
+
+output : True
+
+str="raman";
+print(str.isdigit());
+
+Output : False
+
+str="raman";
+print(str.islower());
+
+Output : True
+
+str="raman";
+print(str.isspace());
+
+Output : False
+
+str="raman";
+print(str.isupper());
+
+Output : False
+
+str="raman";
+print(str.lower());
+
+Output : raman
+
+str="raman";
+print(str.upper());
+
+Output :RAMAN
+
+str="  raman";
+print(str.lstrip());
+
+Output : raman
+
+str="raman     ";
+print(str.rstrip());
+
+Output : raman
+
+Program to read a line and give its statistics like:
+number of upper case letters:
+number of lower case letters
+number of alphabets:
+number of digits:
+
+str="raman123Raman";
+low=0;
+up=0;
+dig=0;
+alp=0;
+for a in str:
+    if a.islower():
+        low+=1;
+    elif a.isupper():
+        up+=1;
+    elif a.isdigit():
+        dig+=1;
+    if a.isalpha():
+        alp+=1;
+print("Number of alphabets ", alp);
+print("Number of Lower Case Letters ", low);
+print("Number of Upper Case Letters ",up);
+print("Number of Digits : ",dig);
+
+

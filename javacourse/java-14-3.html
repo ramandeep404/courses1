@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javafiles.html"> Back To Java Files Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//Write Data to File
+import java.io.FileWriter;   // Import the FileWriter class
+import java.io.IOException;  // Import the IOException class to handle errors
+
+public class WriteToFile {
+  public static void main(String[] args) {
+    try {
+      FileWriter myWriter = new FileWriter("filename.txt");
+      myWriter.write("Files in Java might be tricky, but it is fun enough!");
+      myWriter.close();
+      System.out.println("Successfully wrote to the file.");
+    } catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
+  }
+}
+
+
+        </textarea>
+    </body>
+</html>

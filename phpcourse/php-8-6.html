@@ -1,0 +1,68 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phppdomysql.html"> Back To PHP PDO MySql</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to demostrate prepared statement
+
+$hostname = 'localhost';
+
+$username = 'root';
+
+$password = '';
+
+try {
+    $dbh = new PDO("mysql:host=$hostname;dbname=students", $username, $password);
+    
+   print('Connected to database<br />');
+
+    
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+   
+    $rno = 3;
+
+    $name = 'abcdef';
+
+    
+    $stmt = $dbh->prepare("SELECT * FROM student WHERE rollno = :rno AND name = :name");
+
+    
+    $stmt->bindParam(':rno', $rno, PDO::PARAM_INT);
+    $stmt->bindParam(':name', $name, PDO::PARAM_STR, 5);
+
+   
+    $stmt->execute();
+
+    $result = $stmt->fetchAll();
+
+    foreach($result as $row)
+        {
+        print($row['rollno'].'<br />');
+        print($row['name'].'<br />');
+        print($row['class'] . '<br />');
+        print($row['marks'] . '<br />');
+        }
+
+  
+    $dbh = null;
+}
+catch(PDOException $e)
+    {
+    print($e->getMessage());
+    }
+?>
+
+
+
+        </textarea>
+    </body>
+</html>

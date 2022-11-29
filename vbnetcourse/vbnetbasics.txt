@@ -1,0 +1,374 @@
+1. program to display hello world on the output screen
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Console.WriteLine("Hello World")
+    End Sub
+End Module
+
+2.Program to add two numbers
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, sum As Integer
+        Console.WriteLine("Enter First Number")
+
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        sum = a + b
+        Console.WriteLine("Sum of two numbers is " & sum)
+    End Sub
+End Module
+
+3. Program to find difference between two numbers
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, diff As Integer
+        Console.WriteLine("Enter First Number")
+
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        diff = a - b
+        Console.WriteLine("Difference of two numbers is " & diff)
+    End Sub
+End Module
+
+4. Program to find product of two numbers
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, product As Integer
+        Console.WriteLine("Enter First Number")
+
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        product = a * b
+        Console.WriteLine("Product of two numbers is " & product)
+    End Sub
+End Module
+
+5. Program to find quotient of two numbers
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, quo As Integer
+        Console.WriteLine("Enter First Number")
+
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        quo = a / b
+        Console.WriteLine("Quotient of two numbers is " & quo)
+    End Sub
+End Module
+
+6. Program to find remainder of two numbers
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, remainder As Integer
+        Console.WriteLine("Enter First Number")
+
+        a = Convert.ToInt32(Console.ReadLine())
+        Console.WriteLine("Enter Second Number")
+        b = Convert.ToInt32(Console.ReadLine())
+        remainder = a Mod b
+        Console.WriteLine("Remainder of two numbers is " & remainder)
+    End Sub
+End Module
+
+7. Program to initialize a Char variable and display its value
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Char
+        a = Convert.ToChar("c")
+        Console.WriteLine("Character is " & a)
+
+    End Sub
+End Module
+
+8. program to input a double value (number with decimal point)
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Double
+        Console.WriteLine("Enter Decimal Point Value")
+        a = Convert.ToDouble(Console.ReadLine)
+        Console.WriteLine("Decimal Point Number is " & a)
+
+    End Sub
+End Module
+
+9. Program to input two decimal point numbers and display their sum
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, sum As Double
+        Console.WriteLine("Enter First Number as Decimal Point Value")
+        a = Convert.ToDouble(Console.ReadLine)
+        Console.WriteLine("Enter Second Number as Decimal Point Value")
+        b = Convert.ToDouble(Console.ReadLine)
+        sum = a + b
+        Console.WriteLine("Sum of two Numbers is " & sum)
+
+    End Sub
+End Module
+
+10. Program to input two decimal point numbers and display their difference
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, diff As Double
+        Console.WriteLine("Enter First Number as Decimal Point Value")
+        a = Convert.ToDouble(Console.ReadLine)
+        Console.WriteLine("Enter Second Number as Decimal Point Value")
+        b = Convert.ToDouble(Console.ReadLine)
+        diff = a - b
+        Console.WriteLine("Difference of two Numbers is " & diff)
+
+    End Sub
+End Module
+
+11. program to input two float (decimal point) values and find their product
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, product As Double
+        Console.WriteLine("Enter First Number as Decimal Point Value")
+        a = Convert.ToDouble(Console.ReadLine)
+        Console.WriteLine("Enter Second Number as Decimal Point Value")
+        b = Convert.ToDouble(Console.ReadLine)
+        product = a * b
+        Console.WriteLine("Product of two Numbers is " & product)
+
+    End Sub
+End Module
+
+12. program to input two double (decimal point ) values and find their division
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a, b, quo As Double
+        Console.WriteLine("Enter First Number as Decimal Point Value")
+        a = Convert.ToDouble(Console.ReadLine)
+        Console.WriteLine("Enter Second Number as Decimal Point Value")
+        b = Convert.ToDouble(Console.ReadLine)
+        quo = a / b
+        Console.WriteLine("Quotient of two Numbers is " & quo)
+
+    End Sub
+End Module
+
+13. program to input principal, rate of interest and time and compute simple interest
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim p, r, t, si As Double
+        Console.WriteLine("Enter Principal Amount")
+        p = Convert.ToDouble(Console.ReadLine)
+        Console.WriteLine("Enter Rate of Interest")
+        r = Convert.ToDouble(Console.ReadLine)
+        Console.WriteLine("Enter Time in Years")
+        t = Convert.ToDouble(Console.ReadLine)
+        si = (p * r * t) / 100
+        Console.WriteLine("Simple Interest is " & si)
+
+    End Sub
+End Module
+
+14. program to input length and breadth of rectangle and find area of rectangle
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim l, b, area As Integer
+        Console.WriteLine("Enter Length of Rectangle")
+        l = Convert.ToInt32(Console.ReadLine)
+        Console.WriteLine("Enter Breadth of Rectangle")
+        b = Convert.ToInt32(Console.ReadLine)
+        area = l * b
+        Console.WriteLine("Area of Rectangle is " & area)
+
+    End Sub
+End Module
+
+15. program to input length and breadth of rectangle and compute perimeter of rectangle
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim l, b, perimeter As Integer
+        Console.WriteLine("Enter Length of Rectangle")
+        l = Convert.ToInt32(Console.ReadLine)
+        Console.WriteLine("Enter Breadth of Rectangle")
+        b = Convert.ToInt32(Console.ReadLine)
+        perimeter = 2 * (l + b)
+        Console.WriteLine("Perimeter of Rectangle is " & perimeter)
+
+    End Sub
+End Module
+
+16. Program to input side of square and find area of square
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim side, area As Integer
+        Console.WriteLine("Enter side of square")
+        side = Convert.ToInt32(Console.ReadLine)
+        area = side * side
+        Console.WriteLine("Area of Square is " & area)
+    End Sub
+End Module
+
+17. Program to input side of square and find perimeter of square
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim side, perimeter As Integer
+        Console.WriteLine("Enter side of square")
+        side = Convert.ToInt32(Console.ReadLine)
+        perimeter = 4 * side
+        Console.WriteLine("Perimeter of Square is " & perimeter)
+    End Sub
+End Module
+
+18. program to input base and height of right angled triangle and find area of right angled triangle
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim b, h, area As Double
+        Console.WriteLine("Enter base of right angled triangle")
+        b = Convert.ToDouble(Console.ReadLine())
+        Console.WriteLine("Enter height of right angled triangle")
+        h = Convert.ToDouble(Console.ReadLine())
+        area = 0.5 * b * h
+        Console.WriteLine("Area of Right Angled Triangle is " & area)
+    End Sub
+End Module
+
+19. program to input radius of circle and find area of circle
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim r, area As Double
+        Console.WriteLine("Enter Radius of circle")
+        r = Convert.ToDouble(Console.ReadLine())
+        area = 3.14 * r * r
+        Console.WriteLine("Area of Circle is " & area)
+    End Sub
+End Module
+
+20. Program to input radius of circle and find circumference of circle
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim r, cr As Double
+        Console.WriteLine("Enter Radius of circle")
+        r = Convert.ToDouble(Console.ReadLine())
+        cr = 2 * 3.14 * r
+        Console.WriteLine("Circumference of Circle is " & cr)
+    End Sub
+End Module
+
+21. Program to input price and find discount as 10%
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim price, discount As Double
+        Console.WriteLine("Enter Price ")
+        price = Convert.ToDouble(Console.ReadLine)
+        discount = 0.1 * price
+        Console.WriteLine("Discount is " & discount)
+    End Sub
+End Module
+
+22. program to find volume of box based on width,depth and height
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim w, d, h, vol As Double
+        Console.WriteLine("Enter Width of Box")
+        w = Convert.ToDouble(Console.ReadLine())
+        Console.WriteLine("Enter Depth of Box")
+        d = Convert.ToDouble(Console.ReadLine())
+        Console.WriteLine("Enter Height of Box")
+        h = Convert.ToDouble(Console.ReadLine())
+        vol = w * d * h
+        Console.WriteLine("Volume of box is " & vol)
+    End Sub
+End Module
+
+23. program to declare a constant using const keyword
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Const pi As Double = 3.14
+        Dim radius, area As Double
+        Console.WriteLine("Enter radius of circle")
+        radius = Convert.ToDouble(Console.ReadLine())
+        area = pi * radius * radius
+        Console.WriteLine("Area of Circle is " & area)
+    End Sub
+End Module
+
+24. Program to demonstrate boolean variable
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim a As Boolean
+        a = True
+        Console.WriteLine("Value of Boolean Variable a is " & a)
+    End Sub
+End Module
+

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javaclasses.html"> Back To Java Classes Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate example of class book that contains two public member functions getdata() and showdata() and four data members (bookid,name,price and author)
+
+class book
+{
+	private int bookid;
+	private String name;
+	private float price;
+	private String author;
+public void getdata()
+	{
+		bookid=1;
+                name=new String("abcdef");
+		price=300;
+                author=new String("abcxyz");
+	}
+	void showdata()
+	{
+		System.out.println("book id is " + bookid);
+		System.out.println("book name is " + name);
+		System.out.println("price of book is " + price);
+		System.out.println("author of the book is " + author);
+	}
+};
+
+public class classbook {
+         public static void main(String[] args) {
+       
+        book ob=new book();
+        ob.getdata();
+        ob.showdata();
+}
+}
+
+        </textarea>
+    </body>
+</html>

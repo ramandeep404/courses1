@@ -1,0 +1,25 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phparrays.html"> Back To PHP Arrays Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to randomize an array using shuffle function
+$arr=range(1,10);
+shuffle($arr);
+foreach($arr as $a)
+{
+    print($a);
+    print('<br>');
+}
+?>
+        </textarea>
+    </body>
+</html>

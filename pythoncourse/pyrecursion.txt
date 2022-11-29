@@ -1,0 +1,86 @@
+find a raise to power of b
+
+def power(a,b):
+    res=1
+    if b==0:
+        return 1
+    else:
+        for i in range (b):
+            res=res*a
+    return res
+#__main__
+print("enter only positive numbers below:")
+num=int(input("enter base number:"))
+p=int(input("raised to power of:"))
+result=power(num,p)
+print(num,"raised to power of",p,"is",result)
+
+___________________________________________________________
+
+factorial
+
+def factorial(n):
+    if n<2:
+        return 1
+    return n*factorial(n-1)
+#__main__
+n=int(input("enter a number (>0):"))
+print("factoriaal of",n,"is",factorial(n))
+________________________________________________________________
+
+gcd
+
+def gcd(a,b):
+    if b==0:
+        return a
+    else:
+        return gcd(b,a%b)
+#__main__
+n1=int(input("enter first number:"))
+n2=int(input("enter second number:"))
+d=gcd(n1,n2)
+print("gcd of",n1,n2,"is",d)
+________________________________________________________
+
+fibonicci
+
+def fib(n):
+    if n==1:
+        return 0
+    elif n==2:
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
+#__main__
+n=int(input("enter last term required:"))
+for i in range(1,n+1):
+    print(fib(i),end=',')
+print("...")
+
+____________________________________________________________
+
+binary search
+
+def binsearch(ar,key):
+    low=0
+    high=len(ar)-1
+    while low<=high:
+        mid=int((low+high)/2)
+        if key==ar[mid]:
+            return mid
+        elif key<ar[mid]:
+            high=mid-1
+        else:
+            low=mid+1
+    else:
+        return -999
+#__main__
+ar=[12,15,21,25,28,32,33,36,43,45]
+item=int(input("enter search item:"))
+res=binsearch(ar,item)
+if res>=0:
+    print(item,"found at index",res)
+else:
+    print("sorry!",item,"not found in array")
+______________________________________________________________
+

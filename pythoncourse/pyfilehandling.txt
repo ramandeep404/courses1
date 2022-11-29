@@ -1,0 +1,60 @@
+program to raed whole file using read function
+
+fp=open("foo.txt","r");
+str=fp.read();
+print(str)
+
+_______________________________________
+
+program to raed a file line by line using readline function
+
+fp=open("foo.txt","r");
+print(fp.readline())
+print(fp.readline())
+
+_________________________________________
+
+program to read a file line by line using readlines function
+
+fp=open("foo.txt","r")
+lst=fp.readlines();
+l=len(lst)
+for i in range(0,l):
+    print(lst[i]);
+
+_______________________________________
+
+program to write a line to a file using write function
+
+fp=open("foo1.txt","w")
+str=input("Enter a string");
+fp.write(str);
+
+__________________________________________
+program to write multiple lines to a file using write function
+
+fp=open("foo3.txt","w")
+a=int(input("enter no of lines"))
+for i in range (0,a):
+    str=input("enter a string");
+    fp.write(str)
+
+__________________________________________
+
+program to write multiple lines to a file using writelines function
+
+fp=open("foo8.txt","w")
+a=int(input("enter no of lines"))
+str=[];
+for i in range (0,a):
+    str1=input("enter a string");
+    str.append(str1+"\n")
+fp.writelines(str);
+
+___________________________________________________________
+
+to append data to file
+
+fp=open("foo1.txt","a")
+str=input("Enter a string");
+fp.write(str);

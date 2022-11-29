@@ -1,0 +1,2 @@
+create table employees_clerk
+select * from employees where designation="clerk";

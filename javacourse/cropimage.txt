@@ -1,0 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaopencv;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import javax.imageio.ImageIO;
+/**
+ *
+ * @author raman
+ */
+public class NewClass2 {
+    public static BufferedImage cropImage(BufferedImage bufferedImage, int x, int y, int width, int height){
+    BufferedImage croppedImage = bufferedImage.getSubimage(x, y, width, height);
+    return croppedImage;
+}
+    public static void main(String args[])
+    {
+        try
+        {
+            File imageFile = new File("C:\\temp\\img123.jpg");
+BufferedImage bufferedImage = ImageIO.read(imageFile);
+BufferedImage image=null;
+image=cropImage(bufferedImage,20,20,400,400);
+            File pathFile = new File("C:\\temp\\img12345.jpg");
+ImageIO.write(image,"jpg", pathFile);
+System.out.println("Cropped Image Saved");
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.toString());
+        }
+    }
+}

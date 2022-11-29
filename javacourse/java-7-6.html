@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaclasses.html"> Back To Java Classes Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate a class studentone which has a parameterized method
+
+class studentone
+{
+	private int rollno;
+	private String name;
+	private int marks;
+	private int clas;
+public 	void getdata(int rno,String n,int m,int cl)
+	{
+		rollno=rno;
+                name=n;
+                marks=m;
+                clas=cl;
+	}
+public void showdata()
+	{
+		System.out.println("rollno of the student is " + rollno);
+		System.out.println("name of student is " + name);
+		System.out.println("marks of student are " + marks);
+		System.out.println("class of student is " + clas);
+	}
+}
+
+public class classstudentparameter {
+    public static void main(String[] args) {
+
+        studentone ob=new studentone();
+        ob.getdata(1,"abcdef",80,11);
+        ob.showdata();
+    }
+}
+
+
+
+        </textarea>
+    </body>
+</html>

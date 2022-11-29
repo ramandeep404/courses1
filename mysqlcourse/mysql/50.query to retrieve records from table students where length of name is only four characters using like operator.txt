@@ -1,0 +1,5 @@
+select *
+from students
+where name like '____';
+
+50.query to retrieve records from table students where length of name is only four characters using like operator

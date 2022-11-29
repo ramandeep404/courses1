@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaconstructors.html"> Back To Java Constructors Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate constructor overloading in class student
+
+class studenttwo
+{
+	int rollno;
+	String name;
+	int marks;
+	int clas;
+public	studenttwo()   //constructor 1
+	{
+		rollno=1;
+		name=new String("abcdef");
+		marks=90;
+		clas=11;
+	}
+public	studenttwo(int srollno)  //constructor 2
+	{
+		rollno=srollno;
+		name=new String("abcdef");
+		marks=90;
+		clas=11;
+	}
+	public studenttwo(int srollno,String sname)    //constructor 3
+	{
+		rollno=srollno;
+		name=sname;
+		marks=90;
+		clas=11;
+	}
+	public studenttwo(int srollno,String sname,int smarks)   //constructor 4
+	{
+		rollno=srollno;
+		name=sname;
+		marks=smarks;
+		clas=11;
+	}
+	public studenttwo(int srollno,String sname,int smarks,int sclas) //constructor 5
+	{
+		rollno=srollno;
+		name=sname;
+		marks=smarks;
+		clas=sclas;
+	}
+	void showdata()
+	{
+		System.out.println("rollno is " + rollno);
+		System.out.println("name is " + name);
+		System.out.println("marks are " + marks);
+		System.out.println("class is " + clas);
+	}
+};
+
+public class consoverloading {
+                 public static void main(String[] args) {
+  studenttwo ob1=new studenttwo();  //constructor 1 called here
+	ob1.showdata();
+	studenttwo ob2=new studenttwo(2); //constructor 2 called here
+	ob2.showdata();
+	studenttwo ob3=new studenttwo(3,"derdre"); // constructor 3 called here
+	ob3.showdata();
+	studenttwo ob4=new studenttwo(4,"abcdef",89); // constructor 4 called here
+	ob4.showdata();
+	studenttwo ob5=new studenttwo(5,"xyxyz",90,11);  //constructor 5 called here
+	ob5.showdata();
+}
+}
+
+        </textarea>
+    </body>
+</html>

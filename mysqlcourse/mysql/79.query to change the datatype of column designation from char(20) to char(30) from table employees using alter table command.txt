@@ -1,0 +1,1 @@
+alter table employees modify designation char(30);

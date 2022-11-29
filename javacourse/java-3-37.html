@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaloops.html"> Back To Java Loops Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to input a number and find whether it is palindrome or not (1221 is a palindrome and 1234 is not a palindrome)
+
+public class checknopalindrome {
+                             public static void main(String[] args) {
+   
+
+    int n,num,digit,rev=0;
+   num=1221;
+    n=num;
+    do
+    {
+        digit=num%10;
+        rev=(rev*10)+digit;
+        num=num/10;
+    }while(num!=0);
+   System.out.println("the reverse of number is " + rev);
+   if(n==rev)
+    {
+        System.out.println("number is palindrome");
+    }
+    else
+    {
+        System.out.println("number is not pelindrome");
+    }
+}
+}
+
+        </textarea>
+    </body>
+</html>

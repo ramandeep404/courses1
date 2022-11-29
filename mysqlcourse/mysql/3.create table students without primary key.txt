@@ -1,0 +1,4 @@
+create table students(rollno int,
+name char(20),
+class int,
+marks int);

@@ -1,0 +1,363 @@
+1. //program to display first character of string
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdef";
+            Console.WriteLine(a.Substring(0, 1));
+            Console.ReadLine();
+        }
+    }
+}
+
+2. //program to demonstrate compareto method
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdef";
+            string b="xyz";
+            Console.WriteLine(a.CompareTo(b));
+            Console.ReadLine();
+        }
+    }
+}
+
+3. //program to demonstrate compareto method to check for equality of two strings
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdef";
+            string b="abcdef";
+            if (a.CompareTo(b) == 0)
+            {
+                Console.WriteLine("Strings are equal");
+            }
+            else
+            {
+                Console.WriteLine("Strings are not equal");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+4. //program to demonstrate Concat method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdef";
+            string b="abcdef";
+            string c;
+            c = string.Concat(a,b);
+            Console.WriteLine("Concatenated String is " + c);
+            Console.ReadLine();
+        }
+    }
+}
+
+5. //program to demonstrate Contains method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdef";
+            bool b;
+            b = a.Contains("a");
+            if (b == true)
+            {
+                Console.WriteLine("string a contains a");
+            }
+            else
+            {
+                Console.WriteLine("string a does not contains a");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+6. //program to demonstrate Equals method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdef";
+            string b = "abcdef";
+            bool c;
+            c = a.Equals(b);
+            if (c == true)
+            {
+                Console.WriteLine("both strings are equal");
+            }
+            else
+            {
+                Console.WriteLine("strings are not equal");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+7. //program to demonstrate EndsWith method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdef";
+            bool b;
+            b = a.EndsWith("f");
+            if (b == true)
+            {
+                Console.WriteLine("string ends with f");
+            }
+            else
+            {
+                Console.WriteLine("string does not ends with f");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+8. //program to demonstrate IndexOf method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdef";
+            int b;
+            b=a.IndexOf("b");
+            Console.WriteLine("Index of b in string is " + b);
+            Console.ReadLine();
+        }
+    }
+}
+
+9. //program to demonstrate LastIndexOf method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdefb";
+            int b;
+            b = a.LastIndexOf("b");
+            Console.WriteLine("Last Index of b in string is " + b);
+            Console.ReadLine();
+        }
+    }
+}
+
+10. //program to demonstrate Length property of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdefb";
+            int b;
+            b = a.Length;
+            Console.WriteLine("Length of string is " + b);
+            Console.ReadLine();
+        }
+    }
+}
+
+11. //program to demonstrate Replace method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdefb";
+            Console.WriteLine("Original String is " + a);
+            a=a.Replace("a", "x");
+            Console.WriteLine("Replaced string is " + a);
+            Console.ReadLine();
+        }
+    }
+}
+
+12. //program to demonstrate StartsWith method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdef";
+            bool b;
+            b = a.StartsWith("a");
+            if (b == true)
+            {
+                Console.WriteLine("string starts with a");
+            }
+            else
+            {
+                Console.WriteLine("string does not starts with a ");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+13. //program to demonstrate ToUpper method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "abcdef";
+            string b;
+            b = a.ToUpper();
+            Console.WriteLine("upper case string is " + b);
+            Console.ReadLine();
+        }
+    }
+}
+
+14. //program to demonstrate ToLower method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "ABCDEF";
+            string b;
+            b = a.ToLower();
+            Console.WriteLine("lower case string is " + b);
+            Console.ReadLine();
+        }
+    }
+}
+
+15. //program to demonstrate Trim method of string class
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "     ABCDEF      ";
+            string b;
+            b = a.Trim();
+            Console.WriteLine("Trimmed string is " + b);
+            Console.ReadLine();
+        }
+    }
+}
+

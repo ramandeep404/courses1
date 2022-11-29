@@ -1,0 +1,277 @@
+keys of dictionary must be of immutable types
+
+creating a dictionary
+
+dict={"1":"raman","2":"gagan","3":"aman"};
+print(dict);
+
+____________________________________________________
+
+access elements of dictionary using a key
+
+dict={"1":"raman","2":"gagan","3":"aman"};
+print(dict["2"]);
+
+_____________________________________________________
+
+attempting to access a key that does not exist results in an error
+
+________________________________________________________
+
+traversing a dictionary using keys
+
+dict={"1":"raman","2":"gagan","3":"aman"};
+for key in dict:
+    print(dict[key]);
+
+________________________________________
+
+traversing a dictionary and printing key value pairs and items function
+
+dict={"1":"raman","2":"gagan","3":"aman"};
+for key,val in dict.items():
+    print(key ,":", val);
+
+________________________________________________
+
+program to create a phone dictionary and print it
+
+dict={"raman":"25997888","gagan":"25595652","aman":"23344556"};
+for name in dict:
+    print(name, ":", dict[name]);
+
+_________________________________________________
+
+printing keys using keys method
+
+dict={"raman":"25997888","gagan":"25595652","aman":"23344556"};
+print(dict.keys());
+
+______________________________________________
+
+printing values using values method
+
+dict={"raman":"25997888","gagan":"25595652","aman":"23344556"};
+print(dict.values());
+
+________________________________________________
+
+initialize a dictionary
+
+dict={"raman":"25997888","gagan":"25595652","aman":"23344556"};
+print(dict);
+
+______________________________
+
+add key value pairs
+
+dict={"raman":"25997888","gagan":"25595652","aman":"23344556"};
+print(dict);
+dict["manpreet"]="8888888";
+print(dict);
+
+_____________________________________________________
+
+creating dictionary from name and value pairs
+
+dict=dict(name='raman',age=18,salary=90000);
+print(dict);
+
+_____________________________________________________
+
+creating dictionary by specifying comma separated key value pairs
+
+dict=dict({'name':'raman','age':18,'salary':90000});
+print(dict);
+
+_______________________________________________________
+
+creating a dictionary by specifying keys separately and corresponding values separately
+
+dic=dict(zip(('name','age','salary'),('raman',18,90000)));
+print(dic);
+
+___________________________________________________________________
+
+creating a dictionary by specify key value pairs separately in the form of sequences.
+
+dic=dict([['name','raman'],['age',18],['salary',90000]]);
+print(dic);
+
+___________________________________________________________
+
+add elements to dictionary
+
+dic={"name":"raman","age":18,"salary":90000};
+print(dic);
+dic["designation"]="accountant";
+print(dic);
+
+__________________________________________________________
+
+example of nested dictionary
+
+dic={"raman":{"age":18,"salary":90000},"gagan":{"age":20,"salary":80000}};
+print(dic);
+
+______________________________________________
+
+traversing a nested dictionary
+
+dic={"raman":{"age":18,"salary":90000},"gagan":{"age":20,"salary":80000}};
+for key in dic:
+    print("employee",key,":")
+    print("age : ",str(dic[key]['age']))
+    print("salary : ",str(dic[key]['salary']))
+
+____________________________________________________________________
+
+update existing element
+
+dic={"name":"raman","age":19,"salary":90000};
+print(dic);
+dic['age']=23;
+print(dic);
+
+________________________________________________________
+
+delete element from dictionary using key
+
+dic={"name":"raman","age":19,"salary":90000};
+print(dic);
+del dic['age'];
+print(dic);
+
+______________________________________________
+
+pop element from dictionary using pop method
+
+dic={"name":"raman","age":19,"salary":90000};
+a=dic.pop("age");
+print(a);
+
+_________________________________________________
+
+pop element from dictionary if not found show error
+
+dic={"name":"raman","age":19,"salary":90000};
+a=dic.pop("designation",'not found');
+print(a);
+
+____________________________________________________
+
+check key in dictionary
+
+dic={"name":"raman","age":19,"salary":90000};
+print("age" in dic);
+
+_________________________________________
+
+check key not in dictionary
+
+dic={"name":"raman","age":19,"salary":90000};
+print("age" not in dic);
+
+______________________________________________
+
+print json form of dictionary
+
+import json;
+dic={"name":"raman","age":19,"salary":90000};
+print(json.dumps(dic,indent=2));
+
+________________________________________________
+
+count frequency of elements in a list using dictionary
+
+_________________________________________________
+
+dictionary methods
+
+len method
+
+dic={"name":"raman","age":19,"salary":90000};
+print(len(dic));
+
+_____________________________________________
+
+clear method
+
+dic={"name":"raman","age":19,"salary":90000};
+print(dic);
+dic.clear();
+print(dic);
+
+____________________________________________
+
+delete a dictionary
+
+dic={"name":"raman","age":19,"salary":90000};
+print(dic);
+del dic;
+print(dic);
+
+___________________________________________
+
+get method
+
+dic={"name":"raman","age":19,"salary":90000};
+print(dic.get("age"));
+
+____________________________________________
+
+show an error if key not found
+
+dic={"name":"raman","age":19,"salary":90000};
+print(dic.get("designation","designation not found"));
+
+_______________________________________________
+
+items() method
+
+
+dic={"name":"raman","age":19,"salary":90000};
+for key,val in dic.items():
+    print(key ,":",val);
+
+_________________________________________________
+
+keys method
+
+dic={"name":"raman","age":19,"salary":90000};
+for key in dic.keys():
+    print(key);
+
+_________________________________________________
+
+values method
+
+dic={"name":"raman","age":19,"salary":90000};
+for val in dic.values():
+    print(val);
+
+___________________________________________________
+
+update method merges key value pairs from the new dictionary into the original dictionary
+
+
+dic={"name":"raman","age":19,"salary":90000};
+dic1={"designation":"accountant"};
+print(dic);
+dic.update(dic1);
+print(dic);
+________________________________________________________
+
+
+program to count frequency of elemnts in list using dictionary
+
+freq = {}
+my_list=["raman","deep","deep","singh","raman"];
+for item in my_list:
+    if (item in freq):
+        freq[item] += 1
+    else:
+        freq[item] = 1
+for key, value in freq.items():
+    print ("%s : %d"%(key, value));
+________________________________________________

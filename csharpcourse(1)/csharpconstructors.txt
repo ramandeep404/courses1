@@ -1,0 +1,328 @@
+1. //program to demonstrate example of class student with data members (rollno, name, marks, clas) and contains member functions (showdata), class also contains a default constructor which initializes the data members
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+    class student
+    {
+        int rollno;
+        String name;
+        int marks;
+        int clas;
+        public student() //a default constructor
+        {
+            rollno = 10;
+            name = "abcdef";
+            marks = 90;
+            clas = 11;
+        }
+        public void showdata()
+	{
+		Console.WriteLine("rollno of student is " + rollno);
+		Console.WriteLine("name of student is " + name);
+		Console.WriteLine("marks of student are " + marks);
+        Console.WriteLine("class of student is " + clas);
+	}
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            student ob = new student(); //object of class student is created and constructor is called which initialises the data members
+
+            ob.showdata();
+            Console.ReadLine();
+        }
+    }
+}
+
+2. //program to demonstrate example of class employee with data members (ecode,ename,salary and designation) and contains member functions (showdata), class also contains a default constructor which initializes the data members
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+
+    class employee
+    {
+        int ecode;
+        String ename;
+        int salary;
+        String designation;
+        public employee()
+        {
+            ecode = 1;
+            ename = "abcdef";
+            salary = 10000;
+            designation ="xyzxyz";
+        }
+        public void showdata()
+	{
+		Console.WriteLine("employee code is " + ecode);
+		Console.WriteLine("employee name is " + ename);
+		Console.WriteLine("employee salary is " + salary);
+        Console.WriteLine("employee designation is " + designation);
+	}
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            employee ob = new employee();
+
+            ob.showdata();
+            Console.ReadLine();
+        }
+    }
+}
+
+3. //program to demonstrate example of class bankaccount with data members ( account_no,name,type,balance) and contains member functions (deposit,withdraw and showdata), class also contains a default constructor
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+
+    class account
+        {
+	        int account_no;
+	        String name;
+	        char type;
+	        int balance;
+        public	account()
+	        {
+		        account_no=1001;
+		        name="abcdef";
+		        type='s';
+		        balance=1000;
+	        }
+	        public void deposit(int amount)
+	        {
+		        balance=balance+amount;
+		        Console.WriteLine(amount + " deposited in account no " + account_no);
+	        }
+	        public void withdraw(int amount)
+	        {
+		        if(balance>=1000)
+		        {
+			        balance=balance=amount;
+			        Console.WriteLine(amount + " withdrawn from account no " + account_no);
+		        }
+		        else
+		        {
+                    Console.WriteLine("amount can't be withdrawn (balance in account is less than 1000 ");
+		        }
+	        }
+	        public void showdata()
+	        {
+		        Console.WriteLine("account no is " + account_no);
+		        Console.WriteLine("name of account is " + name);
+		        if(type=='s')
+		        {
+			        Console.WriteLine("type of account is savings");
+		        }
+		        else
+		        {
+			        Console.WriteLine("type of account is current");
+		        }
+                Console.WriteLine("balance in the account is " + balance);
+	        }
+}
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            account ob = new account();
+
+            ob.showdata();
+            ob.deposit(3000);
+            ob.withdraw(2000);
+            ob.showdata();
+            Console.ReadLine();
+        }
+    }
+}
+
+4. //program to demonstrate parameterized constructor in class student
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+
+    class studentone
+    {
+        int rollno;
+        String name;
+        int marks;
+        int clas;
+        public studentone(int srollno, String sname, int smarks, int sclas)
+        {
+            rollno = srollno;
+            name = sname;
+            marks = smarks;
+            clas = sclas;
+        }
+        public void showdata()
+	{
+		Console.WriteLine("rollno is " + rollno);
+		Console.WriteLine("name is " + name);
+		Console.WriteLine("marks are " + marks);
+        Console.WriteLine("class is " + clas);
+	}
+    };
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            studentone ob = new studentone(1, "abcdef", 90, 12);
+            ob.showdata();
+            studentone ob1 = new studentone(2, "abcxyz", 88, 11);
+            ob1.showdata(); 
+            Console.ReadLine();
+        }
+    }
+}
+
+5. //program to demonstrate parameterized constructor in class employee
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+    class employeeone
+    {
+        int ecode;
+        String ename;
+        int esalary;
+        String edesignation;
+        public employeeone(int code, String name, int salary, String designation)
+        {
+            ecode = code;
+            ename = name;
+            esalary = salary;
+            edesignation = designation;
+        }
+        public void showdata()
+	{
+		Console.WriteLine("employee code is "+ ecode);
+		Console.WriteLine("employee name is " + ename);
+		Console.WriteLine("employee salary is " + esalary);
+        Console.WriteLine("employee designation is " + edesignation);
+	}
+    };
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            employeeone ob = new employeeone(1, "abcdef", 10000, "xyxyx");
+            ob.showdata();
+            employeeone ob1 = new employeeone(2, "abcxyz", 20000, "abcabc");
+            ob1.showdata();
+            Console.ReadLine();
+        }
+    }
+}
+
+6. //program to demonstrate constructor overloading in class student
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+
+    class studenttwo
+    {
+        int rollno;
+        String name;
+        int marks;
+        int clas;
+        public studenttwo()   //constructor 1
+        {
+            rollno = 1;
+            name = "abcdef";
+            marks = 90;
+            clas = 11;
+        }
+        public studenttwo(int srollno)  //constructor 2
+        {
+            rollno = srollno;
+            name = "abcdef";
+            marks = 90;
+            clas = 11;
+        }
+        public studenttwo(int srollno, String sname)    //constructor 3
+        {
+            rollno = srollno;
+            name = sname;
+            marks = 90;
+            clas = 11;
+        }
+        public studenttwo(int srollno, String sname, int smarks)   //constructor 4
+        {
+            rollno = srollno;
+            name = sname;
+            marks = smarks;
+            clas = 11;
+        }
+        public studenttwo(int srollno, String sname, int smarks, int sclas) //constructor 5
+        {
+            rollno = srollno;
+            name = sname;
+            marks = smarks;
+            clas = sclas;
+        }
+       public void showdata()
+	    {
+		    Console.WriteLine("rollno is " + rollno);
+		    Console.WriteLine("name is " + name);
+		    Console.WriteLine("marks are " + marks);
+            Console.WriteLine("class is " + clas);
+	    }
+    };
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            studenttwo ob1 = new studenttwo();  //constructor 1 called here
+            ob1.showdata();
+            studenttwo ob2 = new studenttwo(2); //constructor 2 called here
+            ob2.showdata();
+            studenttwo ob3 = new studenttwo(3, "derdre"); // constructor 3 called here
+            ob3.showdata();
+            studenttwo ob4 = new studenttwo(4, "abcdef", 89); // constructor 4 called here
+            ob4.showdata();
+            studenttwo ob5 = new studenttwo(5, "xyxyz", 90, 11);  //constructor 5 called here
+            ob5.showdata();
+            Console.ReadLine();
+        }
+    }
+}

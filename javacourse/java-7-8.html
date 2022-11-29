@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaclasses.html"> Back To Java Classes Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate nested classes
+
+class marks
+{
+	private int physics;
+	private int maths;
+	private int chemistry;
+public	void getmarks(int p,int m,int c)
+	{
+		physics=p;
+                maths=m;
+                chemistry=c;
+	}
+	public void showmarks()
+	{
+		System.out.println("marks in physics are " + physics);
+		System.out.println("marks in maths are " + maths);
+		System.out.println("marks in chemistry are " + chemistry);
+
+	}
+}
+class studentmarks
+{
+	private int rollno;
+	private String name;
+	private int clas;
+	private marks ma;
+public 	void getdata()
+	{
+		rollno=1;
+                name=new String("abcdef");
+                clas=11;
+                ma=new marks();
+		ma.getmarks(89,90,91);
+	}
+	public void showdata()
+	{
+		System.out.println("rollno of student is " + rollno);
+		System.out.println("name of student is "+ name);
+		System.out.println("class of student is " + clas);
+		ma.showmarks();
+	}
+}
+public class nestedclass {
+      public static void main(String[] args) {
+ 
+      studentmarks ob=new studentmarks();
+      ob.getdata();
+      ob.showdata();
+}
+}
+
+
+
+
+        </textarea>
+    </body>
+</html>

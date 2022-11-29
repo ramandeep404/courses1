@@ -1,0 +1,864 @@
+1. program to display hello world on the output screen
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            System.Console.WriteLine("Hello World!");
+        }
+    }
+}
+
+2. program to input an integer (or number) and display its value
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            System.Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Number you entred is "+a);
+           
+        }
+    }
+}
+
+3. // program to input two numbers or integers and display their values
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b;
+            System.Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("First Number you entred is "+a);
+            System.Console.WriteLine("Second Number you entred is " + b);
+            
+        }
+    }
+}
+
+4. // program to input three numbers and display their values
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c;
+            System.Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Enter third number");
+            c = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("First Number you entred is "+a);
+            System.Console.WriteLine("Second Number you entred is " + b);
+            System.Console.WriteLine("Third Number you entred is " + c);
+            
+            
+        }
+    }
+}
+
+5. // program to input two numbers and find their sum
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c;
+            System.Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a + b;
+            System.Console.WriteLine("Sum of two numbers is "+c);
+                    
+        }
+    }
+}
+
+6. //program to input three numbers and find sum of three numbers
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c,d;
+            System.Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Enter third number");
+            c = Convert.ToInt32(Console.ReadLine());
+            d = a + b + c;
+            System.Console.WriteLine("Sum of three numbers is "+d);
+                    
+        }
+    }
+}
+
+7. //program to input two numbers and find the difference between them
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c;
+            System.Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a - b;
+            System.Console.WriteLine("Difference between two numbers is "+c);
+                  
+        }
+    }
+}
+
+8. //program to input two numbers and find their product
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c;
+            System.Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a * b;
+            System.Console.WriteLine("Product of two numbers is "+c);
+         
+        }
+    }
+}
+
+9. // program to input two numbers and display their quotient (division)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c;
+            System.Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a / b;
+            System.Console.WriteLine("Quotient of two numbers is "+c);
+            
+        }
+    }
+}
+
+10. //program to input two numbers and find their remainder (division)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c;
+            System.Console.WriteLine("Enter first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Enter second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a % b;
+            System.Console.WriteLine("Remainder of two numbers is "+c);
+            Console.ReadLine();
+        }
+    }
+}
+
+11. //program to enter a character and display its value
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char ch;
+            ch = 'a';
+            Console.WriteLine("Character you entered is " + ch);
+            Console.ReadLine();
+        }
+    }
+}
+
+12. //program to input a double value (number with decimal point)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a;
+            Console.WriteLine("Enter a decimal point number");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Decimal number you entered is " + a);
+            Console.ReadLine();
+        }
+    }
+}
+
+13. //program to add two decimal point values
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a,b,c;
+            Console.WriteLine("Enter first decimal point number");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter second decimal point number");
+            b = Convert.ToDouble(Console.ReadLine());
+            c = a + b;
+            Console.WriteLine("Sum of two decimal numbers is " + c);
+            Console.ReadLine();
+        }
+    }
+}
+
+14. //program to input two decimal point numbers and display difference between them
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a,b,c;
+            Console.WriteLine("Enter first decimal point number");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter second decimal point number");
+            b = Convert.ToDouble(Console.ReadLine());
+            c = a - b;
+            Console.WriteLine("Difference between two decimal numbers is " + c);
+            Console.ReadLine();
+        }
+    }
+}
+
+15. //program to input two float (decimal point) values and find their product
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a,b,c;
+            Console.WriteLine("Enter first decimal point number");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter second decimal point number");
+            b = Convert.ToDouble(Console.ReadLine());
+            c = a * b;
+            Console.WriteLine("Product of two decimal numbers is " + c);
+            Console.ReadLine();
+        }
+    }
+}
+
+16. //program to input two double (decimal point ) values and find their division
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a,b,c;
+            Console.WriteLine("Enter first decimal point number");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter second decimal point number");
+            b = Convert.ToDouble(Console.ReadLine());
+            c = a / b;
+            Console.WriteLine("Quotient of two decimal numbers is " + c);
+            Console.ReadLine();
+        }
+    }
+}
+
+17. //program to input principal, rate of interest and time and compute simple interest
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double p,r,t,si;
+            Console.WriteLine("Enter prinicpal amount");
+            p = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter rate of interest");
+            r = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter time in years");
+            t = Convert.ToDouble(Console.ReadLine());
+            si = (p * r * t) / 100;
+            Console.WriteLine("Simple Interest is " + si);
+            Console.ReadLine();
+        }
+    }
+}
+
+18. //program to input length and breadth of rectangle and find area of rectangle
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int l, b, area;
+            Console.WriteLine("Enter length of rectangle");
+            l = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter breadth of rectangle");
+            b = Convert.ToInt32(Console.ReadLine());
+            area = l * b;
+            Console.WriteLine("Area of rectangle is " + area);
+            Console.ReadLine();
+        }
+    }
+}
+
+19. //program to input length and breadth of rectangle and compute perimeter of rectangle
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int l, b, perimeter;
+            Console.WriteLine("Enter length of rectangle");
+            l = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter breadth of rectangle");
+            b = Convert.ToInt32(Console.ReadLine());
+            perimeter = 2 * (l + b);
+            Console.WriteLine("Perimeter of rectangle is " + perimeter);
+            Console.ReadLine();
+        }
+    }
+}
+
+20. //program to input side of square and compute area of square
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int side, area;
+            Console.WriteLine("Enter side of square");
+            side = Convert.ToInt32(Console.ReadLine());
+            area = side * side;
+            Console.WriteLine("Area of square is " + area);
+            Console.ReadLine();
+        }
+    }
+}
+
+21. //program to input base and height of right angled triangle and find area of right angled triangle
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double b,h,area;
+            Console.WriteLine("Enter base of right angled triangle");
+            b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter height of right angled triangle");
+            h = Convert.ToDouble(Console.ReadLine());
+            area = 0.5 * b * h;
+            Console.WriteLine("Area of right angled triangle is " + area);
+            Console.ReadLine();
+        }
+    }
+}
+
+22. //program to input radius of circle and find area of circle
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double r,area;
+            Console.WriteLine("Enter radius of circle");
+            r = Convert.ToDouble(Console.ReadLine());
+            area = 3.14 * r * r;
+            Console.WriteLine("Area of circle is " + area);
+            Console.ReadLine();
+        }
+    }
+}
+
+23. //program to input radius of circle and find circumference of circle
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double r,circumference;
+            Console.WriteLine("Enter radius of circle");
+            r = Convert.ToDouble(Console.ReadLine());
+            circumference = 2*3.14 * r;
+            Console.WriteLine("Circumference of circle is " + circumference);
+            Console.ReadLine();
+        }
+    }
+}
+
+24. //program to demonstrate increment(++) operator , i++ is same as i=i+1
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Number you entered is " + a);
+            a++;
+            Console.WriteLine("Number after applying Increment operator (++) is " + a);
+            Console.ReadLine();
+        }
+    }
+}
+
+25. //program to demonstrate deccrement(--) operator , i-- is same as i=i-1
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Number you entered is " + a);
+            a--;
+            Console.WriteLine("Number after applying Decrement operator (--) is " + a);
+            Console.ReadLine();
+        }
+    }
+}
+
+26. //program to assign value 10 to a, initializing variable a
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            a = 10;
+            Console.WriteLine("Value of a is " + a);
+            Console.ReadLine();
+        }
+    }
+}
+
+27. //program to demonstrate (+=) operator, a+=2 is same as a=a+2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Number you entered is " + a);
+            a+=2;
+            Console.WriteLine("Number after applying += operator is " + a);
+            Console.ReadLine();
+        }
+    }
+}
+
+28. //program to demonstrate (-=) operator, a-=2 is same as a=a-2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Number you entered is " + a);
+            a-=2;
+            Console.WriteLine("Number after applying -= operator is " + a);
+            Console.ReadLine();
+        }
+    }
+}
+
+29. //program to demonstrate (*=) operator, a*=2 is same as a=a*2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Number you entered is " + a);
+            a*=2;
+            Console.WriteLine("Number after applying *= operator is " + a);
+            Console.ReadLine();
+        }
+    }
+}
+
+30. //program to demonstrate (/=) operator, a/=2 is same as a=a/2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Number you entered is " + a);
+            a/=2;
+            Console.WriteLine("Number after applying /= operator is " + a);
+            Console.ReadLine();
+        }
+    }
+}
+
+31. //program to demonstrate (%=) operator, a%=2 is same as a=a%2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("Enter a number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Number you entered is " + a);
+            a%=2;
+            Console.WriteLine("Number after applying %= operator is " + a);
+            Console.ReadLine();
+        }
+    }
+}
+
+32. //program to input price of an item from user and calculate discount as 10 percent on the price
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double amount, discount;
+            Console.WriteLine("Enter Amount");
+            amount = Convert.ToDouble(Console.ReadLine());
+            discount = 0.1 * amount;
+            Console.WriteLine("10% Discount is " + discount);
+            Console.ReadLine();
+        }
+    }
+}
+
+33. //program to find volume of box based on width,depth and height
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double w, d, h, vol;
+            Console.WriteLine("Enter Width of box");
+            w = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter depth of box");
+            d = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter height of box");
+            h = Convert.ToDouble(Console.ReadLine());
+            vol = w * d * h;
+            Console.WriteLine("Volume of box is " + vol);
+            Console.ReadLine();
+        }
+    }
+}
+
+34. //program to demonstrate ternary operator or conditional operator, displays 'p' if marks>=40 else displays 'f'
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char result;
+            int marks;
+            Console.WriteLine("Enter marks ");
+            marks = Convert.ToInt32(Console.ReadLine());
+            result = (marks >= 40 ? 'p' : 'f');
+            Console.WriteLine("Result is " + result);
+            Console.ReadLine();
+        }
+    }
+}
+
+35. //program to demonstrate const keyword to create a constant
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const double pi=3.14;
+            double area;
+            area = pi * 10 * 10;
+            Console.WriteLine("Area of circle with radius 10 is " + area);
+            Console.ReadLine();
+        }
+    }
+}
+
+36. //program to enter a boolean and display its value
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool a = true;
+            Console.WriteLine("Value of a is " + a);
+            Console.ReadLine();
+        }
+    }
+}

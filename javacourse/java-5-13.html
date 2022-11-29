@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaarrays.html"> Back To Java Arrays Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to input an integer array and pass this array to method , method prints the integer array
+
+class passarray
+{
+    public void printarr(int arr[])
+    {
+        int i;
+        for(i=0;i<arr.length;i++)
+        {
+            System.out.println(arr[i]);
+        }
+    }
+}
+public class passarraytomethod {
+    public static void main(String[] args) {
+   
+int []marks={88,89,90,78,77};
+passarray ob=new passarray();
+ob.printarr(marks);
+       }
+}
+
+        </textarea>
+    </body>
+</html>

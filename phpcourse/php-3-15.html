@@ -1,0 +1,39 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phploops.html"> Back To PHP Loops Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to find whether number entered is prime or not using for statement
+$a=15;
+$prime=true;
+	
+	for($i=2;$i<=$a/2;$i++)
+	{
+		if($a%$i==0)
+		{
+			$prime=false;
+			break;
+		}
+	}
+	if($prime==true)
+	{
+		print('number entered is prime ');
+	}
+	else
+	{
+		print('number entered is not prime');
+	}
+?>
+
+
+        </textarea>
+    </body>
+</html>

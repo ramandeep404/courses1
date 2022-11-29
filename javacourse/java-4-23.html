@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javauserdefined.html"> Back To Java User Defined Methods Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to create a function that returns factorial of a number passed to it as argument
+
+class cfact
+{
+   public int factorial(int n)
+{
+	int fact=1;
+	int i;
+	for(i=1;i<=n;i++)
+	{
+		fact=fact*i;
+	}
+	return fact;
+}
+}
+public class calcfactreturn {
+                   public static void main(String[] args) {
+   
+cfact ob=new cfact();
+int result;
+result=ob.factorial(5);
+System.out.println("factorial is " + result);
+
+}
+}
+
+        </textarea>
+    </body>
+</html>

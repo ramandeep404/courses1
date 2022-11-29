@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javauserdefined.html"> Back To Java User Defined Methods Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to create a function that returns largest of three numbers passed to it as arguments
+
+class findlarge
+{
+   public int finlarge(int a,int b,int c)
+{
+	int max;
+	max=a;
+	if(b>max)
+	{
+		max=b;
+	}
+	if(c>max)
+	{
+		max=c;
+	}
+	return max;
+}
+}
+public class largethreereturn {
+        public static void main(String[] args) {
+   
+findlarge ob=new findlarge();
+int result;
+result=ob.finlarge(10,8,9);
+System.out.println("largest of three numbers is " + result);
+}
+}
+
+        </textarea>
+    </body>
+</html>

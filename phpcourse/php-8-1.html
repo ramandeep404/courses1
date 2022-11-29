@@ -1,0 +1,33 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phppdomysql.html"> Back To PHP PDO MySql</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to connect to mysql database
+$hostname = 'localhost';
+$username = 'root';
+
+$password = '';
+
+try {
+    $dbh = new PDO("mysql:host=$hostname;dbname=students", $username, $password);
+   
+    print('Connected to database');
+    }
+catch(PDOException $e)
+    {
+    print($e->getMessage());
+    }
+?>
+
+        </textarea>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javainheritance.html"> Back To Java Inheritance Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate super keyword
+
+class boxthree
+{
+    double width;
+    double height;
+    double depth;
+    
+    boxthree(boxthree ob)
+    {
+        width=ob.width;
+        height=ob.height;
+        depth=ob.depth;
+    }
+    boxthree(double w,double h,double d)
+    {
+        width=w;
+        height=h;
+        depth=d;
+    }
+    boxthree()
+    {
+        width=-1;
+        height=-1;
+        depth=-1;
+    }
+    boxthree(double len)
+    {
+        width=height=depth=len;
+    }
+    double volume()
+    {
+        return width*height*depth;
+    }
+}
+class boxweightone extends boxthree
+{
+    double weight;
+    boxweightone(boxweightone ob)
+    {
+        super(ob);
+        weight=ob.weight;
+        
+    }
+    boxweightone(double w,double h,double d,double m)
+    {
+        super(w,h,d);
+        weight=m;
+              
+    } 
+    boxweightone()
+    {
+        super();
+        weight=-1;
+    }
+    boxweightone(double len,double m)
+    {
+        super(len);
+        weight=m;
+    }
+}
+public class boxthreesuper {
+     public static void main(String[] args) {
+       boxweightone mybox1=new boxweightone(10,20,15,34.3);
+       boxweightone mybox2=new boxweightone(2,3,4,0.076);
+       boxweightone mybox3=new boxweightone();
+       boxweightone mycube=new boxweightone(3,2);
+       boxweightone myc=new boxweightone(mybox1);
+       double vol;
+       vol=mybox1.volume();
+       System.out.println("Volume of mybox1 is " + vol);
+       System.out.println("Weight of mybox1 is " + mybox1.weight);
+       System.out.println();
+       vol=mybox2.volume();
+       System.out.println("Volume of mybox2 is " + vol);
+       System.out.println("Weight of mybox2 is " + mybox2.weight);
+       System.out.println();
+       vol=mybox3.volume();
+       System.out.println("Volume of mybox3 is " + vol);
+       System.out.println("Weight of mybox3 is " + mybox3.weight);
+       System.out.println();
+        vol=myc.volume();
+       System.out.println("Volume of myc is " + vol);
+       System.out.println("Weight of myc is " + myc.weight);
+       System.out.println();
+       vol=mycube.volume();
+       System.out.println("Volume of mycube is " + vol);
+       System.out.println("Weight of mycube is " + mycube.weight);
+       System.out.println();
+}
+}
+
+
+
+        </textarea>
+    </body>
+</html>

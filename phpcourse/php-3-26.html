@@ -1,0 +1,40 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="phploops.html"> Back To PHP Loops Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+<?php
+//php program to find sum of even and odd numbers between a and b using while statement
+
+	$sumeven=0;
+	$sumodd=0;
+       $a=5;
+       $b=15;
+	$i=$a;
+	while($i<=$b)
+	{
+		if($i%2==0)
+		{
+			$sumeven=$sumeven+$i;
+		}
+		else
+		{
+			$sumodd=$sumodd+$i;
+		}
+		$i++;
+	}
+	print('sum of even numbers between a and b is ' . $sumeven);
+        print('<br>');
+	print('sum of odd numbers between a and b is ' . $sumodd);
+?>
+
+        </textarea>
+    </body>
+</html>

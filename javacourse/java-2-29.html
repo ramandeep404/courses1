@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaflow.html"> Back To Java Flow of Control Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to input three numbers and print them in ascending order using if-else statement
+
+public class threeascending {
+     public static void main(String[] args) {
+   
+int a,b,c,low,low2,low3;
+      a=10;
+      b=12;
+      c=11;
+     
+	low=a;
+        low2=a;
+        low3=a;
+	if(b<low)
+	{
+		low=b;
+	}
+	if(c<low)
+	{
+		low=c;
+	}
+	if(a==low)
+	{
+		if(b<c)
+		{
+			low2=b;
+			low3=c;
+		}
+		else
+		{
+			low2=c;
+			low3=b;
+		}
+	}
+	else
+		if(b==low)
+		{
+			if(a<c)
+			{
+				low2=a;
+				low3=c;
+			}
+			else
+			{
+				low2=c;
+				low3=a;
+			}
+		}
+		else
+			if(c==low)
+			{
+				if(a<b)
+				{
+					low2=a;
+					low3=b;
+				}
+				else
+				{
+					low2=b;
+					low3=a;
+				}
+			}
+	System.out.println(low + "," + low2 + "," + low3);
+
+
+}
+}
+
+
+
+        </textarea>
+    </body>
+</html>
