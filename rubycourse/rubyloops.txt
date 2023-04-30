@@ -1,0 +1,56 @@
+1. program to demonstrate while statement, print numbers from 0 to 4 using while loop
+
+#!/usr/bin/ruby
+
+$i = 0
+$num = 5
+
+while $i < $num  do
+  puts("#$i" )
+  $i +=1
+end
+
+2. program to demonstrate for statement, print numbers from 0 to 5 using for loop
+
+#!/usr/bin/ruby
+
+for i in 0..5
+  puts "#{i}"
+end
+
+3. program to demonstrate break statement in for loop
+
+#!/usr/bin/ruby
+
+for i in 0..5
+   if i > 2 then
+      break
+   end
+   puts "#{i}"
+end
+
+4. program to demonstrate next statement
+
+#!/usr/bin/ruby
+
+for i in 0..5
+  if i == 2 then
+    next
+  end
+  puts "#{i}"
+end
+
+5. program to demonstrate redo statement which will give output as infinite loop and continously print 2
+
+#!/usr/bin/ruby
+
+for i in 0..5
+  if i == 2 then
+    puts "#{i}"
+    redo
+  end
+end
+
+
+
+

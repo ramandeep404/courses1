@@ -1,0 +1,68 @@
+1. program to demonstrate if statement
+
+#!/usr/bin/ruby
+
+x = 1
+if x == 1
+  puts "x is equal to 1"
+end
+
+2. program to demosntrate if else statement
+
+#!/usr/bin/ruby
+
+x = 10
+if x == 1
+  puts "x is equal to 1"
+else
+  puts "x is not equal to 1"
+end
+
+3. program to demonstrate elseif statement
+
+#!/usr/bin/ruby
+
+x = 20
+if x > 2
+  puts "x is greater than 2"
+elsif x <= 2 and x>=1
+  puts "x is 1 or 2"
+else
+  puts "x is 0"
+end
+
+4. program to demonstrate unless statement
+
+#!/usr/bin/ruby
+
+x = 1 
+unless x>=2
+   puts "x is less than 2"
+ else
+   puts "x is greater than 2"
+end
+
+5. program to demonstrate case statement
+
+#!/usr/bin/ruby
+
+$day =  5
+case $day
+when 1
+  puts "monday"
+when 2
+  puts "tuesday"
+when 3
+  puts "wednesday"
+when 4
+  puts "thursday"
+when 5
+  puts "friday"
+when 6
+  puts "saturday"
+when 7
+  puts "sunday"
+else
+  puts "enter day between 1 to 7"
+end
+

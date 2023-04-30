@@ -1,0 +1,133 @@
+1. program to get input from user
+
+puts("Enter Your Name")
+name = gets
+puts "Name is #{name}"
+
+2. Write a program to add two integers
+
+puts("Enter First Number")
+number1 = gets
+puts("Enter Second Number")
+number2 = gets
+number3=Integer(number1) + Integer(number2)
+puts "Sum is #{number3}"
+
+3. Write a program to subtract two numbers
+
+puts("Enter First Number")
+number1 = gets
+puts("Enter Second Number")
+number2 = gets
+number3=Integer(number1) - Integer(number2)
+puts "Difference is #{number3}"
+
+4. Write a program to multiply two numbers
+
+puts("Enter First Number")
+number1 = gets
+puts("Enter Second Number")
+number2 = gets
+number3=Integer(number1) * Integer(number2)
+puts "Product is #{number3}"
+
+5. Write a program to divide two numbers
+
+puts("Enter First Number")
+number1 = gets
+puts("Enter Second Number")
+number2 = gets
+number3=Integer(number1) / Integer(number2)
+puts "Quotient is #{number3}"
+
+6. Write a program to find remainder of two numbers
+
+puts("Enter First Number")
+number1 = gets
+puts("Enter Second Number")
+number2 = gets
+number3=Integer(number1) % Integer(number2)
+puts "Remainder is #{number3}"
+
+7. Write a program to get a float value
+
+puts("Enter First Number in Decimal Part")
+number1 = Float(gets)
+puts "Fractional Number is #{number1}"
+
+8. Write a program to find sum of two decimal number values
+
+puts("Enter First Number in Decimal Part")
+number1 = Float(gets)
+puts("Enter Second Number in Decimal Part")
+number2 = Float(gets)
+number3=number1+number2
+puts "Sum of Fractional Numbers is #{number3}"
+
+9. Write a program to get a string and display string
+
+puts("Enter a String")
+name=gets
+puts "String you entered is #{name}"
+
+10. Write a program to demonstrate ** operator to find a raise to power b
+
+puts("Enter First Number")
+number1 = gets
+puts("Enter Second Number")
+number2 = gets
+number3=Integer(number1) ** Integer(number2)
+puts "a raise to power b is #{number3}"
+
+11. program to find area of square based on side
+
+puts("Enter Side of Square")
+number1 = Integer(gets)
+area=number1*4
+puts "area of square is #{area}"
+
+12. program to find circumference of circle
+
+puts("Enter Radius of Circle")
+radius = Float(gets)
+area=2*3.14*radius
+puts "area of circle is #{area}"
+
+13. program to find area of rectangle based on length and breadth
+
+puts("Enter Length of Rectangle")
+length = Integer(gets)
+puts("Enter Breadth of rectangle")
+breadth=Integer(gets)
+area=length*breadth
+puts "area of rectangle is #{area}"
+
+14. program to find perimeter of rectangle
+
+puts("Enter Length of Rectangle")
+length = Integer(gets)
+puts("Enter Breadth of rectangle")
+breadth=Integer(gets)
+perimeter=2*(length+breadth)
+puts "perimeter of rectangle is #{perimeter}"
+
+15. program to find simple interest
+
+puts("Enter Principal Amount")
+p = Float(gets)
+puts("Enter Rate of Interest")
+r=Float(gets)
+puts("Enter Time in Years")
+t=Float(gets)
+si=(p*r*t)/100
+puts "Simple Interest is #{si}"
+
+16. Example of += Short hand assignment operator
+
+puts("Enter a number")
+a=Integer(gets)
+a+=5
+puts "Value of a is #{a}"
+
+
+
