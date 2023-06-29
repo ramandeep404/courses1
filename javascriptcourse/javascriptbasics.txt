@@ -1,0 +1,763 @@
+Program to display Hello world
+
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>Before the script...</p>
+
+  <script>
+    alert( 'Hello, world!' );
+  </script>
+
+  <p>...After the script.</p>
+
+</body>
+
+</html>
+________________________________________________________________________________________
+
+Program to display 3+2+1 in alert box
+
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>Before the script...</p>
+
+  <script>
+  alert(3 +
+1
++ 2);
+  </script>
+
+  <p>...After the script.</p>
+
+</body>
+
+</html>
+________________________________________________________________________________________
+
+Program to declare three variables and print them
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let message;
+message = 'Hello!';
+
+alert(message);
+let user = 'John', age = 25, message1 = 'Hello';
+alert(user);
+alert(age);
+alert(message1);
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________________
+
+Program to demonstrate a const
+const value can't be changed after it is declared
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myBirthday = '18.04.1982';
+        alert(myBirthday);
+    </script>
+</body>
+</html>
+____________________________________________________________________________________
+
+Program to demonstrate let and const
+let is a keyword that is used to declare a variable that can be changed in the Program
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const COLOR_RED = "#F00";
+const COLOR_GREEN = "#0F0";
+const COLOR_BLUE = "#00F";
+const COLOR_ORANGE = "#FF7F00";
+
+// ...when we need to pick a color
+let color = COLOR_ORANGE;
+alert(color); // #FF7F00
+    </script>
+</body>
+</html>
+
+________________________________________________________________________________________
+
+Program to demonstrate let keyword to declare variables and assigning different values to that variable
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let message = "hello";
+        alert(message);
+message = 123456;
+alert(message);
+let n = 123;
+alert(n);
+n = 12.345;
+alert(n);
+alert( 1 / 0 );
+    </script>
+</body>
+</html>
+
+_____________________________________________________________________________________________
+
+Program to find sum,difference,product,quotient and remainder of two variables
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=10;
+        let b=20;
+        let c;
+        c=a+b;
+        alert('Sum of a and b is ' + c);
+        c=a-b;
+        alert('Difference between a and b is ' + c);
+        c=a*b;
+        alert('Product of a and b is ' + c);
+        c=a/b;
+        alert('Quotient of a and b is ' + c);
+        c=a%b;
+        alert('Remainder of a and b is ' + c);
+    </script>
+</body>
+</html>
+
+_____________________________________________________________________________________________
+
+Program to demonstrate BigInt variable
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=99123456789123988765444n;
+        alert(a);
+        const bigInt = 1234567890123456789012345678901234567890n;
+        alert(bigInt);
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________________
+
+Program to demonstrate single quotes,double quotes and backticks
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "Hello";
+let str2 = 'Single quotes are ok too';
+let phrase = `can embed another ${str}`;
+alert(phrase);
+    </script>
+</body>
+</html>
+
+_____________________________________________________________________________________________
+
+Another example of backticks to create expressions
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in ${…}, for example:
+
+    -->
+    <script>
+        let name = "John";
+
+// embed a variable
+alert( `Hello, ${name}!` ); // Hello, John!
+
+// embed an expression
+alert( `the result is ${1 + 2}` ); // the result is 3
+    </script>
+</body>
+</html>
+
+______________________________________________________________________________________________
+
+Another example of let variable
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nameFieldChecked = true; // yes, name field is checked
+let ageFieldChecked = false; // no, age field is not checked
+alert(nameFieldChecked);
+
+
+let isGreater = 4 > 1;
+
+alert( isGreater ); // true (the comparison result is "yes")
+
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________________
+
+Program to demonstrate null variable
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = null;
+        alert(age);
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________________
+
+Program to demonstrate undefined value
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age;
+
+alert(age); // shows "undefined"
+
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________________
+
+Program to demonstrate expressions
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = "Ilya";
+
+alert( `hello ${1}` ); // hello 1
+
+alert( `hello ${"name"}` ); // hello name
+
+alert( `hello ${name}` ); // hello Ilya
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Program to demonstrate prompt to get data from user
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = prompt('How old are you?', 100);
+
+        alert(`You are ${age} years old!`); // You are 100 years old!
+    </script>
+</body>
+</html>
+
+_____________________________________________________________________________________________
+
+Program to demonstrate confirm box
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let isBoss = confirm("Are you the boss?");
+
+alert( isBoss ); // true if OK is pressed
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Program to demonstrate typeof keyword to check for the datatype of the value inside a let variable
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value = true;
+alert(typeof value); // boolean
+
+value = String(value); // now value is a string "true"
+alert(typeof value); // string
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Program to demonstrate Number and typeof keyword (example of type conversion)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "123";
+alert(typeof str); // string
+
+let num = Number(str); // becomes a number 123
+
+alert(typeof num); // number
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Program to demonstrate NaN value
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let age = Number("an arbitrary string instead of a number");
+
+alert(age); // NaN, conversion failed
+    </script>
+</body>
+</html>
+
+________________________________________________________________________________________
+
+Program to demonstrate type conversion Number
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( Number("   123   ") ); // 123
+alert( Number("123z") );      // NaN (error reading a number at "z")
+alert( Number(true) );        // 1
+alert( Number(false) );       // 0
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________________
+
+Program to demonstrate type conversion Boolean
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( Boolean(1) ); // true
+alert( Boolean(0) ); // false
+
+alert( Boolean("hello") ); // true
+alert( Boolean("") ); // false
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Example of unary operator (-)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 1;
+
+x = -x;
+alert( x ); // -1, unary negation was applied
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________________
+
+Program to demonstrate binary operator (-)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 1, y = 3;
+alert( y - x ); // 2, binary minus subtracts values
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Program to demonstrate (**) or exponention operator
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( 2 ** 2 ); // 2² = 4
+alert( 2 ** 3 ); // 2³ = 8
+alert( 2 ** 4 ); // 2⁴ = 16
+        </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Program to use exponention operator to find square root and cube root
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root)
+alert( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Program to demonstrate concatenation operator (+) operator
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s = "my" + "string";
+alert(s); // mystring
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Another example of concatenation operator (+)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( '1' + 2 ); // "12"
+alert( 2 + '1' ); // "21"
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Another example to demonstrate concatenation operator 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert(2 + 2 + '1' ); // "41" and not "221"
+        alert('1' + 2 + 2); // "122" and not "14"
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+example of type conversions
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( 6 - '2' ); // 4, converts '2' to a number
+alert( '6' / '2' ); // 3, converts both operands to numbers
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Example of binary plus operator
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // No effect on numbers
+let x = 1;
+alert( +x ); // 1
+
+let y = -2;
+alert( +y ); // -2
+
+// Converts non-numbers
+alert( +true ); // 1
+alert( +"" );   // 0
+let apples = "2";
+let oranges = "3";
+
+alert( apples + oranges ); // "23", the binary plus concatenates strings
+let apples1 = "2";
+let oranges1 = "3";
+
+// both values converted to numbers before the binary plus
+alert( +apples1 + +oranges1 ); // 5
+
+// the longer variant
+// alert( Number(apples1) + Number(oranges1) ); // 5
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Example of multiple assignments
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a, b, c;
+
+a = b = c = 2 + 2;
+
+alert( a ); // 4
+alert( b ); // 4
+alert( c ); // 4
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Example of decrement operator
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let counter = 2;
+counter++;        // works the same as counter = counter + 1, but is shorter
+alert( counter ); // 3
+let counter1 = 2;
+counter1--;        // works the same as counter = counter - 1, but is shorter
+alert( counter1 ); // 1
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Example of increment operator
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let counter = 1;
+let a = ++counter; // (*)
+
+alert(a); // 2
+let counter1 = 1;
+let b = counter1++; // (*) changed ++counter to counter++
+
+alert(b); // 1
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+example of toString function to get a string from any variable
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=1000_000_000;
+        let b=a.toString();
+        alert(b);
+    </script>
+</body>
+</html>
+
+________________________________________________________________________________________
+

@@ -1,0 +1,155 @@
+Program to demonstrate function that will print hello in alert dialog box
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showMessage() {
+  alert( 'Hello everyone!' );
+}
+showMessage();
+    </script>
+</body>
+</html>
+__________________________________________________________________________________________
+
+Program to demonstrate functions with parameters or arguments
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showMessage(from, text) { // parameters: from, text
+  alert(from + ': ' + text);
+}
+
+showMessage('Ann', 'Hello!'); // Ann: Hello! (*)
+showMessage('Ann', "What's up?"); // Ann: What's up? (**)
+    </script>
+</body>
+</html>
+
+__________________________________________________________________________________________
+
+Program to demonstrate a function that returns a value
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(a, b) {
+  return a + b;
+}
+
+let result = sum(1, 2);
+alert( result ); // 3
+    </script>
+</body>
+</html>
+
+__________________________________________________________________________________________
+
+Program to check for number of arguments to a function
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(a) {}
+function f2(a, b) {}
+function many(a, b, ...more) {}
+
+alert(f1.length); // 1
+alert(f2.length); // 2
+alert(many.length); // 2
+    </script>
+</body>
+</html>
+
+__________________________________________________________________________________________
+
+program to demonstrate function expressions
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHi() {   // (1) create
+  alert( "Hello" );
+}
+
+let func = sayHi;    // (2) copy
+
+func(); // Hello     // (3) run the copy (it works)!
+sayHi(); // Hello    //     this still works too (why wouldn't it)
+    </script>
+</body>
+</html>
+
+__________________________________________________________________________________________
+
+Program to demonstrate setTimeout function
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHi() {
+  alert('Hello');
+}
+
+setTimeout(sayHi, 1000);
+    </script>
+</body>
+</html>
+
+__________________________________________________________________________________________
+
+Program to demonstrate setInterval function
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // repeat with the interval of 2 seconds
+let timerId = setInterval(() => alert('tick'), 2000);
+    </script>
+</body>
+</html>
+
+__________________________________________________________________________________________

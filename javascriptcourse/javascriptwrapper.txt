@@ -1,0 +1,22 @@
+example of parseInt and parseFloat Wrapper Functions
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( parseInt('100px') ); // 100
+alert( parseFloat('12.5em') ); // 12.5
+
+alert( parseInt('12.3') ); // 12, only the integer part is returned
+alert( parseFloat('12.3.4') ); // 12.3, the second point stops the reading
+    </script>
+</body>
+</html>
+
+__________________________________________________________________________________________
+

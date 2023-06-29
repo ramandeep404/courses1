@@ -1,0 +1,158 @@
+Program to demonstrate if statement
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let year = prompt('What is eligible age to vote?', '');
+
+if (year == 18) 
+{
+    alert( 'You are right!' );
+}
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Program to demonstrate if else statement
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                let marks = prompt('How many marks you got in exam?', '');
+
+if (marks>=40) 
+{
+    alert( 'You are pass!' );
+}
+else
+{
+    alert('You are fail!');
+}
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Example of and operator in if statement
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //The precedence of AND && operator is higher than OR ||.
+        let hour = 12;
+let minute = 30;
+
+if (hour == 12 && minute == 30) {
+  alert( 'The time is 12:30' );
+}
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Example of or operator in if statement
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let hour = 12;
+let isWeekend = true;
+
+if (hour < 10 || hour > 18 || isWeekend) {
+  alert( 'The office is closed.' ); // it is the weekend
+}
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+Example of not operator (!)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age=10;
+        if(age!=10)
+        {
+            alert('age is not equal to 10');
+        }
+        else
+        {
+            alert('age is equal to 10');
+        }
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+
+example of switch statement
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let day=5;
+        switch(day)
+        {
+            case 1: alert('monday');
+            break;
+            case 2: alert('tuesday');
+            break;
+            case 3: alert('wednesday');
+            break;
+            case 4: alert('thursday');
+            break;
+            case 5: alert('friday');
+            break;
+            case 6: alert('saturday');
+            break;
+            case 7: alert('sunday');
+            break;
+            default: alert('Enter a day between 1 and 7');
+        }
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+

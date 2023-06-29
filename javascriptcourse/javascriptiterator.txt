@@ -1,0 +1,33 @@
+example of Symbol.iterator
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Iterables are objects that implement the Symbol.iterator method,.
+Array-likes are objects that have indexes and length, so they look like arrays.
+        */
+        let str = "Hello";
+
+// does the same as
+// for (let char of str) alert(char);
+
+let iterator = str[Symbol.iterator]();
+
+while (true) {
+  let result = iterator.next();
+  if (result.done) break;
+  alert(result.value); // outputs characters one by one
+}
+    </script>
+</body>
+</html>
+
+____________________________________________________________________________
+

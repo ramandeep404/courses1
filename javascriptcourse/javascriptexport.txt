@@ -1,0 +1,22 @@
+example of import and export module
+
+import {sayHi as hi, sayBye as bye} from './say.js';
+
+hi('John'); // Hello, John!
+bye('John'); // Bye, John!
+
+____________________________________________________________________________
+code for say.js
+
+function sayHi(user) {
+    alert(`Hello, ${user}!`);
+  }
+  
+  function sayBye(user) {
+    alert(`Bye, ${user}!`);
+  }
+  
+  export {sayHi, sayBye}; // a list of exported variables
+
+____________________________________________________________________________
+

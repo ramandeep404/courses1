@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = 'Widget with id';
+
+alert( str.indexOf('Widget') ); // 0, because 'Widget' is found at the beginning
+alert( str.indexOf('widget') ); // -1, not found, the search is case-sensitive
+
+alert( str.indexOf("id") ); // 1, "id" is found at the position 1 (..idget with id)
+let str1 = 'Widget with id';
+
+alert( str1.indexOf('id', 2) ) // 12
+    </script>
+</body>
+</html>
