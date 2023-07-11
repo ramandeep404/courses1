@@ -1,0 +1,339 @@
+program to demonstrate for loop
+
+void main() {
+  for (int i = 0; i < 10; i++) {
+    print("John Doe");
+  }
+}
+
+______________________________________________________________________________________________
+
+program to demonstrate for loop and print numbers from 10 to 1
+
+void main() {
+  for (int i = 10; i >= 1; i--) {
+    print(i);
+  }
+}
+
+______________________________________________________________________________________________
+
+program to calculate sum of first 100 natural numbers using for loop
+
+void main(){
+
+  int total = 0;
+  int n = 100; // change as per required
+  
+  for(int i=1; i<=n; i++){
+    total = total + i;
+  }
+  
+  print("Total is $total");
+  
+}
+
+______________________________________________________________________________________________
+
+program to print even numbers from 50 to 100 using for loop
+
+void main(){
+  for(int i=50; i<=100; i++){
+    if(i%2 == 0){
+      print(i);
+    }
+  } 
+}
+
+______________________________________________________________________________________________
+
+program to demonstrate forEach loop
+
+void main(){
+  List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+  footballplayers.forEach( (names)=>print(names));
+}
+
+______________________________________________________________________________________________
+
+program to demonstrate for in loop
+
+void main(){
+    List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+
+  for(String player in footballplayers){
+    print(player);
+  }
+}
+
+______________________________________________________________________________________________
+
+program to print index and value in list using forEach statement
+
+void main(){
+
+List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+
+footballplayers.asMap().forEach((index, value) => print("$value index is $index"));
+
+}
+
+______________________________________________________________________________________________
+
+program to print unicode numbers of a string using for loop
+
+void main(){
+  
+  String name = "John";
+     
+for(var codePoint in name.runes){
+  print("Unicode of ${String.fromCharCode(codePoint)} is $codePoint.");
+}
+}
+
+______________________________________________________________________________________________
+
+program to demonstrate while loop to print numbers from 1 to 10
+
+void main() {
+  int i = 1;
+  while (i <= 10) {
+    print(i);
+    i++;
+  }
+}
+
+______________________________________________________________________________________________
+
+
+program to demonstrate while loop to print numbers from 10 to 1
+
+void main() {
+  int i = 10;
+  while (i >= 1) {
+    print(i);
+    i--;
+  }
+}
+
+______________________________________________________________________________________________
+
+program to demonstrate while loop to find sum of first 100 natural numbers
+
+void main(){
+
+  int total = 0;
+  int n = 100; // change as per required
+  int i =1;
+
+  while(i<=n){
+    total = total + i;
+    i++;
+  }
+  
+  print("Total is $total");
+  
+}
+
+______________________________________________________________________________________________
+
+program to print even numbers from 50 to 100 using while loop
+
+void main(){
+  int i = 50;
+  while(i<=100){
+  if(i%2 == 0){
+      print(i);
+    }
+    i++;
+  }
+}
+
+______________________________________________________________________________________________
+
+program to demonstrate numbers from 1 to 10 using do while loop
+
+void main() {
+  int i = 1;
+  do {
+    print(i);
+    i++;
+  } while (i <= 10);
+}
+
+______________________________________________________________________________________________
+
+program to print numbers from 10 to 1 using do while loop
+
+void main() {
+  int i = 10;
+  do {
+    print(i);
+    i--;
+  } while (i >= 1);
+}
+
+______________________________________________________________________________________________
+
+program to print first 100 natural numbers using do while loop
+
+void main(){
+
+  int total = 0;
+  int n = 100;
+  int i =1;
+  
+  do{
+  total = total + i;
+    i++;
+  }while(i<=n);
+  
+  print("Total is $total");
+  
+}
+
+______________________________________________________________________________________________
+
+another example of do while loop
+
+void main(){
+
+  int number = 0;
+  
+  do{
+  print("Hello");
+  number--;
+  }while(number >1);
+  
+}
+
+______________________________________________________________________________________________
+
+program to demonstrate break statement in for loop
+
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+      break;
+    }
+    print(i);
+  }
+}
+
+______________________________________________________________________________________________
+
+program to demonstrate break statement in while loop
+
+void main() {
+ int i =1;
+ while(i<=10){
+  print(i);
+   if (i == 5) {
+      break;
+    }
+    i++;
+ }
+}
+
+______________________________________________________________________________________________
+
+example of break statement in switch case statement
+
+void main() {
+  var noOfMoneth = 5;
+  switch (noOfMoneth) {
+    case 1:
+      print("Selected month is January.");
+      break;
+    case 2:
+      print("Selected month is February.");
+      break;
+    case 3:
+      print("Selected month is march.");
+      break;
+    case 4:
+      print("Selected month is April.");
+      break;
+    case 5:
+      print("Selected month is May.");
+      break;
+    case 6:
+      print("Selected month is June.");
+      break;
+    case 7:
+      print("Selected month is July.");
+      break;
+    case 8:
+      print("Selected month is August.");
+      break;
+    case 9:
+      print("Selected month is September.");
+      break;
+    case 10:
+      print("Selected month is October.");
+      break;
+    case 11:
+      print("Selected month is November.");
+      break;
+    case 12:
+      print("Selected month is December.");
+      break;
+    default:
+      print("Invalid month.");
+      break;
+  }
+}
+
+______________________________________________________________________________________________
+
+program to demonstrate continue statement
+
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+      continue;
+    }
+    print(i);
+  }
+}
+
+______________________________________________________________________________________________
+
+program to demonstrate exception
+
+void main() {   
+   int a = 18;   
+   int b = 0;   
+   int res;    
+     
+   try {    
+      res = a ~/ b;
+      print("Result is $res");   
+   }    
+    // It returns the built-in exception related to the occurring exception  
+   catch(ex) {   
+      print(ex);   
+    }   
+} 
+
+______________________________________________________________________________________________
+
+program to demonstrate exceptionand finally clause
+
+void main() {
+  int a = 12;
+  int b = 0;
+  int res;
+  try {
+    res = a ~/ b;
+  } on UnsupportedError {
+    print('Cannot divide by zero');
+  } catch (ex) {
+    print(ex);
+  } finally {
+    print('Finally block always executed');
+  }
+}
+
+______________________________________________________________________________________________
+

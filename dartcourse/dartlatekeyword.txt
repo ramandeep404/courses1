@@ -1,0 +1,77 @@
+// late variable
+late String name;
+
+void main() {
+  // assigning value to late variable
+  name = "John";
+  print(name);
+}
+
+________________________________________________________________________________________________________
+
+Another example of late variable
+
+class Person {
+  // late variable
+  late String name;
+
+  void greet() {
+    print("Hello $name");
+  }
+}
+
+void main() {
+  Person person = Person();
+  // late variable is initialized here
+  person.name = "John";
+  person.greet();
+}
+
+________________________________________________________________________________________________________
+
+Another example of late keyword
+
+// function
+String provideCountry() {
+  print("Function is called");
+  return "USA";
+}
+
+void main() {
+  print("Starting");
+  // late variable
+  late String value = provideCountry();
+  print("End");
+  print(value);
+}
+
+________________________________________________________________________________________________________
+
+Another example of late keyword
+
+// Person class
+class Person {
+  final int age;
+  final String name;
+  late String description = heavyComputation();
+
+// constructor
+  Person(this.age, this.name) {
+    print("Constructor is called");
+  }
+// method
+  String heavyComputation() {
+    print("heavyComputation is called");
+    return "Heavy Computation";
+  }
+}
+
+void main() {
+  // object of Person class
+  Person person = Person(10, "John");
+  print(person.name);
+  print(person.description); 
+}
+
+________________________________________________________________________________________________________
+

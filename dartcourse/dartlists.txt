@@ -1,0 +1,297 @@
+program to create a list that has 0's in in
+
+void main() {  
+   var list = List<int>.filled(5,0);  
+   print(list);  
+}
+
+__________________________________________________________________________________________
+
+Example of growable list
+
+void main() {  
+   var list1 = [210,21,22,33,44,55];  
+   print(list1);  
+}  
+
+__________________________________________________________________________________________
+
+program to access individual items in list
+
+void main() {
+  var list = [210, 21, 22, 33, 44, 55];
+
+  print(list[0]);
+  print(list[1]);
+  print(list[2]);
+  print(list[3]);
+  print(list[4]);
+  print(list[5]);
+}
+
+__________________________________________________________________________________________
+
+program to find index of element in list
+
+void main() {
+  var list = [210, 21, 22, 33, 44, 55];
+
+  print(list.indexOf(22));
+  print(list.indexOf(33));
+}
+
+__________________________________________________________________________________________
+
+program to find length of list
+
+void main(){  
+   List<String> names = ["Raj", "John", "Rocky"];
+   print(names.length);
+ }
+
+__________________________________________________________________________________________
+
+program to change values in list
+
+void main(){  
+   List<String> names = ["Raj", "John", "Rocky"];
+   names[1] = "Bill";
+   names[2] = "Elon";
+   print(names);
+}
+
+__________________________________________________________________________________________
+
+program to create mutable and immutable list
+mutable list can be modified but immutable list can't be modified
+
+void main(){ 
+  List<String> names = ["Raj", "John", "Rocky"]; // Mutable List
+names[1] = "Bill"; // possible
+names[2] = "Elon"; // possible
+    
+const List<String> names1 = ["Raj", "John", "Rocky"]; // Immutable List
+names1[1] = "Bill"; // not possible
+names1[2] = "Elon"; // not possible
+}
+
+__________________________________________________________________________________________
+
+program to access first and last element of list
+
+void main() {
+   List<String> drinks = ["water", "juice", "milk", "coke"];
+   print("First element of the List is: ${drinks.first}");
+   print("Last element of the List is: ${drinks.last}");
+}  
+
+__________________________________________________________________________________________
+
+program to check whether list is empty or not
+
+void main() {
+   List<String> drinks = ["water", "juice", "milk", "coke"];
+   List<int>  ages = [];
+   print("Is drinks Empty: "+drinks.isEmpty.toString());
+   print("Is drinks not Empty: "+drinks.isNotEmpty.toString());
+   print("Is ages Empty: "+ages.isEmpty.toString());
+   print("Is ages not Empty: "+ages.isNotEmpty.toString());
+   
+}  
+
+__________________________________________________________________________________________
+
+program to reverse a list
+
+void main() {
+   List<String> drinks = ["water", "juice", "milk", "coke"];
+   print("List in reverse: ${drinks.reversed}");
+}  
+
+__________________________________________________________________________________________
+
+program to add items to list
+
+void main() {  
+    var evenList = [2,4,6,8,10];  
+    print(evenList);  
+    evenList.add(12);  
+    print(evenList);  
+}  
+
+__________________________________________________________________________________________
+
+program to demonstrate addAll function of list to add multiple items to list
+
+void main() {
+  var evenList = [2, 4, 6, 8, 10];
+  print(evenList);
+  evenList.addAll([12, 14, 16, 18]);
+  print(evenList);
+}
+
+__________________________________________________________________________________________
+
+program to insert item to list at a particular index
+
+void main() {
+  List myList = [3, 4, 2, 5];
+  print(myList);
+  myList.insert(2, 15);
+  print(myList);
+}
+
+__________________________________________________________________________________________
+
+insert multiple items to list at an index
+
+void main() {
+  List myList = [3, 4, 2, 5];
+  print(myList);
+  myList.insert(2, 15);
+  print(myList);
+}
+
+__________________________________________________________________________________________
+
+program to replace item with multiple items in list
+
+void main() {
+  var list = [10, 15, 20, 25, 30];
+  print("List before updation: ${list}");
+  list.replaceRange(0, 4, [5, 6, 7, 8]);
+  print("List after updation using replaceRange() function : ${list}");
+}
+
+__________________________________________________________________________________________
+
+program to remove item from item
+
+void main() {
+  var list = [10, 20, 30, 40, 50];
+  print("List before removing element : ${list}");
+  list.remove(30);
+  print("List after removing element : ${list}");
+}
+
+__________________________________________________________________________________________
+
+remove element at a particular index in list
+
+void main() {
+  var list = [10, 11, 12, 13, 14];
+  print("List before removing element : ${list}");
+  list.removeAt(3);
+  print("List after removing element : ${list}");
+}
+
+__________________________________________________________________________________________
+
+remove last element from list
+
+void main() {
+  var list = [10, 20, 30, 40, 50];
+  print("List before removing element:${list}");
+  list.removeLast();
+  print("List after removing last element:${list}");
+}
+
+__________________________________________________________________________________________
+
+remove items from list based on range
+
+void main() {
+  var list = [10, 20, 30, 40, 50];
+  print("List before removing element:${list}");
+  list.removeRange(0, 3);
+  print("List after removing range element:${list}");
+}
+
+__________________________________________________________________________________________
+
+program to demonstrate forEach in list
+
+void main() {
+  List<int> list = [10, 20, 30, 40, 50];
+  list.forEach((n) => print(n));
+}
+
+__________________________________________________________________________________________
+
+program to demonstrate map function in list
+
+void main() {
+  List<int> list = [10, 20, 30, 40, 50];
+  var douledList = list.map((n) => n * 2);
+
+  print((douledList));
+}
+
+__________________________________________________________________________________________
+
+program to combine two Lists
+
+void main() {
+  List<String> names = ["Raj", "John", "Rocky"];
+  List<String> names2 = ["Mike", "Subash", "Mark"];
+
+  List<String> allNames = [...names, ...names2];
+  print(allNames);
+}
+
+__________________________________________________________________________________________
+
+program to demonstrate conditions in list
+
+void main() {
+  bool happy = true;
+  var cart = ['milk', 'ghee', if (happy) 'Apple'];
+  print(cart);
+}
+ 
+__________________________________________________________________________________________
+
+program to demonstrate where in list
+
+void main(){
+List<int> numbers = [2,4,6,8,10,11,12,13,14];
+
+List<int> even = numbers.where((number)=> number.isEven).toList(); 
+print(even);
+}
+
+__________________________________________________________________________________________
+
+
+program to take out odd numbers from list using where function
+
+void main() {
+  List<int> numbers = [2, 4, 6, 8, 10, 11, 12, 13, 14];
+
+  List<int> oddNumbers = numbers.where((number) => number.isOdd).toList();
+  print(oddNumbers);
+}
+
+__________________________________________________________________________________________
+
+program to take out elements from lists that starts with S and save elements to a list
+
+void main() {
+  List<String> days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+
+  List<String> startWithS =
+      days.where((element) => element.startsWith("S")).toList();
+
+  print(startWithS);
+}
+
+__________________________________________________________________________________________
+

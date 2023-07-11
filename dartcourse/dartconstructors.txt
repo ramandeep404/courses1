@@ -1,0 +1,469 @@
+program to create a constructor of class
+constructor is a special member function of class that is called when an object of class is created
+
+class Student {
+  String? name;
+  int? age;
+  int? rollNumber;
+
+  // Constructor
+  Student(String name, int age, int rollNumber) {
+    print(
+        "Constructor called"); // this is for checking the constructor is called or not.
+    this.name = name;
+    this.age = age;
+    this.rollNumber = rollNumber;
+  }
+}
+
+void main() {
+  // Here student is object of class Student.
+  Student student = Student("John", 20, 1);
+  print("Name: ${student.name}");
+  print("Age: ${student.age}");
+  print("Roll Number: ${student.rollNumber}");
+}
+
+_________________________________________________________________________________________________________
+
+Another example of creating a constructor
+
+class Teacher {
+  String? name;
+  int? age;
+  String? subject;
+  double? salary;
+
+  // Constructor
+  Teacher(String name, int age, String subject, double salary) {
+    this.name = name;
+    this.age = age;
+    this.subject = subject;
+    this.salary = salary;
+  }
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Age: ${this.age}");
+    print("Subject: ${this.subject}");
+    print("Salary: ${this.salary}\n"); // \n is used for new line
+  }
+}
+
+void main() {
+  // Creating teacher1 object of class Teacher
+  Teacher teacher1 = Teacher("John", 30, "Maths", 50000.0);
+  teacher1.display();
+
+  // Creating teacher2 object of class Teacher
+  Teacher teacher2 = Teacher("Smith", 35, "Science", 60000.0);
+  teacher2.display();
+}
+
+_________________________________________________________________________________________________________
+
+Another example of creating a constructor
+
+ class Car {
+  String? name;
+  double? prize;
+
+  // Constructor
+  Car(String name, double prize) {
+    this.name = name;
+    this.prize = prize;
+  }
+
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Prize: ${this.prize}");
+  }
+}
+
+void main() {
+  // Here car is object of class Car.
+  Car car = Car("BMW", 500000.0);
+  car.display();
+}
+
+_________________________________________________________________________________________________________
+
+Another example of creating a constructor
+In the following code phone2 data member will be set to null
+
+ class Staff {
+  String? name;
+  int? phone1;
+  int? phone2;
+  String? subject;
+
+  // Constructor
+  Staff(String name, int phone1, String subject) {
+    this.name = name;
+    this.phone1 = phone1;
+    this.subject = subject;
+  }
+
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Phone1: ${this.phone1}");
+    print("Phone2: ${this.phone2}");
+    print("Subject: ${this.subject}");
+  }
+}
+
+void main() {
+  // Here staff is object of class Staff.
+  Staff staff = Staff("John", 1234567890, "Maths");
+  staff.display();
+}
+
+_________________________________________________________________________________________________________
+
+Program to create a single line constructor
+
+class Person{
+  String? name;
+  int? age;
+  String? subject;
+  double? salary;
+
+  // Constructor in short form
+  Person(this.name, this.age, this.subject, this.salary);
+
+  // display method
+  void display(){
+    print("Name: ${this.name}");
+    print("Age: ${this.age}");
+    print("Subject: ${this.subject}");
+    print("Salary: ${this.salary}");
+  }
+}
+
+void main(){
+  Person person = Person("John", 30, "Maths", 50000.0);
+  person.display();
+}
+
+_________________________________________________________________________________________________________
+
+Program to create a constructor with optional parameters
+
+class Employee {
+  String? name;
+  int? age;
+  String? subject;
+  double? salary;
+
+  // Constructor
+  Employee(this.name, this.age, [this.subject = "N/A", this.salary=0]);
+
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Age: ${this.age}");
+    print("Subject: ${this.subject}");
+    print("Salary: ${this.salary}");
+  }
+}
+
+void main(){
+  Employee employee = Employee("John", 30);
+  employee.display();
+}
+
+_________________________________________________________________________________________________________
+
+constructor with default values
+
+class Table {
+  String? name;
+  String? color;
+
+  // Constructor
+  Table({this.name = "Table1", this.color = "White"});
+
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Color: ${this.color}");
+  }
+}
+
+void main(){
+  Table table = Table();
+  table.display();
+}
+
+_________________________________________________________________________________________________________
+
+example of default constructor
+
+class Laptop {
+  String? brand;
+  int? prize;
+
+  // Constructor
+  Laptop() {
+    print("This is a default constructor");
+  }
+}
+
+void main() {
+  // Here laptop is object of class Laptop.
+  Laptop laptop = Laptop();
+}
+
+_________________________________________________________________________________________________________
+
+Example of parameterized constructor, constructor that has parameters
+
+ class Student {
+      String? name;
+      int? age;
+      int? rollNumber;
+      // Constructor
+      Student(this.name, this.age, this.rollNumber);
+    }
+    
+    void main(){
+        // Here student is object of class Student. 
+        Student student = Student("John", 20, 1);
+        print("Name: ${student.name}");
+        print("Age: ${student.age}");
+        print("Roll Number: ${student.rollNumber}");
+    }
+_________________________________________________________________________________________________________
+
+constructor with named parameters
+
+   class Student {
+      String? name;
+      int? age;
+      int? rollNumber;
+    
+      // Constructor
+      Student({String? name, int? age, int? rollNumber}) {
+        this.name = name;
+        this.age = age;
+        this.rollNumber = rollNumber;
+      }
+    }
+    
+    void main(){
+        // Here student is object of class Student. 
+        Student student = Student(name: "John", age: 20, rollNumber: 1);
+        print("Name: ${student.name}");
+        print("Age: ${student.age}");
+        print("Roll Number: ${student.rollNumber}");
+    }
+
+_________________________________________________________________________________________________________
+
+parameterized constructor with default values
+
+   class Student {
+      String? name;
+      int? age;
+    
+      // Constructor
+      Student({String? name = "John", int? age = 0}) {
+        this.name = name;
+        this.age = age;
+      }
+    }
+    
+    void main(){
+        // Here student is object of class Student. 
+        Student student = Student();
+        print("Name: ${student.name}");
+        print("Age: ${student.age}");
+    }
+
+_________________________________________________________________________________________________________
+
+example of constructor with named parameters
+
+class Chair {
+String? name;
+String? color;
+
+// Constructor
+Chair({this.name, this.color});
+
+// Method
+void display() {
+  print("Name: ${this.name}");
+  print("Color: ${this.color}");
+}
+}
+
+void main(){
+Chair chair = Chair(name: "Chair1", color: "Red");
+chair.display();
+}
+
+_________________________________________________________________________________________________________
+
+program to create a named constructor which means constructor has a name
+
+class Student {
+  String? name;
+  int? age;
+  int? rollNumber;
+
+  // Default Constructor
+  Student() {
+    print("This is a default constructor");
+  }
+
+  // Named Constructor
+  Student.namedConstructor(String name, int age, int rollNumber) {
+    this.name = name;
+    this.age = age;
+    this.rollNumber = rollNumber;
+  }
+}
+
+void main() {
+  // Here student is object of class Student.
+  Student student = Student.namedConstructor("John", 20, 1);
+  print("Name: ${student.name}");
+  print("Age: ${student.age}");
+  print("Roll Number: ${student.rollNumber}");
+}
+
+_________________________________________________________________________________________________________
+
+Another example of named constructor
+
+class Mobile {
+  String? name;
+  String? color;
+  int? prize;
+
+  Mobile(this.name, this.color, this.prize);
+  // here Mobile() is a named constructor
+  Mobile.namedConstructor(this.name, this.color, [this.prize = 0]);
+
+  void displayMobileDetails() {
+    print("Mobile name: $name.");
+    print("Mobile color: $color.");
+    print("Mobile prize: $prize");
+  }
+}
+
+void main() {
+  var mobile1 = Mobile("Samsung", "Black", 20000);
+  mobile1.displayMobileDetails();
+  var mobile2 = Mobile.namedConstructor("Apple", "White");
+  mobile2.displayMobileDetails();
+}
+
+_________________________________________________________________________________________________________
+
+program to create two named constructors
+
+class Animal {
+  String? name;
+  int? age;
+
+  // Default Constructor
+  Animal() {
+    print("This is a default constructor");
+  }
+
+  // Named Constructor
+  Animal.namedConstructor(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // Named Constructor
+  Animal.namedConstructor2(String name) {
+    this.name = name;
+  }
+}
+void main(){
+  // Here animal is object of class Animal.
+  Animal animal = Animal.namedConstructor("Dog", 5);
+  print("Name: ${animal.name}");
+  print("Age: ${animal.age}");
+
+  Animal animal2 = Animal.namedConstructor2("Cat");
+  print("Name: ${animal2.name}");
+}
+
+_________________________________________________________________________________________________________
+
+program to create a constant constructor
+
+class Point {
+  final int x;
+  final int y;
+
+  const Point(this.x, this.y);
+}
+
+void main() {
+  // p1 and p2 has the same hash code.
+  Point p1 = const Point(1, 2);
+  print("The p1 hash code is: ${p1.hashCode}");
+
+  Point p2 = const Point(1, 2);
+  print("The p2 hash code is: ${p2.hashCode}");
+  // without using const
+  // this has different hash code.
+  Point p3 = Point(2, 2);
+  print("The p3 hash code is: ${p3.hashCode}");
+
+  Point p4 = Point(2, 2);
+  print("The p4 hash code is: ${p4.hashCode}");
+}
+
+_________________________________________________________________________________________________________
+
+Another example of constant constructor
+
+class Student {
+  final String? name;
+  final int? age;
+  final int? rollNumber;
+
+  // Constant Constructor
+  const Student({this.name, this.age, this.rollNumber});
+}
+
+void main() {
+  // Here student is object of Student.
+  const Student student = Student(name: "John", age: 20, rollNumber: 1);
+  print("Name: ${student.name}");
+  print("Age: ${student.age}");
+  print("Roll Number: ${student.rollNumber}");
+}
+
+_________________________________________________________________________________________________________
+
+constant constructor with named parameters
+
+class Car {
+  final String? name;
+  final String? model;
+  final int? prize;
+
+  // Constant Constructor
+  const Car({this.name, this.model, this.prize});
+}
+
+void main() {
+  // Here car is object of class Car.
+  const Car car = Car(name: "BMW", model: "X5", prize: 50000);
+  print("Name: ${car.name}");
+  print("Model: ${car.model}");
+  print("Prize: ${car.prize}");
+}
+
+_________________________________________________________________________________________________________
+

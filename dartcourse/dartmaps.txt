@@ -1,0 +1,204 @@
+program to create a map
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  print(countryCapital);
+}
+
+__________________________________________________________________________________________
+
+access a value in map using key
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  print(countryCapital["USA"]);
+}
+
+__________________________________________________________________________________________
+
+program to demonstrate properties of map
+
+void main() {
+ 
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  
+  print("All keys of Map: ${expenses.keys}");
+  print("All values of Map: ${expenses.values}");
+  print("Is Map empty: ${expenses.isEmpty}");
+  print("Is Map not empty: ${expenses.isNotEmpty}");
+  print("Length of map is: ${expenses.length}");
+}
+
+__________________________________________________________________________________________
+
+program to add element to map
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  // Adding New Item
+  countryCapital['Japan'] = 'Tokio';
+  print(countryCapital);
+}
+
+__________________________________________________________________________________________
+
+program to update element in map
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Nothing',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  // Updating Item
+  countryCapital['USA'] = 'Washington, D.C.';
+  print(countryCapital);
+}
+
+__________________________________________________________________________________________
+
+convert keys and values in map to lists
+
+void main() {
+ 
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  
+  // Without List
+  print("All keys of Map: ${expenses.keys}");
+  print("All values of Map: ${expenses.values}");
+ 
+  // With List
+  print("All keys of Map with List: ${expenses.keys.toList()}");
+  print("All values of Map with List: ${expenses.values.toList()}");
+  
+}
+
+__________________________________________________________________________________________
+
+program to demonstrate containsKey and containsValue function of map
+
+void main() {
+ 
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  
+  // For Keys
+  print("Does Map contain key sun: ${expenses.containsKey("sun")}");
+  print("Does Map contain key abc: ${expenses.containsKey("abc")}");
+ 
+  // For Values
+  print("Does Map contain value 3000.0: ${expenses.containsValue(3000.0)}");
+  print("Does Map contain value 100.0: ${expenses.containsValue(100.0)}");
+  
+}
+
+__________________________________________________________________________________________
+
+program to remove item from map
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Nothing',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  
+  countryCapital.remove("USA");
+  print(countryCapital);
+}
+
+__________________________________________________________________________________________
+
+traverse values in map using for in Loop
+
+void main(){
+
+  Map<String, dynamic> book = {
+    'title': 'Misson Mangal',
+    'author': 'Kuber Singh',
+    'page': 233
+  };
+  
+ // Loop Through Map
+  for(MapEntry book in book.entries){
+    print('Key is ${book.key}, value ${book.value}');
+  }
+}
+
+__________________________________________________________________________________________
+
+traverse map using forEach Loop
+
+void main(){
+
+  Map<String, dynamic> book = {
+    'title': 'Misson Mangal',
+    'author': 'Kuber Singh',
+    'page': 233
+  };
+  
+  
+ // Loop Through For Each
+  book.forEach((key,value)=> print('Key is $key and value is $value'));
+  
+}
+
+__________________________________________________________________________________________
+
+program to demonstrate removewhere function to remove item from map based on a condition
+
+void main() {
+  Map<String, double> mathMarks = {
+    "ram": 30,
+    "mark": 32,
+    "harry": 88,
+    "raj": 69,
+    "john": 15,
+  };
+  mathMarks.removeWhere((key, value) => value < 32);
+  print(mathMarks);
+}
+
+__________________________________________________________________________________________
+
+program to demonstrate removeWhere function of map that removes element from map based on a 
+condition
+
+void main() {
+  Map<String, double> mathMarks = {
+    "ram": 30,
+    "mark": 32,
+    "harry": 88,
+    "raj": 69,
+    "john": 15,
+  };
+
+  mathMarks.removeWhere((key, value) => value < 32);
+
+  print(mathMarks);
+}
+__________________________________________________________________________________________
+

@@ -1,0 +1,113 @@
+program to read data from file and store data in String
+
+import 'dart:io';
+
+void main() {
+  // creating file object
+  File file = File('c:\\darttest\\darttest\\test.txt');
+  // read file
+  String contents = file.readAsStringSync();
+  // print file
+  print(contents);
+}
+
+________________________________________________________________________________________________
+
+program to get information of the file
+
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('c:\\darttest\\darttest\\test.txt');
+  // get file location
+  print('File path: ${file.path}');
+  // get absolute path
+  print('File absolute path: ${file.absolute.path}');
+  // get file size
+  print('File size: ${file.lengthSync()} bytes');
+  // get last modified time
+  print('Last modified: ${file.lastModifiedSync()}');
+}
+
+________________________________________________________________________________________________
+
+program to read only part of file
+
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = new File('c:\\darttest\\darttest\\test.txt');
+  // read only first 10 characters
+  String contents = file.readAsStringSync().substring(0, 10);
+  // print file
+  print(contents);
+}
+
+________________________________________________________________________________________________
+
+program to write data to file
+
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('c:\\darttest\\darttest\\test1.txt');
+  // write to file
+  file.writeAsStringSync('Welcome to test1.txt file.');
+  print('File written.');
+}
+
+________________________________________________________________________________________________
+
+program to write data to existing file
+
+// dart program to write to existing file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file =  File('c:\\darttest\\darttest\\test.txt');
+  // write to file
+  file.writeAsStringSync('\nThis is a new content.', mode: FileMode.append);
+  print('Congratulations!! New content is added on top of previous content.');
+}
+
+________________________________________________________________________________________________
+
+program to delete a file
+
+// dart program to delete file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('c:\\darttest\\darttest\\test1.txt');
+  // delete file
+  file.deleteSync();
+  print('File deleted.');
+}
+
+________________________________________________________________________________________________
+
+program to delete a file if file exists
+
+// dart program to delete file if exists
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('c:\\darttest\\darttest\\test.txt');
+  // check if file exists
+  if (file.existsSync()) {
+    // delete file
+    file.deleteSync();
+    print('File deleted.');
+  } else {
+    print('File does not exist.');
+  }
+}
+
+________________________________________________________________________________________________
+

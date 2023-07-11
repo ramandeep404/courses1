@@ -1,0 +1,27 @@
+Example of Asynchronous Function
+
+void main() {
+  print("First Operation");   
+  Future.delayed(Duration(seconds:3),()=>print('Second Big Operation'));
+  print("Third Operation"); 
+  print("Last Operation"); 
+}
+
+________________________________________________________________________________________________________
+
+Example of Future class
+
+// function that returns a future
+Future<String> getUserName() async {
+  return Future.delayed(Duration(seconds: 2), () => 'Mark');
+}
+
+// main function
+void main() {
+  print("Start");
+  getUserName().then((value) => print(value));
+  print("End");
+}
+
+________________________________________________________________________________________________________
+

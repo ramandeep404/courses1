@@ -1,0 +1,114 @@
+program to create a function that prints a message
+
+// writing function outside main function.
+void printName(){
+  print("My name is Raj Sharma. I am from function.");
+}
+// this is our main function.
+void main(){
+  printName();
+}
+
+______________________________________________________________________________________________
+
+program to create a function that finds sum of two numbers
+
+ void add(int num1, int num2){
+  int sum = num1 + num2;
+   print("The sum is $sum");
+}
+
+void main(){
+  add(10, 20);
+}
+
+______________________________________________________________________________________________
+
+program to create a function that calculates simple interest
+
+// function that calculate interest
+void calculateInterest(double principal, double rate, double time) {
+  double interest = principal * rate * time / 100;
+  print("Simple interest is $interest");
+}
+
+void main() {
+  double principal = 5000;
+  double time = 3;
+  double rate = 3;
+  calculateInterest(principal, rate, time);
+}
+
+______________________________________________________________________________________________
+
+program to create a function that returns a String
+
+void main() {
+  String name = primeMinisterName();
+  print("The Name from function is $name.");
+}
+
+String primeMinisterName() {
+  return "John Doe";
+}
+
+______________________________________________________________________________________________
+
+program to create a function that has a optional parameter
+
+void printInfo(String name, String gender, [String title = "sir/ma'am"]) {
+  print("Hello $title $name your gender is $gender.");
+}
+
+void main() {
+  printInfo("John", "Male");
+  printInfo("John", "Male", "Mr.");
+  printInfo("Kavya", "Female", "Ms.");
+}
+
+______________________________________________________________________________________________
+
+example of function having a named parameter
+
+void printInfo({String? name, String? gender}) {
+  print("Hello $name your gender is $gender.");
+}
+
+void main() {
+  // you can pass values in any order in named parameters.
+  printInfo(gender: "Male", name: "John");
+  printInfo(name: "Sita", gender: "Female");
+  printInfo(name: "Reecha", gender: "Female");
+  printInfo(name: "Reecha", gender: "Female");
+  printInfo(name: "Harry", gender: "Male");
+  printInfo(gender: "Male", name: "Santa");
+}
+
+______________________________________________________________________________________________
+
+program to create a function having required parameter
+
+void printInfo({required String name, required String gender}) {
+  print("Hello $name your gender is $gender.");
+}
+
+void main() {
+  // you can pass values in any order in named parameters.
+  printInfo(gender: "Male", name: "John");
+  printInfo(gender: "Female", name: "Suju");
+}
+
+______________________________________________________________________________________________
+
+program to create a anonymous function
+
+void main() {
+  const fruits = ["Apple", "Mango", "Banana", "Orange"];
+
+  fruits.forEach((fruit) {
+    print(fruit);
+  });
+}
+
+______________________________________________________________________________________________
+

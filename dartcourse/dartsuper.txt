@@ -1,0 +1,78 @@
+program to demonstrate super keyword super is used to refer to parent class
+
+class Laptop {
+  // Method
+    void show() {
+        print("Laptop show method");
+    }
+}
+
+class MacBook extends Laptop {
+    void show() {
+        super.show(); // Calling the show method of the parent class
+        print("MacBook show method");
+    }
+}
+
+void main() {
+  // Creating an object of the MacBook class
+  MacBook macbook = MacBook();
+  macbook.show();
+}
+
+________________________________________________________________________________________________________
+
+program to call named constructor of parent class using super keyword
+
+class Employee {
+  // Named constructor
+  Employee.manager() {
+    print("Employee named constructor");
+  }
+}
+
+class Manager extends Employee {
+  // Named constructor
+  Manager.manager() : super.manager() {
+    print("Manager named constructor");
+  }
+}
+
+void main() {
+  Manager manager = Manager.manager();
+}
+
+________________________________________________________________________________________________________
+
+program to demonstrate super keyword in multilevel inheritance
+
+class Laptop {
+  // Method
+  void display() {
+    print("Laptop display");
+  }
+}
+
+class MacBook extends Laptop {
+  // Method
+  void display() {
+    print("MacBook display");
+    super.display();
+  }
+}
+
+class MacBookPro extends MacBook {
+  // Method
+  void display() {
+    print("MacBookPro display");
+    super.display();
+  }
+}
+
+void main() {
+  var macbookpro = MacBookPro();
+  macbookpro.display();
+}
+
+________________________________________________________________________________________________________
+
