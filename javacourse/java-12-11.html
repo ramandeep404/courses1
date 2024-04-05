@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javajdbc.html"> Back To Java JDBC Database Connectivity Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+// Create SQL statement
+String SQL = "INSERT INTO Employees (id, first, last, age) " +
+             "VALUES(?, ?, ?, ?)";
+
+// Create PrepareStatement object
+PreparedStatemen pstmt = conn.prepareStatement(SQL);
+
+//Set auto-commit to false
+conn.setAutoCommit(false);
+
+// Set the variables
+pstmt.setInt( 1, 400 );
+pstmt.setString( 2, "FirstName1" );
+pstmt.setString( 3, "LastName1" );
+pstmt.setInt( 4, 33 );
+// Add it to the batch
+pstmt.addBatch();
+
+// Set the variables
+pstmt.setInt( 1, 401 );
+pstmt.setString( 2, "FirstName2" );
+pstmt.setString( 3, "LastName2" );
+pstmt.setInt( 4, 31 );
+// Add it to the batch
+pstmt.addBatch();
+
+//add more batches
+.
+.
+.
+.
+//Create an int[] to hold returned values
+int[] count = stmt.executeBatch();
+
+//Explicitly commit statements to apply changes
+conn.commit();
+
+        </textarea>
+    </body>
+</html>

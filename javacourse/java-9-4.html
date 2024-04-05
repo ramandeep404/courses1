@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javainheritance.html"> Back To Java Inheritance Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate multilevel inheritance
+class Animal {
+    public void eat() {
+        System.out.println("eating...");
+    }
+}
+
+class Dog extends Animal {
+    public void bark() {
+        System.out.println("barking...");
+    }
+}
+
+class BabyDog extends Dog {
+    public void weep() {
+        System.out.println("weeping...");
+    }
+}
+
+public class Multilevel {
+    public static void main(String[] args) {
+        BabyDog babyDog = new BabyDog();
+        babyDog.eat();
+        babyDog.bark();
+        babyDog.weep();
+    }
+}
+        </textarea>
+    </body>
+</html>

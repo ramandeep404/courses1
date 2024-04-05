@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaexceptions.html"> Back To Java Exceptions Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to create your own exception
+
+class MyException extends Exception {
+    public MyException(String s)
+    {
+        // Call constructor of parent Exception
+        super(s);
+    }
+}
+
+// A Class that uses above MyException
+public class Main1 {
+    // Driver Program
+    public static void main(String args[])
+    {
+        try {
+            // Throw an object of user defined exception
+            throw new MyException("My Exception Demo");
+        }
+        catch (MyException ex) {
+            System.out.println("Caught");
+
+            // Print the message from MyException object
+            System.out.println(ex.getMessage());
+        }
+    }
+}
+        </textarea>
+    </body>
+</html>

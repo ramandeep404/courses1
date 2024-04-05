@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javagenerics.html"> Back To Java Generics Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//Program to demonstrate another example generic class with single type parameter rectangle class
+class Rectangle<T>
+{
+    private T length;
+    private T breadth;
+    public Rectangle(T length,T breadth){
+        this.length=length;
+        this.breadth=breadth;
+    }
+    public T getLength(){
+        return length;
+    }
+    public T getBreadth(){
+        return breadth;
+    }
+    public void setLength(T length)
+    {
+        this.length=length;
+    }
+    public void setBreadth(T breadth)
+    {
+        this.breadth=breadth;
+    }
+    public String toString() {
+        return "Dimension{" +
+                "length=" + length +
+                ", breadth=" + breadth +
+                "}";
+    }
+}
+public class RectangleDemo{
+    public static void main(String args[]){
+        Rectangle<Integer> ob=new Rectangle<>(18,10);
+        System.out.println(ob.toString());
+        Rectangle<Double> ob1=new Rectangle<>(12.1,8.7);
+        System.out.println(ob1.toString());
+    }
+}
+</textarea>
+    </body>
+</html>

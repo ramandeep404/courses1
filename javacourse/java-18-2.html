@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javacollections.html"> Back To Java Collections Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+
+//Java program to demonstrate a LinkedList
+
+public class LinkedList_Impl { 
+public static void main(String[] args) { 
+LinkedList<String> cars = new LinkedList<String>(); 
+cars.add("Volvo"); 
+cars.add("BMW"); 
+cars.add("Ford"); 
+cars.add("Mazda"); 
+System.out.println(cars); 
+cars.addFirst("Mazda"); 
+System.out.println(cars); 
+cars.addLast("Mazda"); 
+System.out.println(cars); 
+cars.removeFirst(); 
+System.out.println(cars); 
+cars.removeLast(); 
+System.out.println(cars); 
+// Use getFirst() to display the first item in the list 
+System.out.println(cars.getFirst()); 
+// Use getLast() to display the last item in the list 
+System.out.println(cars.getLast()); 
+} 
+
+
+        </textarea>
+    </body>
+</html>

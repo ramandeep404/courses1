@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javagenerics.html"> Back To Java Generics Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate generic class with single type parameter
+
+//create a generic class with single type parameter
+class GenericClass<T> {
+    private T t;
+
+    public GenericClass(T t) {
+        this.t = t;
+    }
+
+    public T get() {
+        return t;
+    }
+
+    public void set(T t) {
+        this.t = t;
+    }
+}
+public class Class1Demo {
+    public static void main(String args[])
+    {
+        GenericClass<Integer> ob=new GenericClass<>(20);
+        System.out.println(ob.get());
+    }
+}
+
+
+</textarea>
+    </body>
+</html>

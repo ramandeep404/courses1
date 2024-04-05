@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaarrays.html"> Back To Java Arrays Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate stack as array
+
+class Stack
+{
+    int top;
+    int arr[];
+    Stack()
+    {
+        arr=new int[10];
+        top=-1;
+    }
+    int pop()
+    {
+        int element;
+        element=arr[top];
+        top--;
+        return element;
+    }
+     void push(int element)
+    {
+        top=top+1;
+        arr[top]=element;
+    }
+}
+public class StackDemo {
+public static void main(String args[])
+{
+    Stack ob=new Stack();
+    ob.push(10);
+    ob.push(20);
+    System.out.println(ob.pop());
+    System.out.println(ob.pop());
+}
+}
+        </textarea>
+    </body>
+</html>

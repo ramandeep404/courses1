@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <a href="javainterfaces.html"> Back To Java Interfaces Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to create a default interface
+interface Vehicle {
+    void startVehicle();
+
+    default void stopVehicle() {
+        System.out.println("Vehicle is stopping");
+    }
+}
+
+class Car implements Vehicle {
+    @Override
+    public void startVehicle() {
+        System.out.println("Car is starting");
+    }
+}
+
+public class defaultinterface {
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.startVehicle();
+        car.stopVehicle();
+    }
+}
+        </textarea>
+    </body>
+</html>

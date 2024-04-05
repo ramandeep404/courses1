@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+     <a href="javaclasses.html"> Back To Java Classes Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate this keyword
+public class thisclass {
+
+    // instance variable
+    int age;
+
+    // constructor
+    thisclass(int age) {
+        this.age = age;
+    }
+
+    // method
+    public void printAge() {
+        System.out.println("My age is " + this.age);
+    }
+
+    // main method
+    public static void main(String[] args) {
+        thisclass myClass = new thisclass(25);
+        myClass.printAge();
+    }
+}
+        </textarea>
+    </body>
+</html>

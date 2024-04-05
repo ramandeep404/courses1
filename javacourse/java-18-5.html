@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javacollections.html"> Back To Java Collections Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+
+//Java program to demonstrate a ArrayDeque
+import java.util.*;    
+class TreeSet3{    
+ public static void main(String[] args) {
+        // Creating a Deque using the ArrayDeque class
+        Deque<String> deque = new ArrayDeque<>();
+
+        // Adding elements to the Deque
+        deque.add("Ravi");
+        deque.add("Vijay");
+        deque.add("Ajay");
+
+        // Printing the elements of the Deque
+        System.out.println("Elements of the Deque:");
+        for (String element : deque) {
+            System.out.println(element);
+        }
+
+        // Removing an element from the Deque
+        deque.removeFirst();
+
+        // Printing the elements of the Deque after removing an element
+        System.out.println("Elements of the Deque after removing an element:");
+        for (String element : deque) {
+            System.out.println(element);
+        }
+    }
+}
+
+}  
+        </textarea>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <a href="javagenerics.html"> Back To Java Generics Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+            package zany;
+
+            import java.util.ArrayList;
+            //program to take arraylist of string and convert it to array of strings
+            /**
+             *
+             * @author raman
+             */
+            public class Zany2 {
+                public static void main(String[] args) {
+                    
+                   ArrayList<String> al = new ArrayList<String>();
+             
+                   
+                    al.add("Mango");
+                    al.add("Grapes");
+                    al.add("Orange");
+                    al.add("Kiwi");
+             
+                    String[] str = new String[al.size()];
+             
+                    for (int i = 0; i < al.size(); i++) {
+                        str[i] = al.get(i);
+                    }
+             
+                    for (String k : str) {
+                        System.out.println(k);
+                    }
+            }
+            }
+        </textarea>
+    </body>
+</html>

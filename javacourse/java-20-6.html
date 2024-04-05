@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <a href="javamultithreading.html"> Back To Java Multithreading Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate thread synchronized keyword
+/*
+In this example, we have a Counter class that has a count variable and an increment() method. The increment()
+method is synchronized, which means that only one thread can access it at a time.
+We then create two threads, thread1 and thread2, and start them both. Each thread calls the
+increment() method 1000 times.
+We then use the join() method to wait for both threads to finish executing.
+Finally, we print the value of the count variable.
+Without synchronization, it is possible that the two threads could interleave their
+execution and the value of the count variable could be incorrect. However, with synchronization,
+the two threads cannot interleave their execution and the value of the count variable is always correct.
+*/
+
+class Counter {
+    private int count = 0;
+
+    public synchronized void increment() {
+        count++;
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+
+public class ThreadSync {
+    public static void main(String[] args) {
+        Counter counter = new Counter();
+
+        Thread thread1 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                counter.increment();
+            }
+        });
+
+        Thread thread2 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                counter.increment();
+            }
+        });
+
+        thread1.start();
+        thread2.start();
+
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(counter.getCount());
+    }
+}
+
+ </textarea>
+    </body>
+</html>

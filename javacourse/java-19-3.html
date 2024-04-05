@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <a href="javagenerics.html"> Back To Java Generics Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+            package zany;
+
+            import java.util.ArrayList;
+            
+            /**
+             *
+             * @author raman
+             */
+            //program to convert array of integers to arraylist of Double objects after dividing integers with 2 
+            public class Zany3 {
+                public static void main(String args[])
+                {
+                    ArrayList<Double> array_list = new ArrayList<Double>(); 
+                    int array[] = { 1, 2, 3, 4, 5 }; 
+                     
+                for (int i = 0; i < array.length; i++) 
+                array_list.add(new Double((int)array[i]/2)); 
+                System.out.print(array_list); 
+                }
+            }
+            
+        </textarea>
+    </body>
+</html>

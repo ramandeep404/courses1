@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <a href="javamultithreading.html"> Back To Java Multithreading Index</a>
+        <br>
+        <br>
+        <hr>
+        <textarea rows="40" cols="100">
+//program to demonstrate thread join Method
+public class MyThread1 extends Thread
+{
+    public void run()
+    {
+        System.out.println("r1 ");
+        try {
+            Thread.sleep(500);
+        }catch(InterruptedException ie){ }
+        System.out.println("r2 ");
+    }
+    public static void main(String[] args)
+    {
+        MyThread1 t1=new MyThread1();
+        MyThread1 t2=new MyThread1();
+        t1.start();
+
+        try{
+            t1.join();	//Waiting for t1 to finish
+        }catch(InterruptedException ie){}
+
+        t2.start();
+    }
+}
+ </textarea>
+    </body>
+</html>
